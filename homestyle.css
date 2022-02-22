@@ -11,6 +11,26 @@ html, body {
     font-family: Helvetica;
     line-height: 50%;
 }
+
+/*positions the map image*/
+img#map{
+  position: relative;
+  top: -10px;
+  bottom: 100px;
+  left: 180px;
+}
+/*positions the food image*/
+img#food{
+  height: 225px;
+  width: 450px;
+  position: relative;
+  top: -150px;
+  bottom: 100px;
+  left: 425px;
+  
+}
+
+
 /* unvisited link */
 a:link {
     color: white;
