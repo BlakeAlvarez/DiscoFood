@@ -11,6 +11,37 @@ html, body {
     font-family: Helvetica;
     line-height: 50%;
 }
+/* removes bullet points from navbar */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* styles list items of the navbar */
+nav li {
+  display: inline-block ;
+  font-size: medium;
+  font-family: Helvetica;
+  margin-right: 70px ;
+  text-transform: uppercase;
+}
+/* some hover action for navbar */
+nav a:hover {
+  color: grey;
+}
+/* login attributes */
+nav .login{
+  background: #4b8500;
+  padding-left: 50px;
+  padding-right: 50px; 
+  
+}
+/* navigation bar properties */
+.navbar{
+  padding: 5px 100px;
+  background: black;
+  color: white;
+}
 
 /*positions the map image*/
 img#map{
