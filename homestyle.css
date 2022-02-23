@@ -85,3 +85,48 @@ a:link {
     color: white;
     text-decoration: none;
   }
+  .first_col, .second_col, .third_col, .fourth_col {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .first_col{
+    background-image: url("Images/Home/disco-park-grill_portfolio-cover1.jpeg");
+  }
+  .second_col{
+    background-image: url("Images/Home/disco-park_banner2.jpg");
+  }
+  .third_col{
+      background-image: url("Images/Home/starbucks_banner_cropped2-1.jpg");
+  }
+  .fourth_col{
+      background-image: url("Images/Home/disco-park_banner1.jpeg");
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    box-sizing: border-box;
+  }
+  .home_strip{
+        position: relative;
+        text-align: center;
+        color: white;
+  }
+  .center_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family:'Playfair Display',serif;
+    font-size: 43px;
+    font-style: italic;
+    
+  }
