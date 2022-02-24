@@ -191,7 +191,9 @@ a:link {
     font-family:'Playfair Display',serif;
     font-size: 43px;
     font-style: italic;
-    
+    border: 5px solid white;
+    padding: 10px;
+    box-shadow: 10px 10px black;
   }
 
 .footer {
