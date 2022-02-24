@@ -132,37 +132,37 @@ a:link {
   }
 
   .footer {
-    position:relative;
-    padding:10px 10px 25px 100px;
-    text-align: left;
-    text-indent: 5%;
-    background: #000000;
-    color: #72B844;
-    font-size: medium;
-    font-family: Helvetica; 
-    line-height: 50%;
-    bottom:0;
-    }
-
-.bottom-nav{
-  align-items:stretch ;
-
-}
-.bottom-nav a:after{
-  content: "|";
+    position: relative;
+      padding:10px 10px 25px 100px;
+      text-align: left;
+      text-indent: 5%;
+      background: #000000;
+      color: #72B844;
+      font-size: medium;
+      font-family: Helvetica;
+      bottom:0; 
+     overflow-x: hidden;
+      
+      
+  }
   
-}
-
-.bottom-nav:last-child a:after{
-  content: ' ';
-}
-
-.bottom-nav2{
-  color: white;
-}
-
-.bottom-nav3{
- text-align: right;
- float: right;
- color:white; 
-}
+  .bottom-nav{
+   float: left;
+   }
+  .bottom-nav a:after{
+    content: "|";
+    
+  }
+  
+  .bottom-nav:last-child a:after{
+    content: ' ';
+  }
+  
+  .bottom-nav2{
+    color: white;
+  
+    
+  }
+  .dine{
+    color: white;
+  }
