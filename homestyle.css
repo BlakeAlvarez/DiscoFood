@@ -23,36 +23,41 @@ nav li {
   vertical-align: baseline;
   display: inline-block ;
   font-size: medium;
-  font-family: helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;;
+  font-family: helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;
   margin-right: 70px ;
   text-transform: uppercase;
   font-weight: bold;
 }
 
+/* login attributes */
+nav .login{
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 20px;
+  background: #72B844;
+  font-size: small;
+}
+
+/* login list item hover action */
+.login :hover{
+  color: grey;
+}
+
 /* some hover action for navbar */
-nav li a:hover {
-  
+.pages :hover{
   color: black;
   background-color: white;
   text-decoration: underline;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  /* position: absolute */
 }
 
-nav .login:hover {
-  color: black;
-  background-color: #72B844;
-}
-/* login attributes */
-nav .login{
-  background: #72B844;
-  padding-left: 50px;
-  padding-right: 50px; 
-  
-}
+
 /* navigation bar properties */
 .navbar{
   padding: 5px 100px;
   background: rgb(31, 27, 27);
-  color: white;
 }
 
 /*table things*/
