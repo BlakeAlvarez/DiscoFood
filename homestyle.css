@@ -20,6 +20,7 @@ nav ul {
 }
 /* styles list items of the navbar */
 nav li {
+  vertical-align: baseline;
   display: inline-block ;
   font-size: medium;
   font-family: helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;;
@@ -27,8 +28,10 @@ nav li {
   text-transform: uppercase;
   font-weight: bold;
 }
+
 /* some hover action for navbar */
-nav a:hover {
+nav li a:hover {
+  
   color: black;
   background-color: white;
   text-decoration: underline;
@@ -52,6 +55,47 @@ nav .login{
   color: white;
 }
 
+/*table things*/
+table.table1{
+  border-collapse: collapse;
+  table-layout: auto;
+}
+table.table1 table,th,td{
+  border: 1px solid black;
+}
+table.table1 th,td{
+  padding: 10px;
+}
+table.table1 th, tr{
+  text-align: center;
+}
+table.table1 tr:nth-child(even){
+  background-color: rgba(238,237,238,255);
+}
+table.table1 tr:nth-child(odd){
+  background-color: white;
+}
+
+table.table2{
+  border-collapse: collapse;
+  table-layout: auto;
+}
+table.table2 table,th,td{
+  border: 1px solid black;
+}
+table.table2 th,td{
+  padding: 10px;
+}
+table.table2 th, tr{
+  text-align: center;
+}
+table.table2 tr:nth-child(odd){
+  background-color: rgba(238,237,238,255);
+}
+table.table2 tr:nth-child(even){
+  background-color: white;
+}
+
 /*positions the map image*/
 img#map{
   position: relative;
@@ -67,9 +111,14 @@ img#food{
   top: -150px;
   bottom: 100px;
   left: 425px;
-  
 }
-
+/*positions the calendar image*/
+img#calendar{
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  left: 425px;
+}
 
 /* unvisited link */
 a:link {
