@@ -207,7 +207,6 @@ a:link {
       bottom:0; 
      overflow-x: hidden;
       
-      
   }
   
   .bottom-nav{
@@ -229,4 +228,43 @@ a:link {
   }
   .dine{
     color: white;
+  }
+  .meal_plan_overall{
+    text-align: center;
+    transform: translateY(-185px);
+    padding-right: 120px;
+
+  }
+  .meal_plan{
+    text-align: left;
+    
+    padding-bottom: 25px;
+    display: inline-block;
+    
+  }
+  .meal_cube1{
+    text-align: center;
+    background-color: #fafafa;
+    display: inline-block;
+    padding: 15px 100px;
+    transform: translateY(-120px);
+    
+    
+  }
+  .meal_cube2{
+    text-align: center;
+    background-color: #fafafa;
+    display: inline-block;
+    padding: 40px 50px;
+    margin-left: 100px;
+    width: 400px;
+    transform: translateY(-80px);
+  }
+  .home_bottom_banner{
+    background-image: url("Images/Home/student-mp_flex-banner2.jpeg");
+    padding: 200px;
+    padding-top: 250px;
+    margin-top: -220px;
+    object-fit: cover;
+    
   }
