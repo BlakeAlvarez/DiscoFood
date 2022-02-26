@@ -2,6 +2,9 @@ html, body, footer {
     margin: 0;
     padding: 0;
   }
+html {
+  scroll-behavior: smooth;
+}
 .header{
     padding:5px 10px 10px 100px;
     text-align: left;
@@ -277,3 +280,26 @@ a:link {
     object-fit: cover;
     
   }
+
+#topButton {
+  display: none;
+  position: fixed;
+  right: 45px;
+  bottom: 65px;
+  z-index: 10000;
+  border: 2px solid white;
+  outline: none;
+  background-color: rgb(43,83,54);
+  color: white;
+  cursor: pointer;
+  padding: 0px;
+  border-radius: 50px;
+  height: 45px;
+  width: 45px;
+  font-size: 13px;
+  line-height: 12px;
+}
+
+#topButton:hover {
+  background-color: grey;
+}
