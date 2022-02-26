@@ -1,0 +1,116 @@
+
+
+
+li{
+    display: inline-block ;
+
+}
+
+
+.signi{
+    padding-left: 20 px; 
+    background-color: #00853E;
+    border-radius: 5px;
+    height: 45px;
+    width: 360px;
+    color:white;
+    position: relative;
+    left: 370px;
+    top: 10px;
+    border: 3px solid #00853E;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.signu{
+    height: 45px;
+    padding-left: 20 px; 
+    background-color: #00853E;
+    border-radius: 5px;
+    width: 600px;
+    color:white;
+    position: relative;
+    bottom: 130px;
+    left: 370px;
+    border: 3px solid #00853E;
+    z-index: 10;
+    font-weight: bold;
+
+}
+
+.signin {
+    border-radius: 10px;
+    width: 360px;
+    height: 270px;
+    border: 3px solid rgb(172, 164, 164);
+    padding: 0px;
+    margin: 20px;
+    position: relative;
+    left: 350px;
+    bottom: 20px;
+  }
+
+.signup {
+    border-radius: 10px;
+    width: 600px;
+    height: 270px;
+    border: 3px solid rgb(172, 164, 164);
+    padding: 0px;
+    margin: 20px;
+    position: relative;
+    left: 350px;
+    bottom: 160px;
+  }
+
+
+  input[type=text] {
+    background-color: #f1efefef;
+    padding: 10px;
+    width: 310px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    border-radius: 5px;
+
+  }
+
+  input[type=password] {
+    background-color: #f1efefef;
+    padding: 10px;
+    width: 310px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    border-radius: 5px;
+  }
+
+  input[type=submit] {
+    padding: 10px;
+    width: 335px;
+    height: 45px;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    background-color: #00853E;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .submit2{
+    position: relative;
+    top: 70px;
+    left: 120px;
+  }
+
+  .submit1 :hover, .submit2 :hover{
+    color: grey;
+    cursor: pointer;
+  }
+
+
+
+
