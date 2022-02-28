@@ -114,6 +114,21 @@ li{
     transition: .4s;
   }
 
-
-
-
+  .footer-container{
+    background-color: black;
+    padding-top: 4rem;
+    max-height: 15cm;
+    min-height: fit-content;
+  }
+  .footer{
+    width: 80%;
+    color:#72B844;
+    display:inline-block;
+    
+  }
+  .footer-1 h2{
+    color:#72B844; 
+    transform: translateX(-5px);
+    
+  }
+ 
