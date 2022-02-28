@@ -17,6 +17,7 @@ li{
     position: relative;
     left: 370px;
     top: 10px;
+    font: Poppins semi bold;
     border: 3px solid #00853E;
     z-index: 10;
     font-weight: bold;
@@ -32,6 +33,7 @@ li{
     position: relative;
     bottom: 130px;
     left: 370px;
+    font: Poppins semi bold;
     border: 3px solid #00853E;
     z-index: 10;
     font-weight: bold;
@@ -109,6 +111,7 @@ li{
   .submit1 :hover, .submit2 :hover{
     color: grey;
     cursor: pointer;
+    transition: .4s;
   }
 
 

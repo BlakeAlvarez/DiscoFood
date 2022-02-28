@@ -52,6 +52,7 @@ nav .login{
 /* login list item hover action */
 .login :hover{
   color: grey;
+  transition: .3s;
 }
 
 /* some hover action for navbar */
@@ -61,6 +62,7 @@ nav .login{
   text-decoration: underline;
   padding-top: 5px;
   padding-bottom: 10px;
+  transition: .3s;
   /* position: absolute */
 }
 
