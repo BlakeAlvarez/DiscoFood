@@ -255,7 +255,7 @@ a:link {
   .meal_plan_overall{
     text-align: center;
     transform: translateY(-185px);
-    padding-right: 120px;
+    padding-left: 100px;
 
   }
   .meal_plan{
@@ -280,18 +280,44 @@ a:link {
     display: inline-block;
     padding: 40px 50px;
     margin-left: 100px;
-    width: 400px;
+    width: 600px;
     transform: translateY(-80px);
   }
   .home_bottom_banner{
     background-image: url("Images/Home/student-mp_flex-banner2.jpeg");
-    padding: 200px;
-    padding-top: 250px;
-    margin-top: -220px;
-    object-fit: cover;
-    
+    width: 100%;
+    position: relative;
+    height: 600px; /* Should be removed. Only for demonstration */
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: -200px;
+ 
   }
-
+  .Create_Account_Today_Box{
+   background-color: white;
+   height: 250px;
+   width: 750px;
+   text-align: center;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 20px;
+  }
+.sign_up{
+  padding:20px 40px;
+  background-color: #BADA55;
+  color: white;
+  font-size: large;
+  font-family: Helvetica;
+  /*transition: color 500ms ease-out 10ms */ /*(Hover animation; add later)*/
+}
+.sign_up:hover{
+  color: grey;
+}
 #topButton {
   display: none;
   position: fixed;
