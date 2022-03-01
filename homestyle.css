@@ -11,9 +11,10 @@ html {
     background: #00853E;
     color:white;
     font-size: medium;
-    font-family: Helvetica;
+    font-family: Helvetica, Arial, sans-serif;
     line-height: 50%;
 }
+
 
 /* make navbar sticky */
 .navbar{
@@ -163,7 +164,7 @@ a:link {
     float: left;
     width: 25%;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+    height: 400px; /* Should be removed. Only for demonstration */
     box-sizing: border-box;
     background-position: center;
     background-size: cover;
@@ -189,7 +190,7 @@ a:link {
     clear: both;
     box-sizing: border-box;
   }
-  .home_strip{
+  .top_strip{
         position: relative;
         text-align: center;
         color: white;
@@ -199,7 +200,7 @@ a:link {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family:'Playfair Display',serif;
+    font-family:Helvetica, Arial, sans-serif;
     font-size: 43px;
     font-style: italic;
     border: 5px solid white;
@@ -255,12 +256,11 @@ a:link {
   .meal_plan_overall{
     text-align: center;
     transform: translateY(-185px);
-    padding-left: 100px;
-    
+    padding-left: 0px;
+    margin-right: -100px;
   }
   .meal_plan{
-    text-align: left;
-    
+    text-align: left;  
     padding-bottom: 25px;
     display: inline-block;
    
@@ -272,6 +272,8 @@ a:link {
     padding: 15px 100px;
     transform: translateY(-120px);
     margin-top: 100px;
+    margin-right: 130px;
+    margin-bottom: 30px;
   
   }
   .meal_cube2{
@@ -279,13 +281,13 @@ a:link {
     background-color: #fafafa;
     display: inline-block;
     padding: 40px 50px;
-    margin-left: 100px;
+    margin-left: 0px;
     width: 600px;
-    transform: translateY(-80px);
+    transform: translateY(-100px);
   }
   #meal_cube2_light_links:link {
     font-size:xx-large; 
-    font-family:'Playfair Display',serif;
+    font-family:Helvetica, Arial, sans-serif;
     color: #72b844;
     text-align: center;
     text-decoration: none;
@@ -299,7 +301,7 @@ a:link {
   /* visited link */
   #meal_cube2_light_links:visited {
     font-size:xx-large; 
-    font-family:'Playfair Display',serif;
+    font-family:Helvetica, Arial, sans-serif;
     color: #72b844;
     text-align: center;
     text-decoration: none;
@@ -313,7 +315,7 @@ a:link {
   /* mouse over link */
   #meal_cube2_light_links:hover {
     font-size:xx-large; 
-    font-family:'Playfair Display',serif;
+    font-family:Helvetica, Arial, sans-serif;
     color: #72b844;
     text-align: center;
     text-decoration: none;
@@ -325,7 +327,7 @@ a:link {
   }
   #meal_cube2_light_links:active {
     font-size:xx-large; 
-    font-family:'Playfair Display',serif;
+    font-family:Helvetica, Arial, sans-serif;
     color: #72b844;
     text-align: center;
     text-decoration: none;
@@ -337,7 +339,7 @@ a:link {
   }
   #meal_cube2_dark_links:link {
     font-size:xx-large; 
-    font-family:'Playfair Display',serif;
+    font-family:Helvetica, Arial, sans-serif;
     color:#407C51;
     text-align: center;
     text-decoration: none;
@@ -351,7 +353,7 @@ a:link {
   /* visited link */
   #meal_cube2_dark_links:visited {
     font-size:xx-large; 
-    font-family:'Playfair Display',serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: #407C51;
     text-align: center;
     text-decoration: none;
@@ -365,7 +367,7 @@ a:link {
   /* mouse over link */
   #meal_cube2_dark_links:hover {
     font-size:xx-large; 
-    font-family:'Playfair Display',serif;
+    font-family:Helvetica, Arial, sans-serif;
     color: #407C51;
     text-align: center;
     text-decoration: none;
@@ -377,7 +379,7 @@ a:link {
   }
   #meal_cube2_dark_links:active{
     font-size:xx-large; 
-    font-family:'Playfair Display',serif;
+    font-family:Helvetica, Arial, sans-serif;
     color: #407C51;
     text-align: center;
     text-decoration: none;
@@ -416,7 +418,7 @@ a:link {
   background-color: #BADA55;
   color: white;
   font-size: large;
-  font-family: Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
   /*transition: color 500ms ease-out 10ms */ /*(Hover animation; add later)*/
 }
 .sign_up:hover{
@@ -443,4 +445,41 @@ a:link {
 
 #topButton:hover {
   background-color: grey;
+}
+
+.food_section_1{
+  background-image: url("Images/Food/disco-park_banner2.jpg");
+  width: 100%;
+    position: relative;
+    height: 400px; /* Should be removed. Only for demonstration */
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+  
+}
+.drink_section_1{
+  background-image: url("Images/Drink/starbucks_banner_cropped2-1.jpg");
+  width: 100%;
+    position: relative;
+    height: 400px; /* Should be removed. Only for demonstration */
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+  
+}
+.market_section_1{
+  background-image: url("Images/Market/disco-park_banner1.jpeg");
+  width: 100%;
+    position: relative;
+    height: 400px; /* Should be removed. Only for demonstration */
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+  
 }
