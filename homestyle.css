@@ -256,14 +256,14 @@ a:link {
     text-align: center;
     transform: translateY(-185px);
     padding-left: 100px;
-
+    
   }
   .meal_plan{
     text-align: left;
     
     padding-bottom: 25px;
     display: inline-block;
-    
+   
   }
   .meal_cube1{
     text-align: center;
@@ -272,7 +272,7 @@ a:link {
     padding: 15px 100px;
     transform: translateY(-120px);
     margin-top: 100px;
-    
+  
   }
   .meal_cube2{
     text-align: center;
@@ -282,6 +282,110 @@ a:link {
     margin-left: 100px;
     width: 600px;
     transform: translateY(-80px);
+  }
+  #meal_cube2_light_links:link {
+    font-size:xx-large; 
+    font-family:'Playfair Display',serif;
+    color: #72b844;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* visited link */
+  #meal_cube2_light_links:visited {
+    font-size:xx-large; 
+    font-family:'Playfair Display',serif;
+    color: #72b844;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* mouse over link */
+  #meal_cube2_light_links:hover {
+    font-size:xx-large; 
+    font-family:'Playfair Display',serif;
+    color: #72b844;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #meal_cube2_light_links:active {
+    font-size:xx-large; 
+    font-family:'Playfair Display',serif;
+    color: #72b844;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #meal_cube2_dark_links:link {
+    font-size:xx-large; 
+    font-family:'Playfair Display',serif;
+    color:#407C51;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* visited link */
+  #meal_cube2_dark_links:visited {
+    font-size:xx-large; 
+    font-family:'Playfair Display',serif;
+    color: #407C51;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* mouse over link */
+  #meal_cube2_dark_links:hover {
+    font-size:xx-large; 
+    font-family:'Playfair Display',serif;
+    color: #407C51;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #meal_cube2_dark_links:active{
+    font-size:xx-large; 
+    font-family:'Playfair Display',serif;
+    color: #407C51;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
   }
   .home_bottom_banner{
     background-image: url("Images/Home/student-mp_flex-banner2.jpeg");
