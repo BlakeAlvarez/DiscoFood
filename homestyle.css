@@ -209,15 +209,15 @@ a:link {
 
   .footer-container{
     background-color: black;
-    padding-top: 4rem;
-    max-height: fit-content;
     font-family: Helvetica;
+    position: bottom;
+    min-height: 8cm;
   }
   .footer{
     width: 80%;
     color:#72B844;
     display:inline-block;
-    
+    height:5cm;
   }
   .footer-1 h2{
     color:#72B844; 
