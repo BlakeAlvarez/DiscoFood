@@ -116,15 +116,16 @@ li{
 
   .footer-container{
     background-color: black;
-    padding-top: 4rem;
-    max-height: 15cm;
-    min-height: fit-content;
+    font-family: Helvetica;
+    position: bottom;
+    min-height: 10.15cm;
   }
   .footer{
     width: 80%;
     color:#72B844;
     display:inline-block;
-    
+    height:5cm;
+    max-height: 4cm;
   }
   .footer-1 h2{
     color:#72B844; 
