@@ -1,0 +1,43 @@
+{
+    
+    "Foods": [
+      {
+        "id": "1",
+        "Name": "Burger",
+        "Price": "$1.99"
+      },
+      {
+        "id": "2",
+        "Name": "Chicken",
+        "Price": "$3.99"
+      }
+    ],
+    "Drinks": [
+        {
+          "id": "1",
+          "Name": "Coffee",
+          "Size": "small",
+          "Price": "$5.99"
+        },
+        {
+          "id": "2",
+          "Name": "Tea",
+          "Size":"small",
+          "Price": "$4.99"
+        }
+      ],
+      "Market": [
+        {
+          "id": "1",
+          "Name": "Chips",
+          "Price": "$0.99"
+        },
+        {
+          "id": "2",
+          "Name": "Fruit",
+          "Price": "$0.50"
+        }
+      ]
+
+
+  }
