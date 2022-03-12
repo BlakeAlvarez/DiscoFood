@@ -28,7 +28,7 @@ html {
 nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 3px;
 }
 /* styles list items of the navbar */
 nav li {
@@ -43,11 +43,14 @@ nav li {
 
 /* login attributes */
 nav .login{
+  padding-top: 7px;
+  padding-bottom: 7px;
   padding-left: 50px;
   padding-right: 50px;
-  border-radius: 20px;
+  border-radius: 0px;
   background: #72B844;
   font-size: small;
+  
 }
 
 /* login list item hover action */
