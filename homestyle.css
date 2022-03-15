@@ -226,17 +226,19 @@ a:link {
     height:5cm;
   }
   .footer-1 h2{
-    color:#72B844; 
-    
+    color:#72B844;
+    content: none; 
     
   }
   .footer-1{
     display: inline-block;
     flex-direction: row;
     margin-right: 4rem;
+   
   }
-  .footer-1 p :not(:last-child):after {
+  .footer-1 :not(:first-child):not(:last-child)::after { 
     content: " |";
+    
   }
   .footer-2 h2{
     color:#72B844
