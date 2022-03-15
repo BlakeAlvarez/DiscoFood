@@ -235,7 +235,7 @@ a:link {
     flex-direction: row;
     margin-right: 4rem;
   }
-  .footer-1 :not(:last-child):after {
+  .footer-1 p :not(:last-child):after {
     content: " |";
   }
   .footer-2 h2{
