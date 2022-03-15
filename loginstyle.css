@@ -131,21 +131,24 @@ li{
   }
 
   .footer-container{
+    position: relative;
+    margin-top:100px;
+    height: 5cm;
+    clear: both;
     background-color: black;
-    font-family: Helvetica;
-    position: bottom;
-    min-height: 10.15cm;
+   
   }
   .footer{
     width: 80%;
     color:#72B844;
     display:inline-block;
-    height:5cm;
-    max-height: 4cm;
+    
   }
   .footer-1 h2{
     color:#72B844; 
-    transform: translateX(-5px);
-    
+    transform: translateX(-5px);  
+  }
+  .footer-3 h2{
+    transform: translateY(10px);
   }
  

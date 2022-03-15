@@ -235,8 +235,8 @@ a:link {
     flex-direction: row;
     margin-right: 4rem;
   }
-  .footer-1 a:after {
-    content: "|";
+  .footer-1 :not(:last-child):after {
+    content: " |";
   }
   .footer-2 h2{
     color:#72B844
@@ -253,6 +253,8 @@ a:link {
   }
   .footer-3 h2{
     text-align: center;
+   
+    transform: translateY(10px);
   }
   .footer-3 p{
     color: white;
