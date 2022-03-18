@@ -1,10 +1,9 @@
 
-
-
 li{
     display: inline-block ;
-
 }
+
+
 
 
 .signi{
@@ -156,3 +155,61 @@ li{
     transform: translateY(10px);
   }
  
+
+
+  /* @media only screen and (min-width: 375px){
+    .signi{
+      text-align: center;
+      background-color: #00853E;
+      border-radius: 5px;
+      color:white;
+      width: 190%;
+      position: relative;
+      left:50%;
+      top: 10px;
+      font: Poppins semi bold;
+      border: 3px solid #00853E;
+      z-index: 10;
+      font-weight: bold;
+}
+
+.signu{
+    height: 45px;
+    padding-left: 20 px; 
+    background-color: #00853E;
+    border-radius: 5px;
+    width: 600px;
+    color:white;
+    position: relative;
+    bottom: 155px;
+    left: 370px;
+    font: Poppins semi bold;
+    border: 3px solid #00853E;
+    z-index: 10;
+    font-weight: bold;
+
+}
+
+.signin {
+    border-radius: 10px;
+    width: 190%;
+    height: 270px;
+    border: 3px solid rgb(172, 164, 164);
+    margin: 20px;
+    position: relative;
+    left: 55%;
+    bottom: 20px;
+  }
+
+.signup {
+    border-radius: 10px;
+    width: 600px;
+    height: 270px;
+    border: 3px solid rgb(172, 164, 164);
+    padding: 0px;
+    margin: 20px;
+    position: relative;
+    left: 350px;
+    bottom: 185px;
+  }
+  } */
