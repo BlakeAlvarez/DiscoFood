@@ -1,6 +1,4 @@
 # DiscoFood
 
-Ideas:
--Make navbar sticky
--Border around main text over pictures to add to readability
--make sign in button not hamburger patty
+Issues to be fixed:
+-the entire website is not responsive to smaller screens and looks janky
