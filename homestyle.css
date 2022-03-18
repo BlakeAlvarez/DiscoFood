@@ -48,13 +48,13 @@ nav .login{
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 0px;
-  background: #72B844;
+  background-color: #72B844;
   font-size: small;
   
 }
 
 /* login list item hover action */
-.login :hover{
+nav a:hover{
   color: grey;
   transition: .3s;
 }

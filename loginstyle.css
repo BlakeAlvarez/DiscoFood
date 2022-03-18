@@ -31,7 +31,7 @@ li{
     width: 600px;
     color:white;
     position: relative;
-    bottom: 130px;
+    bottom: 155px;
     left: 370px;
     font: Poppins semi bold;
     border: 3px solid #00853E;
@@ -61,7 +61,7 @@ li{
     margin: 20px;
     position: relative;
     left: 350px;
-    bottom: 160px;
+    bottom: 185px;
   }
 
 
@@ -90,20 +90,25 @@ li{
     border-radius: 5px;
   }
   
-.submit2{
+.registrationButton{
   text-align: center;
-  padding: 12px;
-  width: 275px;
-  height: 20px;
+  padding: 15px;
+  padding-left: 90px;
+  padding-right: 90px;
   position: relative;
-  left: 150px;
-  top: 90px;
+  left: 170px;
+  top: 115px;
   background-color: #00853E;
   color: white;
   font-weight: bold;
   border-radius: 5px;
   border: none;
   font-family: Helvetica;
+}
+  .registrationButton:hover{
+    color: grey;
+    cursor: pointer;
+    transition: .4s;
 }
 
 
@@ -124,7 +129,7 @@ li{
 
 
 
-  .submit1 :hover, .submit2 :hover{
+  .submit1 :hover{
     color: grey;
     cursor: pointer;
     transition: .4s;
