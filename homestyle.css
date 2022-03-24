@@ -8,6 +8,9 @@ html {
 p{
   font-family: Helvetica, Arial, sans-serif;
 }
+body{
+ overflow-x: hidden;   
+}
 .header{
     padding:5px 10px 10px 100px;
     text-align: left;
