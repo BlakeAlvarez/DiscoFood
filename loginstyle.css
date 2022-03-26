@@ -4,17 +4,15 @@ li{
 }
 
 
-
-
-.signi{
-    padding-left: 20 px; 
+.signin-prompt{
+    /* padding-left: 20 px;  */
     background-color: #00853E;
     border-radius: 5px;
     height: 45px;
     width: 360px;
     color:white;
     position: relative;
-    left: 370px;
+    /* left: 50% ; */
     top: 10px;
     font: Poppins semi bold;
     border: 3px solid #00853E;
@@ -22,21 +20,20 @@ li{
     font-weight: bold;
 }
 
-.signu{
+.signup-prompt{
     height: 45px;
-    padding-left: 20 px; 
+    /* padding-left: 20 px;  */
     background-color: #00853E;
     border-radius: 5px;
     width: 600px;
     color:white;
     position: relative;
     bottom: 155px;
-    left: 370px;
+    /* left: 370px; */
     font: Poppins semi bold;
     border: 3px solid #00853E;
     z-index: 10;
     font-weight: bold;
-
 }
 
 .signin {
@@ -45,9 +42,9 @@ li{
     height: 270px;
     border: 3px solid rgb(172, 164, 164);
     padding: 0px;
-    margin: 20px;
+    margin-right: 20px;
     position: relative;
-    left: 350px;
+    /* left: 350px; */
     bottom: 20px;
   }
 
@@ -57,9 +54,9 @@ li{
     height: 270px;
     border: 3px solid rgb(172, 164, 164);
     padding: 0px;
-    margin: 20px;
+    /* margin: 20px; */
     position: relative;
-    left: 350px;
+    /* left: 350px; */
     bottom: 185px;
   }
 
@@ -75,6 +72,20 @@ li{
     top: 20px;
     border-radius: 5px;
 
+  }
+
+  input[type=submit] {
+    padding: 10px;
+    width: 335px;
+    height: 45px;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    background-color: #00853E;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
   }
 
   input[type=password] {
@@ -104,35 +115,12 @@ li{
   border: none;
   font-family: Helvetica;
 }
-  .registrationButton:hover{
+  .registrationButton:hover, .submit1 :hover{
     color: grey;
     cursor: pointer;
     transition: .4s;
 }
 
-
-  input[type=submit] {
-    padding: 10px;
-    width: 335px;
-    height: 45px;
-    position: relative;
-    left: 10px;
-    top: 20px;
-    background-color: #00853E;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
-    
-  }
-
-
-
-  .submit1 :hover{
-    color: grey;
-    cursor: pointer;
-    transition: .4s;
-  }
 
   .footer-container{
     position: relative;
@@ -157,59 +145,166 @@ li{
  
 
 
-  /* @media only screen and (min-width: 375px){
-    .signi{
-      text-align: center;
-      background-color: #00853E;
-      border-radius: 5px;
-      color:white;
-      width: 190%;
-      position: relative;
-      left:50%;
-      top: 10px;
-      font: Poppins semi bold;
-      border: 3px solid #00853E;
-      z-index: 10;
-      font-weight: bold;
-}
+@media only screen and (min-width: 300px){
+  .signin-prompt{
+    width: 800px;
+    left: 50px ;
+    top: 10px;
+  }
 
-.signu{
-    height: 45px;
-    padding-left: 20 px; 
-    background-color: #00853E;
-    border-radius: 5px;
-    width: 600px;
-    color:white;
-    position: relative;
-    bottom: 155px;
-    left: 370px;
-    font: Poppins semi bold;
-    border: 3px solid #00853E;
-    z-index: 10;
-    font-weight: bold;
+  .signup-prompt{
+    width: 800px;
+    bottom: 0px;
+    left: 50px ;
+  }
 
-}
-
-.signin {
-    border-radius: 10px;
-    width: 190%;
-    height: 270px;
-    border: 3px solid rgb(172, 164, 164);
-    margin: 20px;
-    position: relative;
-    left: 55%;
+  .signin {
+    width: 800px;
+    left: 50px ;
     bottom: 20px;
   }
 
-.signup {
-    border-radius: 10px;
-    width: 600px;
-    height: 270px;
-    border: 3px solid rgb(172, 164, 164);
+  .signup {
+    width: 800px;
     padding: 0px;
-    margin: 20px;
-    position: relative;
-    left: 350px;
+    left: 50px ;
+    bottom: 30px;
+  }
+
+  input[type=text] {
+    padding: 15px;
+    width: 750px;
+  }
+
+  input[type=submit] {
+    padding: 15px;
+    width: 500px;
+    left: 150px;
+  }
+
+  input[type=password] {
+    padding: 15px;
+    width: 750px;
+  }
+  
+  .registrationButton{
+    padding: 20px;
+    padding-left: 225px;
+    padding-right: 225px;
+    left: 150px;
+  }
+
+}
+
+
+
+/* makes webpage responsive */
+@media only screen and (min-width: 1200px){
+  .signin-prompt{
+    width: 360px;
+    left: 15% ;
+  }
+
+  .signup-prompt{
+    width: 600px;
+    bottom: 155px;
+    left: 15% ;
+  }
+
+  .signin {
+    width: 360px;
+    margin-right: 20px;
+    left: 15% ;
+  }
+.signup {
+    width: 600px;
+    left: 15% ;
     bottom: 185px;
   }
-  } */
+  input[type=text] {
+    padding: 10px;
+    width: 310px;
+
+  }
+  input[type=submit] {
+    padding: 10px;
+    width: 335px;
+    left: 10px;
+  }
+
+  input[type=password] {
+    padding: 10px;
+    width: 310px;
+  }
+  
+  .registrationButton{
+    padding: 15px;
+    padding-left: 90px;
+    padding-right: 90px;
+    left: 170px;
+  }
+
+}
+
+@media only screen and (min-width: 1300px){
+  .signin-prompt{
+    left: 25% ;
+  }
+  .signup-prompt{
+    left: 25% ;
+  }
+  .signin {
+    left: 25% ;
+  }
+  .signup {
+    left: 25% ;
+  }
+}
+
+
+@media only screen and (min-width: 1400px){
+  .signin-prompt{
+    left: 30% ;
+  }
+  .signup-prompt{
+    left: 30% ;
+  }
+  .signin {
+    left: 30% ;
+  }
+  .signup {
+    left: 30% ;
+  }
+}
+
+@media only screen and (min-width: 1500px){
+  .signin-prompt{
+    left: 35% ;
+  }
+  .signup-prompt{
+    left: 35% ;
+  }
+  .signin {
+    left: 35% ;
+  }
+  .signup {
+    left: 35% ;
+  }
+}
+
+@media only screen and (min-width: 1600px){
+  .signin-prompt{
+    left: 40% ;
+  }
+  .signup-prompt{
+    left: 40% ;
+  }
+  .signin {
+    left: 40% ;
+  }
+  .signup {
+    left: 40% ;
+  }
+}
+
+
