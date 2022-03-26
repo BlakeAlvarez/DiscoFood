@@ -78,26 +78,6 @@ input[type=submit] {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer-container{
   position: relative;
   margin-top:201px;
@@ -114,4 +94,32 @@ input[type=submit] {
     color:#72B844; 
     transform: translateX(-5px);
     }
- 
+
+
+/* makes webpage responsive */
+ @media only screen and (min-width: 300px){
+  .createacc-sign{
+    left: 20%;
+  }
+  .createacc-container{
+    left: 20%;
+  }
+ }
+
+ @media only screen and (min-width: 1100px){
+  .createacc-sign{
+    left: 25%;
+  }
+  .createacc-container{
+    left: 25%;
+  }
+ }
+
+ @media only screen and (min-width: 1300px){
+  .createacc-sign{
+    left: 30%;
+  }
+  .createacc-container{
+    left: 30%;
+  }
+ }
