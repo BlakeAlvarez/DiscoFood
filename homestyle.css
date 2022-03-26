@@ -268,17 +268,17 @@ a:link {
     color: white;
     text-align: center;
   }
-  .meal_plan_overall{
+  .meal_plan_positioning{
     text-align: center;
     transform: translateY(-185px);
     padding-left: 0px;
     margin-right: -100px;
-  }
-  .meal_plan{
-    text-align: left;  
     padding-bottom: 25px;
+  }
+  .meal_plan_alignment{
+    text-align: left;  
     display: inline-block;
-   
+    
   }
   .meal_cube1{
     text-align: center;
