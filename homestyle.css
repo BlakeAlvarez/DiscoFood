@@ -501,5 +501,18 @@ a:link {
 
 
 
+/* makes navbar responsive */
+@media only screen and (min-width: 300px){
 
+  nav li {
+    margin-right: 30px ;
+  }
+
+}
+@media only screen and (min-width: 800px){
+
+  nav li {
+    margin-right: 70px ;
+  }
+}
 

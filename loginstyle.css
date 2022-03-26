@@ -292,6 +292,19 @@ li{
   }
 }
 
-
+@media only screen and (min-width: 1600px){
+  .signin-prompt{
+    left: 40% ;
+  }
+  .signup-prompt{
+    left: 40% ;
+  }
+  .signin {
+    left: 40% ;
+  }
+  .signup {
+    left: 40% ;
+  }
+}
 
 
