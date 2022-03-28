@@ -37,7 +37,17 @@
           "Name": "Fruit",
           "Price": "$0.50"
         }
-      ]
+      ],
+      "Users": [
+        {
+          "User_ID":"1",
+          "User_Type":"admin",
+          "User_Name":"Abrielle",
+          "User_Email":"AW@gmail.com",
+          "User_Username":"atw011",
+          "User_Password":"1234"
+        }
 
+      ]
 
   }
