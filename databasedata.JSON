@@ -3,13 +3,88 @@
     "Foods": [
       {
         "id": "1",
-        "Name": "Burger",
-        "Price": "$1.99"
+        "Name": "Single Chesseburger",
+        "Price": "$2.00"
       },
       {
         "id": "2",
-        "Name": "Chicken",
-        "Price": "$3.99"
+        "Name": "Double CheeseBurger",
+        "Price": "$3.00"
+      },
+      {
+        "id":"3",
+        "Name": "Triple Cheeseburger",
+        "Price": "$4.00"
+      },
+      {
+        "id":"4",
+        "Name":"Grilled Cheese",
+        "Price":"$2.00"
+      },
+      {
+        "id":"5",
+        "Name":"BLT",
+        "Price":"$3.25"
+      },
+      {
+        "id": "6",
+        "Name": "Chicken Tender Basket",
+        "Price": "$3.50"
+      },
+      {
+        "id": "7",
+        "Name": "Chicken Tenders each",
+        "Price": "$1.50"
+      },
+      {
+        "id":"8",
+        "Name": "French Fries Basket",
+        "Price": "$1.99"
+      },
+      {
+        "id":"9",
+        "Name":"Chicken Crunch Sandwhich",
+        "Price":"$4.00"
+      },
+      {
+        "id":"10",
+        "Name":"Spicy Chicken Sandwhich",
+        "Price":"$4.00"
+      },
+      {
+        "id": "11",
+        "Name": "Veggie Burger",
+        "Price": "$3.50"
+      },
+      {
+        "id": "12",
+        "Name": "Philly Cheesesteaks",
+        "Price": "$4.50"
+      },
+      {
+        "id":"13",
+        "Name": "Cheese Quesadillas",
+        "Price": "$3.00"
+      },
+      {
+        "id":"14",
+        "Name":"Chicken Quesadillas",
+        "Price":"$3.50"
+      },
+      {
+        "id":"15",
+        "Name":"Steak Quesadillas",
+        "Price":"$3.75"
+      },
+      {
+        "id": "16",
+        "Name": "Add Lectuce, Tomato, Onion",
+        "Price": "$0.50"
+      },
+      {
+        "id": "17",
+        "Name": "Add Bacon",
+        "Price": "$1.00"
       }
     ],
     "Drinks": [
