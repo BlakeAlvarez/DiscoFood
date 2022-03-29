@@ -1,6 +1,7 @@
 html, body, footer {
     margin: 0;
     padding: 0;  
+    overflow-x: hidden;
   }
 html {
   scroll-behavior: smooth;
@@ -8,15 +9,54 @@ html {
 p{
   font-family: Helvetica, Arial, sans-serif;
 }
-.header{
-    padding:5px 10px 10px 100px;
-    text-align: left;
-    background: #00853E;
-    color:white;
-    font-size: medium;
-    font-family: Helvetica, Arial, sans-serif;
-    line-height: 50%;
+
+.theme-btn {
+  appearance: button;
+  height: 75px;
+  width: 75px;
+  background-color: white;
+  
 }
+
+div[theme="dark"]{
+  background: rgb(44, 44, 44);
+  color: white;
+}
+[theme="dark"]{
+  background: rgb(44, 44, 44);
+  color: white;
+}
+
+.header{
+  padding:5px 10px 10px 100px;
+  text-align: left;
+  background: #00853E;
+  color:white;
+  font-size: medium;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 50%;
+}
+
+.discoPerks, .hours{
+  font-size: xxx-large; 
+  font-family: serif; 
+  color: rgb(43,83,54);
+}
+
+.marketGrill{
+  color: rgb(237,88,41); 
+  font-size: x-large;
+}
+
+
+
+.section2{
+  text-align: center; 
+  padding-right: 640px; 
+  background-color: rgb(249,249,249); 
+  transform: translateY(-185px);
+}
+
 
 
 /* make navbar sticky */
@@ -439,7 +479,7 @@ a:link {
 #topButton {
   display: none;
   position: fixed;
-  right: 45px;
+  right: 75px;
   bottom: 65px;
   z-index: 10000;
   border: 2px solid white;
@@ -493,5 +533,80 @@ a:link {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-  
+}
+
+#accessBtn {
+  display: block;
+  background-color: transparent;
+  position: fixed;
+  border:none;
+  right: 75px;
+  bottom: 500px;
+  z-index: 10000;
+  outline: none;
+  cursor: pointer;
+}
+
+.accessMenu{
+  height: 50%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 25%;
+  bottom: -25%;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.accessMenu-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.accessMenu .closeBtn {
+  position: absolute;
+  color: white;
+  top: 7%;
+  right: 0;
+  font-size: 72px;
+  margin-right: 50px;
+}
+
+.accessMenu .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.accessMenu .button {
+  padding: 8px 8px 8px 32px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  transition: 0.3s;
+
+  /* border: 1px solid transparent;
+  border-radius: 3px;
+  border-color: #0095ff;
+  box-shadow: 0 0 0 0 rgba(0,149,255,0);
+  color: #07C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; */
+
+
+}
+.accessMenu button:hover{
+  color: #f1f1f1;
+
+  /* background-color: rgba(0,119,204,0.05);
+  color: #005999; */
+
 }
