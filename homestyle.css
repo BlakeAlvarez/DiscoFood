@@ -27,6 +27,9 @@ div[theme="dark"]{
   color: white;
 }
 
+body{
+ overflow-x: hidden;   
+}
 .header{
   padding:5px 10px 10px 100px;
   text-align: left;
@@ -64,7 +67,11 @@ div[theme="dark"]{
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 3;
+}
+
+nav{
+  white-space: nowrap;
 }
 
 /* removes bullet points from navbar */
@@ -75,11 +82,11 @@ nav ul {
 }
 /* styles list items of the navbar */
 nav li {
-  vertical-align: baseline;
+  /* vertical-align: baseline; */
   display: inline-block ;
   font-size: medium;
-  font-family: helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;
-  margin-right: 70px ;
+  font-family:  Helvetica, Arial, sans-serif;
+  width: 7%;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -92,7 +99,7 @@ nav .login{
   padding-right: 50px;
   border-radius: 0px;
   background-color: #72B844;
-  font-size: small;
+  font-size: medium;
   
 }
 
@@ -305,17 +312,17 @@ a:link {
     color: white;
     text-align: center;
   }
-  .meal_plan_overall{
+  .meal_plan_positioning{
     text-align: center;
     transform: translateY(-185px);
     padding-left: 0px;
     margin-right: -100px;
-  }
-  .meal_plan{
-    text-align: left;  
     padding-bottom: 25px;
+  }
+  .meal_plan_alignment{
+    text-align: left;  
     display: inline-block;
-   
+    
   }
   .meal_cube1{
     text-align: center;
@@ -610,3 +617,60 @@ a:link {
   color: #005999; */
 
 }
+  
+}
+
+
+
+/* makes navbar responsive */
+@media only screen and (min-width: 100px){
+  nav li {
+    position: relative;
+    right: 45px;
+    width: 20%;
+  }
+  nav .login{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media only screen and (min-width: 500px){
+  nav li {
+    position: relative;
+    right: 0px;
+    width: 20%;
+  }
+  nav .login{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media only screen and (min-width: 800px){
+  nav li {
+    position: relative;
+    right: 0px;
+    width: 15%;
+  }
+} 
+@media only screen and (min-width: 1000px){
+  nav li {
+    position: relative;
+    right: 0px;
+    width: 12%;
+  }
+} 
+@media only screen and (min-width: 1200px){
+  nav li {
+    position: relative;
+    right: 0px;
+    width: 10%;
+  }
+} 
+@media only screen and (min-width: 1400px){
+  nav li {
+    position: relative;
+    right: 0px;
+    width: 7.5%;
+  }
+} 
+

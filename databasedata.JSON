@@ -37,7 +37,26 @@
           "Name": "Fruit",
           "Price": "$0.50"
         }
+      ],
+      "Users": [
+        {
+          "User_ID":"1",
+          "User_Type":"admin",
+          "User_Name":"Abrielle",
+          "User_Email":"AW@gmail.com",
+          "User_Username":"atw011",
+          "User_Password":"1234"
+        }
+      ],
+      "Reviews": [
+        {
+          "Review_ID":"1",
+          "User_ID":"1",
+          "Review_Description":"Sample Review",
+          "Review_Rating":"5",
+          "Review_Date":"3-28-22",
+          "Review_Page":"Food"
+        }
       ]
-
 
   }
