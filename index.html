@@ -134,14 +134,14 @@
     <p style = "font-size: xxx-large; font-family:serif; color: rgb(43,83,54);margin-bottom: 0px;margin-top: 10px;">Meal Plan</p>
     <p style="margin-bottom:50px;text-align:left;font-family: Helvetica, Arial, sans-serif;">Discovery Perks Market & Grill accepts Flex, Declining Balance, cash, <br>credit cards, and Apple Pay.</p>
     <p style="font-size:xx-large; font-family:serif;font-weight:bold;color:#72b844;margin-bottom: 50px;">Discovery Perks Grill Combo Meal</p>
-    <div class="meal_cube1">
+    <div theme = "light" class="meal_cube1">
     <p style="font-family: Helvetica;font-size: x-large;"><b>Daily entrée</b></p>
     <img src="Images/Home/PlusSign.png">
     <p style="font-family: Helvetica;font-size: x-large;"><b>Side</b></p>
     <img src="Images/Home/PlusSign.png">
     <p style="font-family: Helvetica;font-size: x-large;"><b>Fountain Beverage</b></p>
     </div>
-    <div class="meal_cube2">
+    <div theme = "light" class="meal_cube2">
     <p style="font-size: large;font-family: Helvetica, Arial, sans-serif;">These Meal Plan swipes can be used at Discovery Park to purchase a Discovery Perks Grill Combo Meal:</p>
     <a id="meal_cube2_light_links" href="https://dining.unt.edu/plans/#Five">Five to Thrive</a>
     <a id="meal_cube2_dark_links" href="https://dining.unt.edu/plans/#Eight">Eight's Enough</a>
@@ -167,10 +167,10 @@
     <script type="text/javascript" src="/DiscoFood/home.js"></script>
 
     <div id="accessMenu" class="accessMenu">
-        <a href="javascript:void(0)" class="closeBtn" onclick="closeAccessMenu()">&times;</a>
-        <div class = "test">
-            <div id="switch-theme" class="theme-btn"> <img src="/DiscoFood/Images/Accessibility/lightmode.png" width="75px" height="75px"> </div>
-        </div>
+        <div class="closeBtn" onclick="closeAccessMenu()" >&times;</div>
+        
+        <a id="switch-theme" class="theme-btn"> <img src="/DiscoFood/Images/Accessibility/lightmode.png" width="75px" height="75px"> </a>
+        
     </div>
 
     <button onclick = "openAccessMenu()" id = "accessBtn" title = "Accessibility Features"> 
