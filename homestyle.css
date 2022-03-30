@@ -11,6 +11,7 @@ p{
 body{
  overflow-x: hidden;   
 }
+
 .header{
     padding:5px 10px 10px 100px;
     text-align: left;
@@ -21,6 +22,23 @@ body{
     line-height: 50%;
 }
 
+.discoPerks, .hours{
+  font-size: xxx-large; 
+  font-family: serif; 
+  color: rgb(43,83,54);
+}
+
+.marketGrill{
+  color: rgb(237,88,41); 
+  font-size: x-large;
+}
+
+.section2{
+  text-align: center; 
+  padding-right: 640px; 
+  background-color: rgb(249,249,249); 
+  transform: translateY(-185px);
+}
 
 /* make navbar sticky */
 .navbar{
@@ -293,7 +311,9 @@ a:link {
     margin-top: 100px;
     margin-right: 130px;
     margin-bottom: 30px;
-  
+    border-radius: 25px;
+    border: 2px solid #72b844;
+
   }
   .meal_cube2{
     text-align: center;
@@ -303,6 +323,8 @@ a:link {
     margin-left: 0px;
     width: 600px;
     transform: translateY(-100px);
+    border-radius: 25px;
+    border: 2px solid #72b844;
   }
   #meal_cube2_light_links:link {
     font-size:xx-large; 
@@ -503,7 +525,79 @@ a:link {
   
 }
 
+#accessBtn {
+  display: block;
+  background-color: transparent;
+  position: fixed;
+  border:none;
+  right: 200px;
+  bottom: 500px;
+  z-index: 10000;
+  outline: none;
+  cursor: pointer;
+}
 
+.accessMenu{
+  height: 50%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 25%;
+  bottom: -25%;
+  background-color: rgb(0,0,0); 
+  overflow-x: hidden; 
+  transition: 0.5s; 
+  overflow-y: auto;
+}
+
+.accessMenu-content {
+  position: relative;
+  top: 25%;
+  text-align: center;
+  margin: 30px;
+  float: left;
+  height: 75px;
+  width: 75px; 
+}
+
+.accessMenu .closeBtn {
+  position: absolute;
+  color: white;
+  top: 7%;
+  right: 0;
+  font-size: 72px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.accessMenu > a{
+  width: 75px;
+  height: 75px;
+  float: left;
+  background: white;   
+  margin: 25px;
+}
+
+.accessMenu button:hover, a:hover{
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.theme-btn {
+  appearance: button;
+  height: 75px;
+  width: 75px;
+  background-color: white;
+}
+div[theme="dark"]{
+  background: rgb(44, 44, 44);
+  color: white;
+}
+[theme="dark"]{
+  background: rgb(44, 44, 44);
+  color: white;
+}
 
 /* makes navbar responsive */
 @media only screen and (min-width: 100px){
