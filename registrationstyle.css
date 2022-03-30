@@ -56,7 +56,7 @@ input[type=password] {
   border-radius: 5px;
 }
 
-input[type=submit] {
+button{
   padding: 10px;
   width: 335px;
   height: 45px;
@@ -71,7 +71,7 @@ input[type=submit] {
   font-size: large;
 }
 
-.submit1 :hover{
+button:hover{
   color: grey;
   cursor: pointer;
   transition: .4s;
