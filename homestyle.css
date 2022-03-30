@@ -11,6 +11,22 @@ p{
 body{
  overflow-x: hidden;   
 }
+
+.theme-btn {
+  appearance: button;
+  height: 75px;
+  width: 75px;
+  background-color: white;
+}
+div[theme="dark"]{
+  background: rgb(44, 44, 44);
+  color: white;
+}
+[theme="dark"]{
+  background: rgb(44, 44, 44);
+  color: white;
+}
+
 .header{
     padding:5px 10px 10px 100px;
     text-align: left;
@@ -21,6 +37,23 @@ body{
     line-height: 50%;
 }
 
+.discoPerks, .hours{
+  font-size: xxx-large; 
+  font-family: serif; 
+  color: rgb(43,83,54);
+}
+
+.marketGrill{
+  color: rgb(237,88,41); 
+  font-size: x-large;
+}
+
+.section2{
+  text-align: center; 
+  padding-right: 640px; 
+  background-color: rgb(249,249,249); 
+  transform: translateY(-185px);
+}
 
 /* make navbar sticky */
 .navbar{
@@ -503,7 +536,76 @@ a:link {
   
 }
 
+#accessBtn {
+  display: block;
+  background-color: transparent;
+  position: fixed;
+  border:none;
+  right: 200px;
+  bottom: 500px;
+  z-index: 10000;
+  outline: none;
+  cursor: pointer;
+}
 
+.accessMenu{
+  height: 50%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 25%;
+  bottom: -25%;
+  background-color: rgb(0,0,0); 
+  overflow-x: hidden; 
+  transition: 0.5s; 
+}
+
+.accessMenu-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px; 
+}
+
+.accessMenu.closeBtn {
+  position: absolute;
+  color: white;
+  top: 7%;
+  right: 0;
+  font-size: 72px;
+  margin-right: 50px;
+}
+
+.accessMenu.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.accessMenu.button {
+  padding: 8px 8px 8px 32px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  transition: 0.3s;
+
+  /* border: 1px solid transparent;
+  border-radius: 3px;
+  border-color: #0095ff;
+  box-shadow: 0 0 0 0 rgba(0,149,255,0);
+  color: #07C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; */
+}
+
+.accessMenu button:hover{
+  color: #f1f1f1;
+}
 
 /* makes navbar responsive */
 @media only screen and (min-width: 100px){
