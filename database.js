@@ -26,13 +26,13 @@ function writeUserData() {
   //var usersTable = firebase.database().ref('Users');
   // var userId = Object.keys(db.Users).length+1;
   
-  set(ref(db, "Users/"+ Id), {
-    User_Email: email.value,
-    User_ID: Id.value,
-    User_Name: name.value,
-    User_Password: password.value,
+  set(ref(db, "Users/"+ "Id"), {
+    User_Email: "email.value",
+    User_ID: "Id.value",
+    User_Name: "name.value",
+    User_Password: "password.value",
     // User_Type: type,
-    User_Username: username.value
+    User_Username: "username.value"
   })
   .then(()=>{
     location.href = "index.html";
@@ -42,8 +42,8 @@ function writeUserData() {
     alert("ERROR:Unsuccessful registration");
   });
 }
-window.onload=function(){
-    document.getElementById("register").addEventListener('click', ()=>{
-      writeUserData();
-    });
-}
+
+document.getElementById("register").addEventListener('click', ()=>{
+  writeUserData();
+});
+
