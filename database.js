@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, onValue} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, onValue, set} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyBaJmGl7QLJTiJ6ZnkKNCbfo-qT_Qagymk",
@@ -13,29 +13,36 @@ const firebaseConfig = {
     measurementId: "G-VVER4EJNW2"
   };
 const app = initializeApp(firebaseConfig);
+const db = getDatabase();
 
+var Id = document.getElementById("ID");
+var name = document.getElementById("name");
+var email = document.getElementById("email");
+var username = document.getElementById("username");
+var password = document.getElementById("password");
+var type="user";
 
-
-// function writeUserData(name, email, username, password) {
-//   const db = getDatabase();
-//   userId = Object.keys(users).length+1;
-//   var type="user";
-//   set(ref(db, 'users/' + userId), {
-//     User_Name: name,
-//     User_Email: email,
-//     User_Type : type,
-//     User_Username : username,
-//     User_Password : password
-//   });
-// }
-
-// document.getElementById("register").addEventListener("click", ()=>{
-//   const name = document.getElementById("name").value;
-//   const email = document.getElementById("email").value;
-//   const username = document.getElementById("username").value;
-//   const password = document.getElementById("password").value;
-//   writeUserData(name, email, username, password);
-//   location.href = "index.html";
-//   alert("Successful registration");
+function writeUserData() {
+  //var usersTable = firebase.database().ref('Users');
+  // var userId = Object.keys(db.Users).length+1;
   
-// });
+  set(ref(db, "Users/"+ Id), {
+    User_Email: email.value,
+    User_ID: Id.value,
+    User_Name: name.value,
+    User_Password: password.value,
+    // User_Type: type,
+    User_Username: username.value
+  })
+  .then(()=>{
+    location.href = "index.html";
+    alert("Successful registration");
+  })
+  .catch((error)=>{
+    alert("ERROR:Unsuccessful registration");
+  });
+}
+
+document.getElementById("register").addEventListener('click', ()=>{
+  writeUserData();
+});

@@ -32,6 +32,8 @@
 input[type=text] {
   background-color: #f1f0f0;
   padding: 10px;
+  margin-bottom: 7px;
+  margin-top: 7px;
   width: 370px;
   height: 20px;
   font-size: large;
@@ -45,6 +47,8 @@ input[type=text] {
 
 input[type=password] {
   background-color: #f1f0f0;
+  margin-bottom: 25px;
+  margin-top: 7px;
   padding: 10px;
   border: .1px solid rgb(172, 164, 164);
   width: 370px;
