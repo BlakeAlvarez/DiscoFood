@@ -42,7 +42,8 @@ function writeUserData() {
     alert("ERROR:Unsuccessful registration");
   });
 }
-
-document.getElementById("register").addEventListener('click', ()=>{
-  writeUserData();
-});
+window.onload=function(){
+    document.getElementById("register").addEventListener('click', ()=>{
+      writeUserData();
+    });
+}
