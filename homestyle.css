@@ -465,10 +465,11 @@ a:link {
 .sign_up:hover{
   color: grey;
 }
+
 #topButton {
   display: none;
   position: fixed;
-  right: 45px;
+  right: 100px;
   bottom: 65px;
   z-index: 10000;
   border: 2px solid white;
@@ -525,16 +526,24 @@ a:link {
   
 }
 
-#accessBtn {
-  display: block;
-  background-color: transparent;
+/* might need later */
+/* #accessBtn {
+
+} */
+
+#accessBtn img {
+  height: 55px;
+  width: 55px;
+  border-radius: 30px;
+  background-color: #00853E;
   position: fixed;
   border:none;
-  right: 200px;
+  right: 100px;
   bottom: 500px;
   z-index: 10000;
   outline: none;
   cursor: pointer;
+  text-align:center
 }
 
 .accessMenu{
