@@ -25,7 +25,7 @@ function writeUserData() {
   var email = document.getElementById("email").value;
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
-  const postListRef = ref(db, 'Users');
+  const postListRef = ref(db, 'Users/'); //Potential Solution 1
   const newPostRef = push(postListRef);
   set(newPostRef, {
     User_Email: email,
@@ -37,7 +37,7 @@ function writeUserData() {
     location.href = "index.html";
     alert("Successful registration");
     const key = newPostRef.key
-    alert("Welcome " + name+"!" +"Your key is: " + key);
+    alert("Welcome " + name+"!" +"Your key is: " + key); //Test Statement, I will delete/modify this statement later
 
   })
   .catch((error)=>{
