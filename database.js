@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, onValue, set} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { getDatabase, ref, push, onValue, set} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
 
 
 const firebaseConfig = {
@@ -15,33 +15,37 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 
-var Id = document.getElementById("ID");
-var name = document.getElementById("name");
-var email = document.getElementById("email");
-var username = document.getElementById("username");
-var password = document.getElementById("password");
-var type="user";
+
+  
 
 function writeUserData() {
   //var usersTable = firebase.database().ref('Users');
   // var userId = Object.keys(db.Users).length+1;
-  
-  set(ref(db, "Users/"+ "Id"), {
-    User_Email: "email.value",
-    User_ID: "Id.value",
-    User_Name: "name.value",
-    User_Password: "password.value",
-    // User_Type: type,
-    User_Username: "username.value"
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  const postListRef = ref(db, 'Users');
+  const newPostRef = push(postListRef);
+  set(newPostRef, {
+    User_Email: email,
+    User_Name: name,
+    User_Password: password,
+    User_Username: username
   })
   .then(()=>{
     location.href = "index.html";
     alert("Successful registration");
+    const key = newPostRef.key
+    alert("Welcome " + name+"!" +"Your key is: " + key);
+
   })
   .catch((error)=>{
     alert("ERROR:Unsuccessful registration");
   });
+
 }
+
 
 document.getElementById("register").addEventListener('click', ()=>{
   writeUserData();
