@@ -607,6 +607,16 @@ div[theme="dark"]{
   background: rgb(44, 44, 44);
   color: white;
 }
+.Grill_Section{
+  display:block;
+  height: 1000px;
+  
+}
+.FoodReviewsSection{
+  display:block;
+  height: 1000px;
+  margin-top: 20px;
+}
 
 /* makes navbar responsive */
 @media only screen and (min-width: 100px){
@@ -637,6 +647,7 @@ div[theme="dark"]{
     right: 0px;
     width: 15%;
   }
+  
 } 
 @media only screen and (min-width: 1000px){
   nav li {
@@ -657,6 +668,21 @@ div[theme="dark"]{
     position: relative;
     right: 0px;
     width: 7.5%;
+  }
+}
+@media only screen and (max-width:900px){
+  .Grill_Section{
+    display:block;
+    height: 1000px;
+    transform: translateX(-400px); 
+    
+  
+  }
+  .FoodReviewsSection{
+    display:block;
+    height: 1000px;
+    transform: translateX(-400px);
+    margin-top: 90px;
   }
 } 
 
