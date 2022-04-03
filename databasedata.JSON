@@ -126,9 +126,41 @@
       "Reviews": [
         {
           "Review_ID":"1",
-          "User_ID":"1",
-          "Review_Description":"Sample Review",
+          "User_Name":"User 1",
+          "Review_Description":"Sample Review 1",
           "Review_Rating":"5",
+          "Review_Date":"3-28-22",
+          "Review_Page":"Food"
+        },
+        {
+          "Review_ID":"2",
+          "User_Name":"User 2",
+          "Review_Description":"Sample Review 2",
+          "Review_Rating":"4",
+          "Review_Date":"3-28-22",
+          "Review_Page":"Food"
+        },
+        {
+          "Review_ID":"3",
+          "User_Name":" User 3",
+          "Review_Description":"Sample Review 3",
+          "Review_Rating":"3",
+          "Review_Date":"3-28-22",
+          "Review_Page":"Food"
+        },
+        {
+          "Review_ID":"4",
+          "User_Name":"User 4",
+          "Review_Description":"Sample Review 4",
+          "Review_Rating":"2",
+          "Review_Date":"3-28-22",
+          "Review_Page":"Food"
+        },
+        {
+          "Review_ID":"5",
+          "User_Name":"User 5",
+          "Review_Description":"Sample Review 5",
+          "Review_Rating":"1",
           "Review_Date":"3-28-22",
           "Review_Page":"Food"
         }
