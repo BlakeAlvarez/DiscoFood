@@ -614,8 +614,49 @@ div[theme="dark"]{
 }
 .FoodReviewsSection{
   display:block;
-  height: 1000px;
+  height: auto;
+  width: auto;
   margin-top: 20px;
+  background-color: #fafafa;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("Images/Food/avesta-plate_back1_edited.png");
+}
+.rateDisplay {
+  float: left;
+  height: 46 px;
+  padding: 0 10px;
+  
+}
+.rateDisplay:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rateDisplay:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  
+  font-size:15px;
+  color: #72B844;
+}
+.rateDisplay:not(:checked) > label:before {
+  content: '★ ';
+}
+.rateDisplay > input:checked ~ label {
+  color: #72B844;    
+}
+.rateDisplay:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #72B844;  
+}
+.rateDisplay > input:checked + label:hover,
+.rateDisplay > input:checked + label:hover ~ label,
+.rateDisplay > input:checked ~ label:hover,
+.rateDisplay > input:checked ~ label:hover ~ label,
+.rateDisplay > label:hover ~ input:checked ~ label {
+  color: #72B844;
 }
 
 /* makes navbar responsive */
@@ -680,9 +721,13 @@ div[theme="dark"]{
   }
   .FoodReviewsSection{
     display:block;
-    height: 1000px;
+    height:auto;
+    width: 200%;
     transform: translateX(-400px);
     margin-top: 90px;
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-image: url("Images/Food/avesta-plate_back1_edited.png");
   }
 } 
 

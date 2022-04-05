@@ -4,6 +4,7 @@
 <script type="module" src="database.js"></script>
 <script type="module" src="food.js"> </script>
 <link rel="stylesheet" href="homestyle.css">
+<link rel="stylesheet" href="food.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
@@ -35,12 +36,54 @@
     <div class="Grill_Section" >
         <h1 style="margin-left:400px;text-align:left;color: #00853e;">Grill</h1>
         <div id="FoodList" ></div><!--RENAME ID LATER-->
-        <img src="Images/Food/FoodSign.png" style="position: relative;transform: translate(1000px,-700px);">
+
     </div>
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://media.istockphoto.com/photos/picturesque-morning-in-plitvice-national-park-colorful-spring-scene-picture-id1093110112?k=20&m=1093110112&s=612x612&w=0&h=3OhKOpvzOSJgwThQmGhshfOnZTvMExZX2R91jNNStBY=" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a id="prevSlide" class="prev">&#10094;</a>
+        <a id="nextSlide" class="next">&#10095;</a>
+        
+    </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+
+
 
     <div class="FoodReviewsSection">
     <h1 style="margin-left:400px;text-align:left;color: #00853e;">Reviews</h1>
+    <div id="ReviewList"></div>
+   <!-- INSERT MORE REVIEWS LINK (POPUP) HERE<p style="margin-left: 470px;margin-top: 30px;margin-bottom:0px;">More Reviews</p> -->
+   <!--INSERT WRITE A REVIEW BUTTON HERE-->
+   <br>
     </div>
+ 
     
 </body>
 <div class = "footer-container">
