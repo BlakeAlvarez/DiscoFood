@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="module" src="database.js"></script>
 <script type="module" src="food.js"> </script>
 <link rel="stylesheet" href="homestyle.css">
@@ -79,7 +80,19 @@
     <div class="FoodReviewsSection">
     <h1 style="margin-left:400px;text-align:left;color: #00853e;">Reviews</h1>
     <div id="ReviewList"></div>
-   <!-- INSERT MORE REVIEWS LINK (POPUP) HERE<p style="margin-left: 470px;margin-top: 30px;margin-bottom:0px;">More Reviews</p> -->
+
+    <p id="MoreReviewsLink" onclick="DisplayMoreReviews()">More Reviews</p>
+    
+    <div id="MoreReviewsModal" class="MoreReviewsModal">
+      <div class="MoreReviewsModal-content">
+        <span class="close" id="CloseMoreReviewsModal">&times;</span>
+        <h1 style="margin-left:0px;text-align:left;color: #00853e;">Food Reviews</h1>
+        <hr>
+        <div id="ReviewList2" style="margin-left:-400px;"></div>
+      </div>
+    </div>
+    
+
    <!--INSERT WRITE A REVIEW BUTTON HERE-->
    <br>
     </div>
