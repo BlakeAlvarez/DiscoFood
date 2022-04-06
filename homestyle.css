@@ -618,20 +618,22 @@ div[theme="dark"]{
   width: auto;
   margin-top: 20px;
   background-color: #fafafa;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   background-image: url("Images/Food/avesta-plate_back1_edited.png");
+  
 }
 #MoreReviewsLink{
   display: block;
-  margin-left: 470px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-left: 410px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   color: black;
   text-decoration: underline;
   cursor: pointer;
+  font-size: 1.2em;
 }
-.MoreReviewsModal{
+.MoreReviewsModal,.WriteReviewsModal{
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -646,7 +648,7 @@ div[theme="dark"]{
 }
 
 /* Modal Content */
-.MoreReviewsModal-content{
+.MoreReviewsModal-content,.WriteReviewsModal-content{
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -669,7 +671,42 @@ div[theme="dark"]{
   text-decoration: none;
   cursor: pointer;
 }
-
+.WriteAReviewButton {
+  background-color: #72b844;
+  border: none;
+  color: white;
+  padding: 15px 52px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 410px;
+  margin-bottom: 50px;
+}
+.WriteReviewsModal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.WriteReviewsModal-content{
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 600px;
+  height: 500px;
+  overflow: hidden; 
+}
 .rateDisplay {
   float: left;
   height: 46 px;
@@ -706,6 +743,114 @@ div[theme="dark"]{
 .rateDisplay > label:hover ~ input:checked ~ label {
   color: #72B844;
 }
+.MakeRating {
+  float: left;
+  height: 46 px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.MakeRating:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.MakeRating:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor: pointer;
+  font-size:40px;
+  color: #ccc;
+}
+.MakeRating:not(:checked) > label:before {
+  content: '★ ';
+}
+.MakeRating > input:checked ~ label {
+  color: #72b844;    
+}
+.MakeRating:not(:checked) > label:hover,
+.MakeRating:not(:checked) > label:hover ~ label {
+  color: #72b844;  
+}
+.MakeRating > input:checked + label:hover,
+.MakeRating > input:checked + label:hover ~ label,
+.MakeRating > input:checked ~ label:hover,
+.MakeRating > input:checked ~ label:hover ~ label,
+.MakeRating > label:hover ~ input:checked ~ label {
+  color: #72B844;
+}
+.FoodReviewInput{
+  display: block;
+  margin-top: 80px;
+  margin-left:100px;
+  width:400px ;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 80px;
+  padding-top: 5px;
+  background-color: #F6F5F5;
+  border: none;
+  border-bottom:5px solid #00853E;
+  outline: none;
+  font-size: 1em;
+  resize: none;
+}
+.FoodReviewInput:focus::placeholder{
+  color: transparent;
+  white-space:normal;
+  font-size: 1em;
+  padding-left: 2px;
+  padding-top: 5px;
+  outline: none;
+  resize: none;
+}
+.FoodReviewInput::placeholder{
+  color: black;
+  white-space:normal;
+  font-size: 1em;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  outline: none;
+  white-space:normal;
+  resize: none;
+}
+#CloseWriteAReviewPopup {
+  background-color: white;
+  border: none;
+  color:#00853E;
+  border: 2px solid #00853E;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 260px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+#SubmitFoodReview{
+  background-color: #00853E;
+  border: none;
+  color: white;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
 
 /* makes navbar responsive */
 @media only screen and (min-width: 100px){
@@ -785,6 +930,10 @@ div[theme="dark"]{
     border: 1px solid #888;
     width: 500px;
   }
+  .WriteAReview{
+    margin-left: 0px;
+  }
+  
   
 } 
 
