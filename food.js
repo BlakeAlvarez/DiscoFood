@@ -607,6 +607,7 @@ document.getElementById("ReviewList2").appendChild(AllReviews);
 document.getElementById("CloseWriteAReviewPopup").addEventListener("click", CloseWriteReviewsPopup);
 var WriteReviewsPopup = document.getElementById("WriteReviewsModal");
 function DisplayWriteReviewsPopup() {
+  document.getElementById("Usernamebox").innerHTML = GetUser;
   WriteReviewsPopup.style.display ="block";
   document.querySelector("body").style.overflow = 'hidden'; //Stops Body Scroll
   var errorcheck = document.getElementById("ratingerror");
@@ -619,6 +620,7 @@ function CloseWriteReviewsPopup(){
   document.querySelector("body").style.overflow = 'visible'; //Enables Body Scroll
   document.getElementById("FoodReviewInput").value='';
 }
+
 document.getElementById("SubmitFoodReview").addEventListener("click",AddReview);
 function AddReview(){
   var rating;
