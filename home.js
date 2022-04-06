@@ -1,3 +1,7 @@
+var something = sessionStorage.getItem("LOGGED_IN");
+if(something=="true")
+document.getElementById("UserButton").innerHTML = "Manage Account";
+
 topBtn = document.getElementById("topButton")
 
 window.onscroll = function() {

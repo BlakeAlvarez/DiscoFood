@@ -3,6 +3,7 @@
 <head>
     <!-- <meta name="viewport" content="width=device-width, intitial-scale=1.0"> -->
     <script type="module" src="database.js"></script>
+    <script type="module" src="login.js"></script>
     <link rel="stylesheet" href="homestyle.css">
     <link rel="stylesheet" href="loginstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,10 +20,10 @@
             <li>
                 <h1 class="signin-prompt">Sign In</h1>
                 <div class="signin">
-                    <form method="post" action="">
-                        <p class="input"><input type="text" name="login" value="" placeholder="Username"></p>
-                        <p class="input"><input type="password" name="password" value="" placeholder="Password"></p>
-                        <p class="submit1"><input type="submit" name="commit" value="SIGN IN"></p>
+                    <form onsubmit="chekUser()">
+                        <p class="input"><input id= "InputUsername" type="text" name="login" value="" placeholder="Username"></p>
+                        <p class="input"><input id="InputPassword" type="password" name="password" value="" placeholder="Password"></p>
+                        <p class="submit1"><input id="SignIn" type="submit" name="commit" value="SIGN IN"></p>
                     </form>
                 </div>
             </li>

@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { getDatabase, ref, push, onValue, set}from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+//import { LOGGED_IN } from "/database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBaJmGl7QLJTiJ6ZnkKNCbfo-qT_Qagymk",
@@ -12,7 +13,22 @@ const firebaseConfig = {
     measurementId: "G-VVER4EJNW2"
   };
 const app = initializeApp(firebaseConfig);
-
+var something = sessionStorage.getItem("LOGGED_IN");
+var GetUser = sessionStorage.getItem("USER");
+//if(GetUser!=null)
+//alert("Hello" + GetUser +" From Food")
+if(something=="true"){
+  document.getElementById("WriteAReviewButton").addEventListener("click", DisplayWriteReviewsPopup);
+  document.getElementById("UserButton").innerHTML="Manage Account";
+  }
+  else
+  {
+    document.getElementById("WriteAReviewButton").addEventListener("click", GoToLogin);
+    
+  }
+  function GoToLogin(){
+   window.location.href = "login.html";
+  }
 const db = getDatabase();
 const Menu = ref(db);
 //Lines 19-43 Creates Foods List that is displayed on Food Page
@@ -88,11 +104,12 @@ for(let x in data.Reviews){
   
     if(data.Reviews[x].Review_Page =="Food"){
     var Review = document.createElement('div');
-    Review.style.cssText="height:auto;width:500px;transform:translateX(400px);margin-bottom:20px;";
+    Review.style.cssText="height:auto;width:500px;transform:translateX(400px);margin-bottom:20px;"; 
     var Icon = document.createElement('div');
-    Icon.style.cssText="height:70px;width:70px;display:inline-block";
+    Icon.style.cssText="height:70px;width:70px;display:inline-block;";
     var img = document.createElement('img');
     img.src = 'Images/Food/Small_Icon.svg';
+    img.style.cssText=" width:100%;height: 100%;max-width: 500px;max-height: 500px;vertical-align: middle;";
     Icon.appendChild(img);
     Review.appendChild(Icon);
     let Name = document.createElement("p");	// Create a new element
@@ -362,6 +379,7 @@ for(let x in data.Reviews){
     Icon.style.cssText="height:70px;width:70px;display:inline-block";
     var img = document.createElement('img');
     img.src = 'Images/Food/Small_Icon.svg';
+    img.style.cssText=" width:100%;height: 100%;max-width: 500px;max-height: 500px;vertical-align: middle;";
     Icon.appendChild(img);
     Review.appendChild(Icon);
     let Name = document.createElement("p");	// Create a new element
@@ -583,3 +601,69 @@ for(let x in data.Reviews){
 
 });
 document.getElementById("ReviewList2").appendChild(AllReviews);
+
+
+
+document.getElementById("CloseWriteAReviewPopup").addEventListener("click", CloseWriteReviewsPopup);
+var WriteReviewsPopup = document.getElementById("WriteReviewsModal");
+function DisplayWriteReviewsPopup() {
+  WriteReviewsPopup.style.display ="block";
+  document.querySelector("body").style.overflow = 'hidden'; //Stops Body Scroll
+  var errorcheck = document.getElementById("ratingerror");
+  errorcheck.style.display='none';
+  var errorcheck2 = document.getElementById("reviewerror");
+     errorcheck2.style.display='none';
+}
+function CloseWriteReviewsPopup(){
+  WriteReviewsPopup.style.display ="none";
+  document.querySelector("body").style.overflow = 'visible'; //Enables Body Scroll
+  document.getElementById("FoodReviewInput").value='';
+}
+document.getElementById("SubmitFoodReview").addEventListener("click",AddReview);
+function AddReview(){
+  var rating;
+  var Review = document.getElementById("FoodReviewInput").value;
+  var ele = document.getElementsByName('MakeRating');
+              
+           for(let i = 0; i < ele.length; i++) {
+              if(ele[i].checked==true)
+                      rating = ele[i].value;
+           }
+      
+  if(rating==null){
+    var errorcheck = document.getElementById("ratingerror");
+     errorcheck.style.display='block';
+  }
+  
+  if(Review==""){
+    var errorcheck = document.getElementById("reviewerror");
+     errorcheck.style.display='block';
+  }
+  if((Review!="") && (rating!=null)){
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    const postListRef = ref(db, 'Reviews/'); //Potential Solution 1
+      const newPostRef = push(postListRef);
+      set(newPostRef, {
+        Review_Date:date,
+        Review_Description:Review,
+        Review_Page:"Food",
+        Review_Rating:rating,
+        User_Name:GetUser
+      })
+      .then(()=>{
+        
+
+        alert("Review added!");
+ 
+       
+      })
+      .catch((error)=>{
+        
+        alert("ERROR: Unable to add review");
+      });
+   
+  }
+ 
+}
+
