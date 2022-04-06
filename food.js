@@ -606,8 +606,9 @@ document.getElementById("ReviewList2").appendChild(AllReviews);
 
 document.getElementById("CloseWriteAReviewPopup").addEventListener("click", CloseWriteReviewsPopup);
 var WriteReviewsPopup = document.getElementById("WriteReviewsModal");
+document.getElementById("Usernamebox").innerHTML = GetUser;
 function DisplayWriteReviewsPopup() {
-  document.getElementById("Usernamebox").innerHTML = GetUser;
+  
   WriteReviewsPopup.style.display ="block";
   document.querySelector("body").style.overflow = 'hidden'; //Stops Body Scroll
   var errorcheck = document.getElementById("ratingerror");
