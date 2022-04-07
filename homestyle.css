@@ -912,6 +912,7 @@ div[theme="dark"]{
     
   
   }
+  
   .FoodReviewsSection{
     display:block;
     height:auto;
@@ -937,3 +938,28 @@ div[theme="dark"]{
   
 } 
 
+@media (max-width:1400px) {
+  .footer{
+    display:inline-flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .footer img{
+    display: none;
+  }
+  .footer-1{
+   margin-left: 40px;
+    }
+  .footer-2{
+    margin-right: 75px;
+    text-align: left;
+   
+  }
+  .footer-3{
+    transform: translateY(-11px);
+    flex-direction: column;
+  }
+  .footer-3 p{
+    margin-bottom: 5px;
+  }
+}
