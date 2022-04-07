@@ -45,8 +45,7 @@ var found;
     alert("Welcome back " + inputusername+"!");
     sessionStorage.setItem("LOGGED_IN","true");
     sessionStorage.setItem("USER",inputusername);
-    location.href="index.html";
-    return true;
+    window.location.replace("index.html");
     }
     else
     alert("User Not found, Please try Again"); //TEST Statement
