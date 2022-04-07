@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="module" src="database.js"></script>
 <link rel="stylesheet" href="homestyle.css">
+<link rel="stylesheet" href="drink.css">
+<script type="module" src="drink.js"> </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
@@ -30,8 +33,115 @@
         <div class="drink_section_1"></div>
         <div class ="center_title"><b>Drink</b></div>
     </div>
-</body>
 
+    <div class="Drink-Section" >
+        <h1 style="margin-left:400px;text-align:left;color: #00853e;">Drinks</h1>
+        <ul id="section-header" style = "display: inline-block ; list-style-type: none;"></ul>
+        <div id="DrinkList" ></div><!--RENAME ID LATER-->
+            <!-- <li style = "display: inline-block; margin-left:640px; ">Tall</li>
+            <li style = "display: inline-block; margin-left:70px;">Grande</li>
+            <li style = "display: inline-block; margin-left:70px;">Venti</li> -->
+        
+        <div id="DrinkList" ></div><!--RENAME ID LATER-->
+    </div>   
+
+
+
+</div>
+    </div>
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://media.istockphoto.com/photos/picturesque-morning-in-plitvice-national-park-colorful-spring-scene-picture-id1093110112?k=20&m=1093110112&s=612x612&w=0&h=3OhKOpvzOSJgwThQmGhshfOnZTvMExZX2R91jNNStBY=" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a id="prevSlide" class="prev">&#10094;</a>
+        <a id="nextSlide" class="next">&#10095;</a>
+        
+    </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+
+
+
+    <div class="DrinkReviewsSection">
+    <h1 style="margin-left:400px;text-align:left;color: #00853e;">Reviews</h1>
+    <div id="ReviewList"></div>
+
+    <p id="MoreReviewsLink" >More Drink Reviews</p>
+    
+    <div id="MoreReviewsModal" class="MoreReviewsModal">
+      <div class="MoreReviewsModal-content">
+        <span class="close" id="CloseMoreReviewsModal">&times;</span>
+        <h1 style="margin-left:0px;text-align:left;color: #00853e;">Drink Reviews</h1>
+        <hr>
+        <div id="ReviewList2" style="margin-left:-400px;"></div>
+      </div>
+    </div>
+    <button id="WriteAReviewButton" class ="WriteAReviewButton">Write A Review</button>
+    <div id="WriteReviewsModal" class="WriteReviewsModal">
+      <div class="WriteReviewsModal-content">
+        
+        <div class="WriteAReview">
+          <h1 style="text-align:center;color: #00853e;">Write A Drink Review</h1>
+          <div style="height:70px;width:70px;margin-left:20px;display:inline-block">
+            <img src ="Images/Food/Small_Icon.svg" style="width:100%;height: 100%;max-width: 500px;max-height: 500px;vertical-align: middle;">
+          </div>
+          <p id="Usernamebox" style="color:black;display: inline;font-size: 1.2em;">Username</p>
+          <form onsubmit="checkUser()">
+          <div style="display:block;margin-bottom:-30px;transform:translateX(80px);margin-top:10px;">
+            <div class="MakeRating"> 
+              <input type="radio" id="star5A" name="MakeRating" value="5" required/>
+              <label for="star5A" title="text">5 stars</label>
+              <input type="radio" id="star4A" name="MakeRating" value="4" />
+              <label for="star4A" title="text">4 stars</label>
+              <input type="radio" id="star3A" name="MakeRating" value="3" />
+              <label for="star3A" title="text">3 stars</label>
+              <input type="radio" id="star2A" name="MakeRating" value="2" />
+              <label for="star2A" title="text">2 stars</label>
+              <input type="radio" id="star1A" name="MakeRating" value="1" />
+              <label for="star1A" title="text">1 star</label>
+              <p id="ratingerror" style="display:none;color: red;margin-top: -10px;margin-left: 10px;margin-bottom: -5px;">*Rating required</p>
+            </div>
+          </div>
+          
+          <textarea id="DrinkReviewInput" class ="DrinkReviewInput" placeholder="Please share your review on the Drink items offered at the Discovery Perks Market & Grill." required></textarea>
+          <p id="reviewerror" style="display:none;color: red;margin-top: 0px;margin-left: 100px;margin-bottom: -5px;">*Review required</p>
+          <button id="CloseWriteAReviewPopup">Cancel</button>
+          <input type="submit" id="SubmitDrinkReview" value="Post">
+        </form>
+        </div>
+       
+      </div>
+    </div>
+   
+    </div>
+ 
+    
+</body>
 <div class = "footer-container">
     <div class = "footer">
        <img src = "Images/Home/unt-logo-stacked-green.png"  width="200" height="100" style="margin: 80px" align="left" alt="Logo for The University of North Texas" title="University of North Texas">

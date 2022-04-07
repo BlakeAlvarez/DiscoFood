@@ -1,6 +1,6 @@
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, push, onValue, set}from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
-//import { LOGGED_IN } from "/database.js";
+import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBaJmGl7QLJTiJ6ZnkKNCbfo-qT_Qagymk",
@@ -13,6 +13,8 @@ const firebaseConfig = {
     measurementId: "G-VVER4EJNW2"
   };
 const app = initializeApp(firebaseConfig);
+
+
 var something = sessionStorage.getItem("LOGGED_IN");
 var GetUser = sessionStorage.getItem("USER");
 //if(GetUser!=null)
@@ -29,34 +31,250 @@ if(something=="true"){
   function GoToLogin(){
    window.location.href = "login.html";
   }
+
+  
+
 const db = getDatabase();
 const Menu = ref(db);
-//Lines 19-43 Creates Foods List that is displayed on Food Page
+//Lines 19-43 Creates Drinks List that is displayed on drink Page
 let div = document.createElement('div');
 onValue(Menu, (snapshot) => {
 const data = snapshot.val(); //Data is string array
-let len = data.Foods.length;
+let len = data.Drinks.length;
 while(div.hasChildNodes()){
     div.removeChild(div.firstChild);
 }
-for(let x in data.Foods){
+// adds first line before sizes
+
+
+for(let x in data.Drinks){
+    if(x==0){
+        let data = ['Espresso', 'Tall', 'Grande', 'Venti' ];
+        let list = document.getElementById("section-header");
     
+        let li = document.createElement("li");
+        li.innerText = data[0];
+        li.style.color = 'black';
+        li.style.display= 'inline-block';
+        li.style.cssText="list-style-type: none;margin-bottom:-15px;margin-left:400px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li);
+
+        let li2 = document.createElement("li");
+        li2.innerText = data[1];
+        li2.style.color = 'black';
+        li2.style.display= 'inline-block';
+        li2.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:680px;text-align:left; font-size:large; font-weight: bold;";
+        div.appendChild(li2);
+
+        let li3 = document.createElement("li");
+        li3.innerText = data[2];
+        li3.style.color = 'black';
+        li3.style.display= 'inline-block';
+        li3.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:780px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li3);
+
+        let li4 = document.createElement("li");
+        li4.innerText = data[3];
+        li4.style.color = 'black';
+        li4.style.display= 'inline-block';
+        li4.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:920px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li4);
+
+        var line = document.createElement("HR");
+        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        div.appendChild(line); 
+    }
+
+    if(x==7){
+        let data = ['Teas & other', 'Tall', 'Grande', 'Venti' ];
+        let list = document.getElementById("section-header");
+    
+        let li = document.createElement("li");
+        li.innerText = data[0];
+        li.style.color = 'black';
+        li.style.display= 'inline-block';
+        li.style.cssText="list-style-type: none;margin-bottom:-15px;margin-left:400px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li);
+
+        let li2 = document.createElement("li");
+        li2.innerText = data[1];
+        li2.style.color = 'black';
+        li2.style.display= 'inline-block';
+        li2.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:680px;text-align:left; font-size:large; font-weight: bold;";
+        div.appendChild(li2);
+
+        let li3 = document.createElement("li");
+        li3.innerText = data[2];
+        li3.style.color = 'black';
+        li3.style.display= 'inline-block';
+        li3.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:780px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li3);
+
+        let li4 = document.createElement("li");
+        li4.innerText = data[3];
+        li4.style.color = 'black';
+        li4.style.display= 'inline-block';
+        li4.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:920px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li4);
+
+        var line = document.createElement("HR");
+        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        div.appendChild(line); 
+    }
+    if(x==12){
+        let data = ['Coffee', 'Tall', 'Grande', 'Venti' ];
+        let list = document.getElementById("section-header");
+    
+        let li = document.createElement("li");
+        li.innerText = data[0];
+        li.style.color = 'black';
+        li.style.display= 'inline-block';
+        li.style.cssText="list-style-type: none;margin-bottom:-15px;margin-left:400px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li);
+
+        let li2 = document.createElement("li");
+        li2.innerText = data[1];
+        li2.style.color = 'black';
+        li2.style.display= 'inline-block';
+        li2.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:680px;text-align:left; font-size:large; font-weight: bold;";
+        div.appendChild(li2);
+
+        let li3 = document.createElement("li");
+        li3.innerText = data[2];
+        li3.style.color = 'black';
+        li3.style.display= 'inline-block';
+        li3.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:780px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li3);
+
+        let li4 = document.createElement("li");
+        li4.innerText = data[3];
+        li4.style.color = 'black';
+        li4.style.display= 'inline-block';
+        li4.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:920px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li4);
+
+        var line = document.createElement("HR");
+        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        div.appendChild(line); 
+    }
+    if(x==14){
+        let data = ['Frappuccinos', 'Grande'];
+    
+        let li = document.createElement("li");
+        li.innerText = data[0];
+        li.style.color = 'black';
+        li.style.display= 'inline-block';
+        li.style.cssText="list-style-type: none;margin-bottom:-15px;margin-left:400px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li);
+
+        let li2 = document.createElement("li");
+        li2.innerText = data[1];
+        li2.style.color = 'black';
+        li2.style.display= 'inline-block';
+        li2.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:680px;text-align:left; font-size:large; font-weight: bold;";
+        div.appendChild(li2);
+
+
+        var line = document.createElement("HR");
+        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        div.appendChild(line); 
+    }
+
+    if(x==18){
+        let data = ['Additions','Price' ];
+        let list = document.getElementById("section-header");
+    
+        let li = document.createElement("li");
+        li.innerText = data[0];
+        li.style.color = 'black';
+        li.style.display= 'inline-block';
+        li.style.cssText="list-style-type: none;margin-bottom:-15px;margin-left:400px;text-align:left; font-size:large;font-weight: bold;";
+        div.appendChild(li);
+
+        let li2 = document.createElement("li");
+        li2.innerText = data[1];
+        li2.style.color = 'black';
+        li2.style.display= 'inline-block';
+        li2.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:680px;text-align:left; font-size:large; font-weight: bold;";
+        div.appendChild(li2);
+
+        var line = document.createElement("HR");
+        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        div.appendChild(line); 
+    }
+    
+
+    
+
+
     let Name = document.createElement("p");	// Create a new element
-    Name.innerText = data.Foods[x].Name;	// Change the text of the element
+    Name.innerText = data.Drinks[x].Name;	// Change the text of the element
     Name.style.color = 'black';
     Name.style.display='inline';
     Name.style.cssText="margin-bottom:-15px;margin-left:400px;text-align:left";
     div.appendChild(Name);
-    let Price = document.createElement("p");	// Create a new element
-    Price.innerText = data.Foods[x].Price;	// Change the text of the element
-    Price.style.cssText= "color:black; padding-left:100px;margin-left:670px;margin-top:0;";	// Change the text color of the element
-    div.appendChild(Price);
+    
+    if(data.Drinks[x].Price != undefined){
+        let Price = document.createElement("p");	// Create a new element
+        Price.innerText = data.Drinks[x].Price;	// Change the text of the element
+        Price.style.cssText= "display: inline-block; color:black; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+        div.appendChild(Price);
+    }
+
+    if(data.Drinks[x].tallPrice != undefined){
+        let tallPrice = document.createElement("p");	// Create a new element
+        tallPrice.innerText = data.Drinks[x].tallPrice;	// Change the text of the element
+        tallPrice.style.cssText= "display: inline-block; color:black; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+        div.appendChild(tallPrice);
+    }
+
+    if(data.Drinks[x].grandePrice != undefined){
+        let grandePrice = document.createElement("p");	// Create a new element
+        grandePrice.innerText = data.Drinks[x].grandePrice;	// Change the text of the element
+        //espresso has a string in its price
+        if(data.Drinks[x].Name == "Espresso"){
+            grandePrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:35px;margin-top:0;";	// Change the text color of the element
+        }
+        else if(data.Drinks[x].Name == "Coffee" || data.Drinks[x].Name == "Caramel" || data.Drinks[x].Name == "Vanilla Bean" || data.Drinks[x].Name == "Mocha"){
+            grandePrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+        }
+        else{
+            grandePrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
+
+        }
+        div.appendChild(grandePrice);
+    }
+    
+
+    if(data.Drinks[x].ventiPrice != undefined){
+        let ventiPrice = document.createElement("p");	// Create a new element
+        ventiPrice.innerText = data.Drinks[x].ventiPrice;	// Change the text of the element
+        ventiPrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
+        div.appendChild(ventiPrice);
+    }
+
+    if(data.Drinks[x].ventiHotPrice != undefined){
+        let ventiHotPrice = document.createElement("p");	// Create a new element
+        ventiHotPrice.innerText = data.Drinks[x].ventiHotPrice;	// Change the text of the element
+        ventiHotPrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
+        div.appendChild(ventiHotPrice);
+    }
+
+    if(data.Drinks[x].ventiIcedPrice != undefined){
+        let ventiIcedPrice = document.createElement("p");	// Create a new element
+        ventiIcedPrice.innerText = data.Drinks[x].ventiIcedPrice;	// Change the text of the element
+        ventiIcedPrice.style.cssText = "color:black; padding-left:10px;margin-left:910px;margin-top:0;";	// Change the text color of the element
+        div.appendChild(ventiIcedPrice);
+    }
+    
     var line = document.createElement("HR");
-    line.style.cssText="text-align:left;margin-left:400px;width:410px;";;
+    line.style.cssText="text-align:left;margin-left:400px;width:600px;";
     div.appendChild(line); 
 }
 });
-document.getElementById("FoodList").appendChild(div);
+document.getElementById("DrinkList").appendChild(div);
+
+
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -90,19 +308,19 @@ document.getElementById("prevSlide").addEventListener("click", function(){
   showSlides(slideIndex += -1);
 });
 
-//Lines 78-348 is used to display the first 5 reviews on Food Page
+//Lines 78-348 is used to display the first 5 reviews on drink Page
 let Reviews = document.createElement('div');
 //var UsersTest = document.createElement('p'); //TEST STATEMENT DELETE LATER
 onValue(Menu, (snapshot) => {
 const data = snapshot.val(); //Data is string array
-let len = data.Foods.length;
+let len = data.Drinks.length;
 while(Reviews.hasChildNodes()){
     Reviews.removeChild(Reviews.firstChild);
 }
 var MaxReviews = 0;
 for(let x in data.Reviews){
   
-    if(data.Reviews[x].Review_Page =="Food"){
+    if(data.Reviews[x].Review_Page =="Drink"){
     var Review = document.createElement('div');
     Review.style.cssText="height:auto;width:500px;transform:translateX(400px);margin-bottom:20px;"; 
     var Icon = document.createElement('div');
@@ -365,14 +583,14 @@ window.onclick = function(event) {
 //var UsersTest = document.createElement('p'); //TEST STATEMENT DELETE LATER
 onValue(Menu, (snapshot) => {
 const data = snapshot.val(); //Data is string array
-let len = data.Foods.length;
+let len = data.Drinks.length;
 while(AllReviews.hasChildNodes()){
     AllReviews.removeChild(AllReviews.firstChild);
 }
 
 for(let x in data.Reviews){
   
-    if(data.Reviews[x].Review_Page =="Food"){
+    if(data.Reviews[x].Review_Page =="drink"){
     var Review = document.createElement('div');
     Review.style.cssText="height:auto;width:500px;transform:translateX(400px);margin-bottom:20px;";
     var Icon = document.createElement('div');
@@ -619,13 +837,13 @@ function DisplayWriteReviewsPopup() {
 function CloseWriteReviewsPopup(){
   WriteReviewsPopup.style.display ="none";
   document.querySelector("body").style.overflow = 'visible'; //Enables Body Scroll
-  document.getElementById("FoodReviewInput").value='';
+  document.getElementById("drinkReviewInput").value='';
 }
 
-document.getElementById("SubmitFoodReview").addEventListener("click",AddReview);
+document.getElementById("SubmitdrinkReview").addEventListener("click",AddReview);
 function AddReview(){
   var rating;
-  var Review = document.getElementById("FoodReviewInput").value;
+  var Review = document.getElementById("drinkReviewInput").value;
   var ele = document.getElementsByName('MakeRating');
               
            for(let i = 0; i < ele.length; i++) {
@@ -650,7 +868,7 @@ function AddReview(){
       set(newPostRef, {
         Review_Date:date,
         Review_Description:Review,
-        Review_Page:"Food",
+        Review_Page:"drink",
         Review_Rating:rating,
         User_Name:GetUser
       })
