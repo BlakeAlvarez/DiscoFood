@@ -1,303 +1,352 @@
 {
-    
-    "Foods": [
-      {
-        "id": "1",
-        "Name": "Single Chesseburger",
-        "Price": "$2.00"
-      },
-      {
-        "id": "2",
-        "Name": "Double CheeseBurger",
-        "Price": "$3.00"
-      },
-      {
-        "id":"3",
-        "Name": "Triple Cheeseburger",
-        "Price": "$4.00"
-      },
-      {
-        "id":"4",
-        "Name":"Grilled Cheese",
-        "Price":"$2.00"
-      },
-      {
-        "id":"5",
-        "Name":"BLT",
-        "Price":"$3.25"
-      },
-      {
-        "id": "6",
-        "Name": "Chicken Tender Basket",
-        "Price": "$3.50"
-      },
-      {
-        "id": "7",
-        "Name": "Chicken Tenders each",
-        "Price": "$1.50"
-      },
-      {
-        "id":"8",
-        "Name": "French Fries Basket",
-        "Price": "$1.99"
-      },
-      {
-        "id":"9",
-        "Name":"Chicken Crunch Sandwhich",
-        "Price":"$4.00"
-      },
-      {
-        "id":"10",
-        "Name":"Spicy Chicken Sandwhich",
-        "Price":"$4.00"
-      },
-      {
-        "id": "11",
-        "Name": "Veggie Burger",
-        "Price": "$3.50"
-      },
-      {
-        "id": "12",
-        "Name": "Philly Cheesesteaks",
-        "Price": "$4.50"
-      },
-      {
-        "id":"13",
-        "Name": "Cheese Quesadillas",
-        "Price": "$3.00"
-      },
-      {
-        "id":"14",
-        "Name":"Chicken Quesadillas",
-        "Price":"$3.50"
-      },
-      {
-        "id":"15",
-        "Name":"Steak Quesadillas",
-        "Price":"$3.75"
-      },
-      {
-        "id": "16",
-        "Name": "Add Lectuce, Tomato, Onion",
-        "Price": "$0.50"
-      },
-      {
-        "id": "17",
-        "Name": "Add Bacon",
-        "Price": "$1.00"
-      }
-    ],
-    "Drinks": [
-        {
-          "id": "1",
-          "Name": "Coffee",
-          "Size": "small",
-          "Price": "$5.99"
-        },
-        {
-          "id": "2",
-          "Name": "Tea",
-          "Size":"small",
-          "Price": "$4.99"
-        }
-      ],
-      "Market": [
-        {
-          "id": "1",
-          "Name": "Chips",
-          "Price": "$1.09"
-        },
-        {
-          "id": "2",
-          "Name": "Fruit",
-          "Price": "$0.50"
-        },
-        {
-          "id": "3",
-          "Name": "Candy",
-          "Price": "$1.09"
-        },
-        {
-          "id": "4",
-          "Name": "House Chips (Any Flavor)",
-          "Price": "$1.50"
-        },
-        {
-          "id": "5",
-          "Name": "Sea Salt Bagel Chips",
-          "Price": "$1"
-        },
-        {
-          "id": "6",
-          "Name": "Single Muffin (Any Variety)",
-          "Price": "$1"
-        },
-        {
-          "id": "7",
-          "Name": "Cookie Cup, Brownie Cup, Muffin Cup",
-          "Price": "$2"
-        },
-        {
-          "id": "8",
-          "Name": "Bagel (Any Flavor)",
-          "Price": "$1"
-        },
-        {
-          "id": "9",
-          "Name": "French Croissant",
-          "Price": "$1.50"
-        },
-        {
-          "id": "10",
-          "Name": "Chocolate ?",
-          "Price": "$1.75"
-        },
-        {
-          "id": "11",
-          "Name": "Union Coffee Cake",
-          "Price": "$1.75"
-        },
-        {
-          "id": "12",
-          "Name": "Grilled Garden Wrap",
-          "Price": "$4.25"
-        },
-        {
-          "id": "13",
-          "Name": "Spicy BBQ Chicken Wrap",
-          "Price": "$4.50"
-        },
-        {
-          "id": "14",
-          "Name": "Peanut Butter & Jelly Sandwich",
-          "Price": "$2.50"
-        },
-        {
-          "id": "15",
-          "Name": "White Cheddar Pimento Cheese Sandwich",
-          "Price": "$3"
-        },
-        {
-          "id": "16",
-          "Name": "Smoked Turkey & Cheddar Sandwich",
-          "Price": "$4.50"
-        },
-        {
-          "id": "17",
-          "Name": "Fire-roasted Jalapeño Egg Salad Sandwich",
-          "Price": "$3"
-        },
-        {
-          "id": "18",
-          "Name": "Classic Egg Salad Sandwich",
-          "Price": "$3"
-        },
-        {
-          "id": "19",
-          "Name": "Smoked Ham & Cheddar Sandwich",
-          "Price": "4.50"
-        },
-        {
-          "id": "20",
-          "Name": "Italian Sub",
-          "Price": "5.50"
-        },
-        {
-          "id": "21",
-          "Name": "Chipotle Turkey Sub",
-          "Price": "$5.25"
-        },
-        {
-          "id": "22",
-          "Name": "Grilled Garden Wrap",
-          "Price": "$4.25"
-        },
-        {
-          "id": "23",
-          "Name": "Spicy BBQ Chicken Wrap",
-          "Price": "$4.50"
-        },
-        {
-          "id": "24",
-          "Name": "Peanut Butter & Jelly Sandwich",
-          "Price": "$2.50"
-        },
-        {
-          "id": "25",
-          "Name": "White Cheddar Pimento Cheese Sandwich",
-          "Price": "$3"
-        },
-        {
-          "id": "26",
-          "Name": "Smoked Turkey & Cheddar Sandwich",
-          "Price": "$4.50"
-        },
-        {
-          "id": "27",
-          "Name": "Fire-roasted Jalapeño Egg Salad Sandwich",
-          "Price": "$3"
-        },
-        {
-          "id": "28",
-          "Name": "Classic Egg Salad Sandwich",
-          "Price": "$3"
-        },
-        {
-          "id": "29",
-          "Name": "Smoked Ham & Cheddar Sandwich",
-          "Price": "$4.50"
-        }
-      ],
-      "Users": [
-        {
-          "User_ID":"1",
-          "User_Type":"admin",
-          "User_Name":"Abrielle",
-          "User_Email":"AW@gmail.com",
-          "User_Username":"atw011",
-          "User_Password":"1234"
-        }
-      ],
-      "Reviews": [
-        {
-          "Review_ID":"1",
-          "User_Name":"User 1",
-          "Review_Description":"Sample Review 1",
-          "Review_Rating":"5",
-          "Review_Date":"3-28-22",
-          "Review_Page":"Food"
-        },
-        {
-          "Review_ID":"2",
-          "User_Name":"User 2",
-          "Review_Description":"Sample Review 2",
-          "Review_Rating":"4",
-          "Review_Date":"3-28-22",
-          "Review_Page":"Food"
-        },
-        {
-          "Review_ID":"3",
-          "User_Name":" User 3",
-          "Review_Description":"Sample Review 3",
-          "Review_Rating":"3",
-          "Review_Date":"3-28-22",
-          "Review_Page":"Food"
-        },
-        {
-          "Review_ID":"4",
-          "User_Name":"User 4",
-          "Review_Description":"Sample Review 4",
-          "Review_Rating":"2",
-          "Review_Date":"3-28-22",
-          "Review_Page":"Food"
-        },
-        {
-          "Review_ID":"5",
-          "User_Name":"User 5",
-          "Review_Description":"Sample Review 5",
-          "Review_Rating":"1",
-          "Review_Date":"3-28-22",
-          "Review_Page":"Food"
-        }
-      ]
-  }
+  "Drinks" : [ {
+    "id" : "1",
+    "Name" : "Caramel Machiato",
+    "tallPrice" : "$3.95",
+    "grandePrice" : "$4.75",
+    "ventiIcedPrice": "Iced $5.25",
+    "ventiHotPrice": "Hot $5.15"
+  }, {
+    "id" : "2",
+    "Name" : "Cafe Mocha",
+    "tallPrice" : "$3.75",
+    "grandePrice" : "$4.35",
+    "ventiIcedPrice": "Iced $5.05",
+    "ventiHotPrice": "Hot $4.75"
+  }, {
+    "id" : "3",
+    "Name" : "White Chocolate Mocha",
+    "tallPrice" : "$3.95",
+    "grandePrice" : "$4.75",
+    "ventiIcedPrice": "Iced $5.25",
+    "ventiHotPrice": "Hot $5.15"
+  }, {
+    "id" : "4",
+    "Name" : "Cafe Late",
+    "tallPrice" : "$3.25",
+    "grandePrice" : "$3.85",
+    "ventiIcedPrice": "Iced $4.55",
+    "ventiHotPrice": "Hot $4.25"
+  }, {
+    "id" : "5",
+    "Name" : "Cappuccino (Hot Only)",
+    "tallPrice" : "$3.25",
+    "grandePrice" : "$3.85",
+    "ventiHotPrice": "Hot $4.25"
+  }, {
+    "id" : "6",
+    "Name" : "Cafe Americano",
+    "tallPrice" : "$1.95",
+    "grandePrice" : "$2.25",
+    "ventiPrice": "$2.65"
+  }, {
+    "id" : "7",
+    "Name" : "Espresso",
+    "tallPrice" : "Solo $1.95",
+    "grandePrice" : "Doppio $2.25"
+  } , {
+    "id" : "8",
+    "Name" : "Tazo Chai (hot or iced)",
+    "tallPrice" : "$3.65",
+    "grandePrice" : "$4.25",
+    "ventiPrice": "$4.45"
+  }, {
+    "id" : "9",
+    "Name" : "Tazo Hot Tea",
+    "tallPrice" : "$2.25",
+    "grandePrice" : "$2.45",
+    "ventiPrice": "$2.65"
+  }, {
+    "id" : "10",
+    "Name" : "Tazo Iced Tea",
+    "tallPrice" : "$1.95",
+    "grandePrice" : "$2.45",
+    "ventiPrice": "$2.75"
+  }, {
+    "id" : "11",
+    "Name" : "Tazo Iced Team & Lemonade",
+    "tallPrice" : "$2.65",
+    "grandePrice" : "$3.25",
+    "ventiPrice": "$3.65"
+  }, {
+    "id" : "12",
+    "Name" : "Hot Chcoloate",
+    "tallPrice" : "$2.95",
+    "grandePrice" : "$3.25",
+    "ventiPrice": "$3.65"
+  }, {
+    "id" : "13",
+    "Name" : "Coffee of the Day",
+    "tallPrice" : "$1.95",
+    "grandePrice" : "$2.25",
+    "ventiPrice": "$2.65"
+  }, {
+    "id" : "14",
+    "Name" : "Cold Brew",
+    "tallPrice" : "$1.95",
+    "grandePrice" : "$2.25",
+    "ventiPrice": "$3.65"
+  }, {
+    "id" : "15",
+    "Name" : "Coffee",
+    "grandePrice" : "$4.25"
+  }, {
+    "id" : "16",
+    "Name" : "Caramel",
+    "grandePrice" : "$4.25"
+  }, {
+    "id" : "17",
+    "Name" : "Mocha",
+    "grandePrice" : "$4.65"
+  }, {
+    "id" : "18",
+    "Name" : "Vanilla Bean",
+    "grandePrice" : "$4.25"
+  }, {
+    "id" : "19",
+    "Name" : "Syrup",
+    "Price" : "$.50"
+  }, {
+    "id" : "20",
+    "Name" : "Soy",
+    "Price" : "$.60"
+  }, {
+    "id" : "21",
+    "Name" : "Espresso",
+    "Price" : "$.80"
+  }, {
+    "id" : "22",
+    "Name" : "Sauce",
+    "Price" : "$.60"
+  }],
+  "Foods" : [ {
+    "Name" : "Single Chesseburger",
+    "Price" : "$2.00",
+    "id" : "1"
+  }, {
+    "Name" : "Double CheeseBurger",
+    "Price" : "$3.00",
+    "id" : "2"
+  }, {
+    "Name" : "Triple Cheeseburger",
+    "Price" : "$4.00",
+    "id" : "3"
+  }, {
+    "Name" : "Grilled Cheese",
+    "Price" : "$2.00",
+    "id" : "4"
+  }, {
+    "Name" : "BLT",
+    "Price" : "$3.25",
+    "id" : "5"
+  }, {
+    "Name" : "Chicken Tender Basket",
+    "Price" : "$3.50",
+    "id" : "6"
+  }, {
+    "Name" : "Chicken Tenders each",
+    "Price" : "$1.50",
+    "id" : "7"
+  }, {
+    "Name" : "French Fries Basket",
+    "Price" : "$1.99",
+    "id" : "8"
+  }, {
+    "Name" : "Chicken Crunch Sandwhich",
+    "Price" : "$4.00",
+    "id" : "9"
+  }, {
+    "Name" : "Spicy Chicken Sandwhich",
+    "Price" : "$4.00",
+    "id" : "10"
+  }, {
+    "Name" : "Veggie Burger",
+    "Price" : "$3.50",
+    "id" : "11"
+  }, {
+    "Name" : "Philly Cheesesteaks",
+    "Price" : "$4.50",
+    "id" : "12"
+  }, {
+    "Name" : "Cheese Quesadillas",
+    "Price" : "$3.00",
+    "id" : "13"
+  }, {
+    "Name" : "Chicken Quesadillas",
+    "Price" : "$3.50",
+    "id" : "14"
+  }, {
+    "Name" : "Steak Quesadillas",
+    "Price" : "$3.75",
+    "id" : "15"
+  }, {
+    "Name" : "Add Lectuce, Tomato, Onion",
+    "Price" : "$0.50",
+    "id" : "16"
+  }, {
+    "Name" : "Add Bacon",
+    "Price" : "$1.00",
+    "id" : "17"
+  } ],
+  "Market" : [ {
+    "Name" : "Chips",
+    "Price" : "$1.09",
+    "id" : "1"
+  }, {
+    "Name" : "Fruit",
+    "Price" : "$0.50",
+    "id" : "2"
+  }, {
+    "Name" : "Candy",
+    "Price" : "$1.09",
+    "id" : "3"
+  }, {
+    "Name" : "House Chips (Any Flavor)",
+    "Price" : "$1.50",
+    "id" : "4"
+  }, {
+    "Name" : "Sea Salt Bagel Chips",
+    "Price" : "$1",
+    "id" : "5"
+  }, {
+    "Name" : "Single Muffin (Any Variety)",
+    "Price" : "$1",
+    "id" : "6"
+  }, {
+    "Name" : "Cookie Cup, Brownie Cup, Muffin Cup",
+    "Price" : "$2",
+    "id" : "7"
+  }, {
+    "Name" : "Bagel (Any Flavor)",
+    "Price" : "$1",
+    "id" : "8"
+  }, {
+    "Name" : "French Croissant",
+    "Price" : "$1.50",
+    "id" : "9"
+  }, {
+    "Name" : "Chocolate ?",
+    "Price" : "$1.75",
+    "id" : "10"
+  }, {
+    "Name" : "Union Coffee Cake",
+    "Price" : "$1.75",
+    "id" : "11"
+  }, {
+    "Name" : "Grilled Garden Wrap",
+    "Price" : "$4.25",
+    "id" : "12"
+  }, {
+    "Name" : "Spicy BBQ Chicken Wrap",
+    "Price" : "$4.50",
+    "id" : "13"
+  }, {
+    "Name" : "Peanut Butter & Jelly Sandwich",
+    "Price" : "$2.50",
+    "id" : "14"
+  }, {
+    "Name" : "White Cheddar Pimento Cheese Sandwich",
+    "Price" : "$3",
+    "id" : "15"
+  }, {
+    "Name" : "Smoked Turkey & Cheddar Sandwich",
+    "Price" : "$4.50",
+    "id" : "16"
+  }, {
+    "Name" : "Fire-roasted Jalapeño Egg Salad Sandwich",
+    "Price" : "$3",
+    "id" : "17"
+  }, {
+    "Name" : "Classic Egg Salad Sandwich",
+    "Price" : "$3",
+    "id" : "18"
+  }, {
+    "Name" : "Smoked Ham & Cheddar Sandwich",
+    "Price" : "4.50",
+    "id" : "19"
+  }, {
+    "Name" : "Italian Sub",
+    "Price" : "5.50",
+    "id" : "20"
+  }, {
+    "Name" : "Chipotle Turkey Sub",
+    "Price" : "$5.25",
+    "id" : "21"
+  }, {
+    "Name" : "Grilled Garden Wrap",
+    "Price" : "$4.25",
+    "id" : "22"
+  }, {
+    "Name" : "Spicy BBQ Chicken Wrap",
+    "Price" : "$4.50",
+    "id" : "23"
+  }, {
+    "Name" : "Peanut Butter & Jelly Sandwich",
+    "Price" : "$2.50",
+    "id" : "24"
+  }, {
+    "Name" : "White Cheddar Pimento Cheese Sandwich",
+    "Price" : "$3",
+    "id" : "25"
+  }, {
+    "Name" : "Smoked Turkey & Cheddar Sandwich",
+    "Price" : "$4.50",
+    "id" : "26"
+  }, {
+    "Name" : "Fire-roasted Jalapeño Egg Salad Sandwich",
+    "Price" : "$3",
+    "id" : "27"
+  }, {
+    "Name" : "Classic Egg Salad Sandwich",
+    "Price" : "$3",
+    "id" : "28"
+  }, {
+    "Name" : "Smoked Ham & Cheddar Sandwich",
+    "Price" : "$4.50",
+    "id" : "29"
+  } ],
+  "Reviews" : [ {
+    "Review_Date" : "3-28-22",
+    "Review_Description" : "Sample Review 1",
+    "Review_ID" : "1",
+    "Review_Page" : "Food",
+    "Review_Rating" : "5",
+    "User_Name" : "User 1"
+  }, {
+    "Review_Date" : "3-28-22",
+    "Review_Description" : "Sample Review 2",
+    "Review_ID" : "2",
+    "Review_Page" : "Food",
+    "Review_Rating" : "4",
+    "User_Name" : "User 2"
+  }, {
+    "Review_Date" : "3-28-22",
+    "Review_Description" : "Sample Review 3",
+    "Review_ID" : "3",
+    "Review_Page" : "Food",
+    "Review_Rating" : "3",
+    "User_Name" : " User 3"
+  }, {
+    "Review_Date" : "3-28-22",
+    "Review_Description" : "Sample Review 4",
+    "Review_ID" : "4",
+    "Review_Page" : "Food",
+    "Review_Rating" : "2",
+    "User_Name" : "User 4"
+  }, {
+    "Review_Date" : "3-28-22",
+    "Review_Description" : "Sample Review 5",
+    "Review_ID" : "5",
+    "Review_Page" : "Food",
+    "Review_Rating" : "1",
+    "User_Name" : "User 5"
+  } ],
+  "Users" : [ {
+    "User_Email" : "AW@gmail.com",
+    "User_ID" : "1",
+    "User_Name" : "Abrielle",
+    "User_Password" : "1234",
+    "User_Type" : "admin",
+    "User_Username" : "atw011"
+  } ]
+}
