@@ -325,10 +325,11 @@ for(let x in data.Reviews){
     ReviewDes.style.cssText="display:block;transform:translateX(70px);margin-top:-20px;";
     Review.appendChild(ReviewDes);
     Reviews.appendChild(Review);
-    }
     MaxReviews++;
     if(MaxReviews == 5)
       break;
+    }
+    
 }
 /*
 // EXAMPLE- How to loop through database regardless of the key is 
@@ -620,6 +621,12 @@ function CloseWriteReviewsPopup(){
   WriteReviewsPopup.style.display ="none";
   document.querySelector("body").style.overflow = 'visible'; //Enables Body Scroll
   document.getElementById("FoodReviewInput").value='';
+  var ele = document.getElementsByName('MakeRating');
+              
+           for(let i = 0; i < ele.length; i++) {
+                       ele[i].checked = false;
+           }
+  
 }
 
 document.getElementById("SubmitFoodReview").addEventListener("click",AddReview);

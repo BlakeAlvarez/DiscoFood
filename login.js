@@ -46,6 +46,7 @@ var found;
     sessionStorage.setItem("LOGGED_IN","true");
     sessionStorage.setItem("USER",inputusername);
     location.href="index.html";
+    return true;
     }
     else
     alert("User Not found, Please try Again"); //TEST Statement
