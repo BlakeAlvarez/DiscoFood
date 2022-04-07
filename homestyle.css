@@ -623,6 +623,17 @@ div[theme="dark"]{
   background-image: url("Images/Food/avesta-plate_back1_edited.png");
   
 }
+.DrinkReviewsSection{
+  display:block;
+  height: auto;
+  width: auto;
+  margin-top: 20px;
+  background-color: #fafafa;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-image: url("Images/Food/avesta-plate_back1_edited.png");
+  
+}
 #MoreReviewsLink{
   display: block;
   margin-left: 410px;
@@ -914,6 +925,17 @@ div[theme="dark"]{
   }
   
   .FoodReviewsSection{
+    display:block;
+    height:auto;
+    width: 200%;
+    margin-left: -400px;
+   
+    margin-top: 90px;
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-image: url("Images/Food/avesta-plate_back1_edited.png");
+  }
+  .DrinkReviewsSection{
     display:block;
     height:auto;
     width: 200%;
