@@ -9,7 +9,8 @@ p{
   font-family: Helvetica, Arial, sans-serif;
 }
 body{
- overflow-x: hidden;   
+  overflow-x: hidden;  
+  font-size: 1rem;
 }
 
 .header{
@@ -22,15 +23,27 @@ body{
     line-height: 50%;
 }
 
-.discoPerks, .hours{
-  font-size: xxx-large; 
+.discoPerks, .hours, .createAccountTitle{
+  font-size: 3rem; 
   font-family: serif; 
   color: rgb(43,83,54);
 }
 
+.createAccountText {
+  font-size: 1.125rem;
+  font-family:Helvetica,Arial,serif;
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.mealPlans{
+  font-size: 1.125rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
 .marketGrill{
   color: rgb(237,88,41); 
-  font-size: x-large;
+  font-size: 1.5rem;
 }
 
 .section2{
@@ -183,7 +196,7 @@ a:link {
   }
   
   /* mouse over link */
-  a:hover {
+  a:hover :not(.text) {
     color: white;
     text-decoration: none;
   }
@@ -327,7 +340,7 @@ a:link {
     border: 2px solid #72b844;
   }
   #meal_cube2_light_links:link {
-    font-size:xx-large; 
+    font-size: 2rem; 
     font-family:Helvetica, Arial, sans-serif;
     color: #72b844;
     text-align: center;
@@ -341,7 +354,7 @@ a:link {
   
   /* visited link */
   #meal_cube2_light_links:visited {
-    font-size:xx-large; 
+    font-size: 2rem; 
     font-family:Helvetica, Arial, sans-serif;
     color: #72b844;
     text-align: center;
@@ -355,7 +368,7 @@ a:link {
   
   /* mouse over link */
   #meal_cube2_light_links:hover {
-    font-size:xx-large; 
+    font-size: 2rem; 
     font-family:Helvetica, Arial, sans-serif;
     color: #72b844;
     text-align: center;
@@ -367,7 +380,7 @@ a:link {
     margin-right: 0;
   }
   #meal_cube2_light_links:active {
-    font-size:xx-large; 
+    font-size:2rem; 
     font-family:Helvetica, Arial, sans-serif;
     color: #72b844;
     text-align: center;
@@ -379,7 +392,7 @@ a:link {
     margin-right: 0;
   }
   #meal_cube2_dark_links:link {
-    font-size:xx-large; 
+    font-size: 2rem; 
     font-family:Helvetica, Arial, sans-serif;
     color:#407C51;
     text-align: center;
@@ -393,7 +406,7 @@ a:link {
   
   /* visited link */
   #meal_cube2_dark_links:visited {
-    font-size:xx-large; 
+    font-size: 2rem; 
     font-family: Helvetica, Arial, sans-serif;
     color: #407C51;
     text-align: center;
@@ -407,7 +420,7 @@ a:link {
   
   /* mouse over link */
   #meal_cube2_dark_links:hover {
-    font-size:xx-large; 
+    font-size:2rem; 
     font-family:Helvetica, Arial, sans-serif;
     color: #407C51;
     text-align: center;
@@ -419,7 +432,7 @@ a:link {
     margin-right: 0;
   }
   #meal_cube2_dark_links:active{
-    font-size:xx-large; 
+    font-size:2rem; 
     font-family:Helvetica, Arial, sans-serif;
     color: #407C51;
     text-align: center;
@@ -535,7 +548,7 @@ a:link {
   height: 55px;
   width: 55px;
   border-radius: 30px;
-  background-color: #00853E;
+  background-color: rgb(223, 210, 208);
   position: fixed;
   border:none;
   right: 100px;
@@ -554,7 +567,8 @@ a:link {
   right: 0;
   top: 25%;
   bottom: -25%;
-  background-color: rgb(0,0,0); 
+  border-radius: 25px;
+  background-color: rgba(243, 239, 238, 1); 
   overflow-x: hidden; 
   transition: 0.5s; 
   overflow-y: auto;
@@ -588,7 +602,7 @@ a:link {
   margin: 25px;
 }
 
-.accessMenu button:hover, a:hover{
+.accessMenu button:hover, a:hover :not(.text){
   color: #f1f1f1;
   cursor: pointer;
 }
@@ -607,6 +621,20 @@ div[theme="dark"]{
   background: rgb(44, 44, 44);
   color: white;
 }
+
+#textProgress1, #textProgress2, #textProgress3 {
+  display: none;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
+
+
+
 .Grill_Section{
   display:block;
   height: 1000px;
@@ -631,7 +659,7 @@ div[theme="dark"]{
   color: black;
   text-decoration: underline;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 .MoreReviewsModal,.WriteReviewsModal{
   display: none; /* Hidden by default */

@@ -82,7 +82,6 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
 document.getElementById("nextSlide").addEventListener("click", function(){
   showSlides(slideIndex += 1);
 });

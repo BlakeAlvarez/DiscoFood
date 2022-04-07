@@ -3,9 +3,8 @@
 <head>
     <!-- <meta name="viewport" content="width=device-width, intitial-scale=1.0"> -->
 <script type="module" src="database.js"></script>
-<script type="module" src="food.js"> 
-
-</script>
+<script type="module" src="food.js"> </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <link rel="stylesheet" href="homestyle.css">
 <div class ="header">
     <img src = "Images/Home/mlog_v2.png" style="margin: 20px" align="right" alt="Logo for The University of North Texas" title="University of North Texas">
@@ -37,7 +36,7 @@
       </div>
       <div class ="center_title"><b>Discovery Perks Market & Grill</b></div>
     </div>
-<div>
+    <div>
 
     <div class = "section1" style = "text-align: center;padding-right: 250px;" >
         <div theme = "light" style = "display: inline-block; text-align: left; font-family: sans-serif;">
@@ -73,7 +72,7 @@
     <div theme = "light" class = "section2">
         <div style = "display: inline-block; text-align: left; font-family: sans-serif;">
             <br/>
-            <p id = "hours"> Hours of Operation</p>
+            <p class = "hours"> Hours of Operation</p>
             <p>Hours are subject to change. Please bookmark <a href="https://dining.unt.edu/hours/" style="color: black; text-decoration: underline;">dining.unt.edu/hours</a><br/>
                  and check back frequently for updates on future schedules.
             </p>
@@ -135,31 +134,31 @@
         
 </div>
 <div class="meal_plan_positioning">
-<div class="meal_plan_alignment">
-    <p style = "font-size: xxx-large; font-family:serif; color: rgb(43,83,54);margin-bottom: 0px;margin-top: 10px;">Meal Plan</p>
-    <p style="margin-bottom:50px;text-align:left;font-family: Helvetica, Arial, sans-serif;">Discovery Perks Market & Grill accepts Flex, Declining Balance, cash, <br>credit cards, and Apple Pay.</p>
-    <p style="font-size:xx-large; font-family:serif;font-weight:bold;color:#72b844;margin-bottom: 50px;">Discovery Perks Grill Combo Meal</p>
-    <div theme = "light" class="meal_cube1">
-    <p style="font-family: Helvetica;font-size: x-large;"><b>Daily entrée</b></p>
-    <img src="Images/Home/PlusSign.png">
-    <p style="font-family: Helvetica;font-size: x-large;"><b>Side</b></p>
-    <img src="Images/Home/PlusSign.png">
-    <p style="font-family: Helvetica;font-size: x-large;"><b>Fountain Beverage</b></p>
+    <div class="meal_plan_alignment">
+        <p style = "font-size: xxx-large; font-family:serif; color: rgb(43,83,54);margin-bottom: 0px;margin-top: 10px;">Meal Plan</p>
+        <p style="margin-bottom:50px;text-align:left;font-family: Helvetica, Arial, sans-serif;">Discovery Perks Market & Grill accepts Flex, Declining Balance, cash, <br>credit cards, and Apple Pay.</p>
+        <p style="font-size:xx-large; font-family:serif;font-weight:bold;color:#72b844;margin-bottom: 50px;">Discovery Perks Grill Combo Meal</p>
+        <div theme = "light" class="meal_cube1">
+        <p style="font-family: Helvetica;font-size: x-large;"><b>Daily entrée</b></p>
+        <img src="Images/Home/PlusSign.png">
+        <p style="font-family: Helvetica;font-size: x-large;"><b>Side</b></p>
+        <img src="Images/Home/PlusSign.png">
+        <p style="font-family: Helvetica;font-size: x-large;"><b>Fountain Beverage</b></p>
+        </div>
+        <div theme = "light" class="meal_cube2">
+        <p class="mealPlans">These Meal Plan swipes can be used at Discovery Park to purchase a Discovery Perks Grill Combo Meal:</p>
+        <a id="meal_cube2_light_links" href="https://dining.unt.edu/plans/#Five">Five to Thrive</a>
+        <a id="meal_cube2_dark_links" href="https://dining.unt.edu/plans/#Eight">Eight's Enough</a>
+        <a id="meal_cube2_light_links" href="https://dining.unt.edu/plans/#Swipes" >Simply Swipes 80, 60 & 40</a>
+        <a id="meal_cube2_dark_links" href="https://dining.unt.edu/fs/">Faculty/Staff Dining Hall Plans</a>
+        </div>
     </div>
-    <div theme = "light" class="meal_cube2">
-    <p style="font-size: large;font-family: Helvetica, Arial, sans-serif;">These Meal Plan swipes can be used at Discovery Park to purchase a Discovery Perks Grill Combo Meal:</p>
-    <a id="meal_cube2_light_links" href="https://dining.unt.edu/plans/#Five">Five to Thrive</a>
-    <a id="meal_cube2_dark_links" href="https://dining.unt.edu/plans/#Eight">Eight's Enough</a>
-    <a id="meal_cube2_light_links" href="https://dining.unt.edu/plans/#Swipes" >Simply Swipes 80, 60 & 40</a>
-    <a id="meal_cube2_dark_links" href="https://dining.unt.edu/fs/">Faculty/Staff Dining Hall Plans</a>
-    </div>
- </div>
 </div>
 <div class="home_bottom_banner">
     <div class="Create_Account_Today_Box">
        
-        <p style="font-size:xxx-large; font-family:serif;color: #407C51; margin-bottom: 15px;margin-top: 0px;">Create an Account Today!</p>
-        <p style="font-size:large; font-family:Helvetica,Arial,serif;color: black;margin-top: 0px;margin-bottom: 30px;">We will love to hear from you! If you create an account, you will be able to<br> write reviews for foods and drinks offered at <br>Discovery Perks Market & Grill!</p>
+        <p class="createAccountTitle" style="color: #407C51; margin-bottom: 15px;margin-top: 0px;">Create an Account Today!</p>
+        <p class="createAccountText">We will love to hear from you! If you create an account, you will be able to<br> write reviews for foods and drinks offered at <br>Discovery Perks Market & Grill!</p>
         <br>
         <a class="sign_up" href="registration.html">SIGN UP</a> <!-- change href link later-->
     </div>
@@ -171,11 +170,19 @@
     </button>
     <script type="text/javascript" src="home.js"></script>
 
-    <div id="accessMenu" class="accessMenu">
+    <div theme="light" id="accessMenu" class="accessMenu">
         <div class="closeBtn" onclick="closeAccessMenu()" >&times;</div>
         
-        <a id="switch-theme" class="theme-btn"> <img src="Images/Accessibility/lightmode.png" width="75px" height="75px"> </a>
-        
+        <a id="switch-theme" class="theme-btn"> <img src="Images/Accessibility/lightmode.png" width="75px" height="75px">
+        <p class = "text">Switch Theme</p> </a>
+
+        <a id="text-size" class="theme-btn" type="button"> <img src="Images/Accessibility/textSize.png" width="75px" height="75px">
+            <div>
+                <span id="textProgress1"></span>
+                <span id="textProgress2"></span>
+                <span id="textProgress3"></span>
+            </div>
+            <p class = "text">Increase Text Size</p> </a>        
     </div>
 
     <button onclick = "openAccessMenu()" id = "accessBtn" title = "Accessibility Features"> 
@@ -207,5 +214,7 @@
        </div>
    </div>
 </div>
+
 </body>
+
 </html>

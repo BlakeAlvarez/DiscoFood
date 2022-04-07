@@ -33,6 +33,7 @@ function closeAccessMenu() {
     document.getElementById("accessBtn").style.display="block"
 }
 
+
 window.onload=function(){
     let btn = document.querySelector("#switch-theme");
     btn.addEventListener("click", function() {
@@ -42,4 +43,100 @@ window.onload=function(){
             
         }
     });
+
+    let textCount = 0;
+    let textSize = document.querySelector("#text-size");
+    textSize.addEventListener("click", function(){
+
+        if (textCount == 0) {
+            curSize = parseInt($('.section1').css('font-size')) + 2;
+            $('.section1').css('font-size', curSize);
+            curSize = parseInt($('.section2').css('font-size')) + 2;
+            $('.section2').css('font-size', curSize);
+            curSize = parseInt($('.meal_plan_positioning').css('font-size')) + 2;
+            $('.meal_plan_positioning').css('font-size', curSize);
+            curSize = parseInt($('.createAccountText').css('font-size')) + 2;
+            $('.createAccountText').css('font-size', curSize);
+            curSize = parseInt($('.mealPlans').css('font-size')) + 2;
+            $('.mealPlans').css('font-size', curSize);
+            curSize = parseInt($('.accessMenu').css('font-size')) + 2;
+            $('.accessMenu').css('font-size', curSize);  
+            
+            
+            var t1 = document.getElementById("textProgress1");
+            var t2 = document.getElementById("textProgress2");
+            var t3 = document.getElementById("textProgress3");
+            t1.style.display="inline-block";
+            t2.style.display="inline-block";
+            t3.style.display="inline-block";
+            t1.style.backgroundColor="#72B844";
+
+            textCount++;        
+        }
+        else if (textCount == 1) {
+            curSize = parseInt($('.section1').css('font-size')) + 2;
+            $('.section1').css('font-size', curSize);
+            curSize = parseInt($('.section2').css('font-size')) + 2;
+            $('.section2').css('font-size', curSize);
+            curSize = parseInt($('.meal_plan_positioning').css('font-size')) + 2;
+            $('.meal_plan_positioning').css('font-size', curSize);
+            curSize = parseInt($('.createAccountText').css('font-size')) + 2;
+            $('.createAccountText').css('font-size', curSize);
+            curSize = parseInt($('.mealPlans').css('font-size')) + 2;
+            $('.mealPlans').css('font-size', curSize);
+            curSize = parseInt($('.accessMenu').css('font-size')) + 2;
+            $('.accessMenu').css('font-size', curSize);   
+
+            var t2 = document.getElementById("textProgress2");
+            t2.style.backgroundColor="#72B844";
+
+            textCount++;        
+        }
+        else if (textCount == 2) {
+            curSize = parseInt($('.section1').css('font-size')) + 2;
+            $('.section1').css('font-size', curSize);
+            curSize = parseInt($('.section2').css('font-size')) + 2;
+            $('.section2').css('font-size', curSize);
+            curSize = parseInt($('.meal_plan_positioning').css('font-size')) + 2;
+            $('.meal_plan_positioning').css('font-size', curSize);
+            curSize = parseInt($('.createAccountText').css('font-size')) + 2;
+            $('.createAccountText').css('font-size', curSize);
+            curSize = parseInt($('.mealPlans').css('font-size')) + 2;
+            $('.mealPlans').css('font-size', curSize);
+            curSize = parseInt($('.accessMenu').css('font-size')) + 2;
+            $('.accessMenu').css('font-size', curSize);  
+
+            var t3 = document.getElementById("textProgress3");
+            t3.style.backgroundColor="#72B844";
+            
+            textCount++;        
+        }
+        else if (textCount == 3) {
+            curSize = parseInt($('.section1').css('font-size')) + 2;
+            $('.section1').css('font-size', "");
+            curSize = parseInt($('.section2').css('font-size')) + 2;
+            $('.section2').css('font-size', "");
+            curSize = parseInt($('.meal_plan_positioning').css('font-size')) + 2;
+            $('.meal_plan_positioning').css('font-size', "");
+            curSize = parseInt($('.createAccountText').css('font-size')) + 2;
+            $('.createAccountText').css('font-size', "");
+            curSize = parseInt($('.mealPlans').css('font-size')) + 2;
+            $('.mealPlans').css('font-size', "");
+            curSize = parseInt($('.accessMenu').css('font-size')) + 2;
+            $('.accessMenu').css('font-size', "");  
+        
+            var t1 = document.getElementById("textProgress1");
+            var t2 = document.getElementById("textProgress2");
+            var t3 = document.getElementById("textProgress3");
+            t1.style.display="";
+            t2.style.display="";
+            t3.style.display="";
+            t1.style.backgroundColor="";
+            t2.style.backgroundColor="";
+            t3.style.backgroundColor="";
+
+            textCount = 0;
+        }
+
+    })
 }

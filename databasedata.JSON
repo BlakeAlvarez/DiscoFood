@@ -105,12 +105,147 @@
         {
           "id": "1",
           "Name": "Chips",
-          "Price": "$0.99"
+          "Price": "$1.09"
         },
         {
           "id": "2",
           "Name": "Fruit",
           "Price": "$0.50"
+        },
+        {
+          "id": "3",
+          "Name": "Candy",
+          "Price": "$1.09"
+        },
+        {
+          "id": "4",
+          "Name": "House Chips (Any Flavor)",
+          "Price": "$1.50"
+        },
+        {
+          "id": "5",
+          "Name": "Sea Salt Bagel Chips",
+          "Price": "$1"
+        },
+        {
+          "id": "6",
+          "Name": "Single Muffin (Any Variety)",
+          "Price": "$1"
+        },
+        {
+          "id": "7",
+          "Name": "Cookie Cup, Brownie Cup, Muffin Cup",
+          "Price": "$2"
+        },
+        {
+          "id": "8",
+          "Name": "Bagel (Any Flavor)",
+          "Price": "$1"
+        },
+        {
+          "id": "9",
+          "Name": "French Croissant",
+          "Price": "$1.50"
+        },
+        {
+          "id": "10",
+          "Name": "Chocolate ?",
+          "Price": "$1.75"
+        },
+        {
+          "id": "11",
+          "Name": "Union Coffee Cake",
+          "Price": "$1.75"
+        },
+        {
+          "id": "12",
+          "Name": "Grilled Garden Wrap",
+          "Price": "$4.25"
+        },
+        {
+          "id": "13",
+          "Name": "Spicy BBQ Chicken Wrap",
+          "Price": "$4.50"
+        },
+        {
+          "id": "14",
+          "Name": "Peanut Butter & Jelly Sandwich",
+          "Price": "$2.50"
+        },
+        {
+          "id": "15",
+          "Name": "White Cheddar Pimento Cheese Sandwich",
+          "Price": "$3"
+        },
+        {
+          "id": "16",
+          "Name": "Smoked Turkey & Cheddar Sandwich",
+          "Price": "$4.50"
+        },
+        {
+          "id": "17",
+          "Name": "Fire-roasted Jalapeño Egg Salad Sandwich",
+          "Price": "$3"
+        },
+        {
+          "id": "18",
+          "Name": "Classic Egg Salad Sandwich",
+          "Price": "$3"
+        },
+        {
+          "id": "19",
+          "Name": "Smoked Ham & Cheddar Sandwich",
+          "Price": "4.50"
+        },
+        {
+          "id": "20",
+          "Name": "Italian Sub",
+          "Price": "5.50"
+        },
+        {
+          "id": "21",
+          "Name": "Chipotle Turkey Sub",
+          "Price": "$5.25"
+        },
+        {
+          "id": "22",
+          "Name": "Grilled Garden Wrap",
+          "Price": "$4.25"
+        },
+        {
+          "id": "23",
+          "Name": "Spicy BBQ Chicken Wrap",
+          "Price": "$4.50"
+        },
+        {
+          "id": "24",
+          "Name": "Peanut Butter & Jelly Sandwich",
+          "Price": "$2.50"
+        },
+        {
+          "id": "25",
+          "Name": "White Cheddar Pimento Cheese Sandwich",
+          "Price": "$3"
+        },
+        {
+          "id": "26",
+          "Name": "Smoked Turkey & Cheddar Sandwich",
+          "Price": "$4.50"
+        },
+        {
+          "id": "27",
+          "Name": "Fire-roasted Jalapeño Egg Salad Sandwich",
+          "Price": "$3"
+        },
+        {
+          "id": "28",
+          "Name": "Classic Egg Salad Sandwich",
+          "Price": "$3"
+        },
+        {
+          "id": "29",
+          "Name": "Smoked Ham & Cheddar Sandwich",
+          "Price": "$4.50"
         }
       ],
       "Users": [
