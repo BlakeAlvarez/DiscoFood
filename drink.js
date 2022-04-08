@@ -181,7 +181,7 @@ for(let x in data.Drinks){
     }
 
     if(x==18){
-        let data = ['Additions','Price' ];
+        let data = ['Additions','Price'];
         let list = document.getElementById("section-header");
     
         let li = document.createElement("li");
@@ -590,7 +590,7 @@ while(AllReviews.hasChildNodes()){
 
 for(let x in data.Reviews){
   
-    if(data.Reviews[x].Review_Page =="drink"){
+    if(data.Reviews[x].Review_Page =="Drink"){
     var Review = document.createElement('div');
     Review.style.cssText="height:auto;width:500px;transform:translateX(400px);margin-bottom:20px;";
     var Icon = document.createElement('div');
@@ -837,13 +837,13 @@ function DisplayWriteReviewsPopup() {
 function CloseWriteReviewsPopup(){
   WriteReviewsPopup.style.display ="none";
   document.querySelector("body").style.overflow = 'visible'; //Enables Body Scroll
-  document.getElementById("drinkReviewInput").value='';
+  document.getElementById("DrinkReviewInput").value='';
 }
 
-document.getElementById("SubmitdrinkReview").addEventListener("click",AddReview);
+document.getElementById("SubmitDrinkReview").addEventListener("click",AddReview);
 function AddReview(){
   var rating;
-  var Review = document.getElementById("drinkReviewInput").value;
+  var Review = document.getElementById("DrinkReviewInput").value;
   var ele = document.getElementsByName('MakeRating');
               
            for(let i = 0; i < ele.length; i++) {
@@ -868,7 +868,7 @@ function AddReview(){
       set(newPostRef, {
         Review_Date:date,
         Review_Description:Review,
-        Review_Page:"drink",
+        Review_Page:"Drink",
         Review_Rating:rating,
         User_Name:GetUser
       })
