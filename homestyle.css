@@ -196,7 +196,7 @@ a:link {
   }
   
   /* mouse over link */
-  a:hover :not(.text) {
+  a:hover {
     color: white;
     text-decoration: none;
   }
@@ -467,14 +467,14 @@ a:link {
    transform: translate(-50%, -50%);
    padding: 20px;
   }
-.sign_up{
-  padding:20px 40px;
-  background-color: #BADA55;
-  color: white;
-  font-size: large;
-  font-family: Helvetica, Arial, sans-serif;
-  /*transition: color 500ms ease-out 10ms */ /*(Hover animation; add later)*/
-}
+  .sign_up{
+    padding:20px 40px;
+    background-color: #BADA55;
+    color: white;
+    font-size: large;
+    font-family: Helvetica, Arial, sans-serif;
+    /*transition: color 500ms ease-out 10ms */ /*(Hover animation; add later)*/
+  }
 .sign_up:hover{
   color: grey;
 }
@@ -602,7 +602,7 @@ a:link {
   margin: 25px;
 }
 
-.accessMenu button:hover, a:hover :not(.text){
+.accessMenu button:hover, a:hover:not(.text){
   color: #f1f1f1;
   cursor: pointer;
 }
