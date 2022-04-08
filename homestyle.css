@@ -316,6 +316,20 @@ a:link {
     display: inline-block;
     
   }
+  #mealPlanTitle{
+    font-size: 3em;  
+    color: rgb(43,83,54);
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-family: serif; 
+  }
+  .mealPlanText{
+    font-size:1.75rem; 
+    font-family:serif;
+    font-weight:bold;
+    color:#72b844;
+    margin-bottom: 50px;
+  }
   .meal_cube1{
     text-align: center;
     background-color: #fafafa;
@@ -596,6 +610,7 @@ a:link {
   float: left;
   background: white;   
   margin: 25px;
+  border: 2px solid #72b844;
 }
 
 .accessMenu button:hover, a:hover:not(.text){
@@ -609,11 +624,16 @@ a:link {
   width: 75px;
   background-color: white;
 }
-div[theme="dark"]{
+div[data-theme="dark"]{
   background: rgb(44, 44, 44);
   color: white;
 }
-[theme="dark"]{
+[data-theme="dark"]{
+  background: rgb(44, 44, 44);
+  color: white;
+}
+
+[data-theme="darkMenu"]{
   background: rgb(44, 44, 44);
   color: white;
 }

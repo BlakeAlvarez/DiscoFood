@@ -26,22 +26,28 @@ function openAccessMenu() {
     var div = document.getElementById("accessMenu")
     div.style.width = "25%"
     document.getElementById("accessBtn").style.display="none"
+    div.style.border = "2px solid #72b844";
 };
 function closeAccessMenu() {
     var div = document.getElementById("accessMenu")
     div.style.width = "0";
     document.getElementById("accessBtn").style.display="block"
+    div.style.border = "";
 }
 
 
 window.onload=function(){
     let btn = document.querySelector("#switch-theme");
     btn.addEventListener("click", function() {
-        let theme = document.querySelectorAll("[theme]");
+        let theme = document.querySelectorAll("[data-theme]");
         for (let i = 0; i < theme.length; i++) {
-            theme[i].setAttribute('theme', theme[i].getAttribute('theme') === 'dark' ? 'light' : 'dark');
-        }
+            if ((theme[i].getAttribute('data-theme') === 'lightMenu') || (theme[i].getAttribute('data-theme') === 'darkMenu')) {
+                theme[i].setAttribute('data-theme', theme[i].getAttribute('data-theme') === 'darkMenu' ? 'lightMenu' : 'darkMenu');                
+            } else {
+                theme[i].setAttribute('data-theme', theme[i].getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+            }
 
+        }
     });
 
     let textCount = 0;
@@ -49,20 +55,13 @@ window.onload=function(){
     textSize.addEventListener("click", function(){
 
         if (textCount == 0) {
-            curSize = parseInt($('.section1').css('font-size')) + 2;
-            $('.section1').css('font-size', curSize);
-            curSize = parseInt($('.section2').css('font-size')) + 2;
-            $('.section2').css('font-size', curSize);
-            curSize = parseInt($('.meal_plan_positioning').css('font-size')) + 2;
-            $('.meal_plan_positioning').css('font-size', curSize);
-            curSize = parseInt($('.createAccountText').css('font-size')) + 2;
-            $('.createAccountText').css('font-size', curSize);
-            curSize = parseInt($('.mealPlans').css('font-size')) + 2;
-            $('.mealPlans').css('font-size', curSize);
-            curSize = parseInt($('.accessMenu').css('font-size')) + 2;
-            $('.accessMenu').css('font-size', curSize);  
-            
-            
+  
+            let text = document.querySelectorAll("[data-fontSize]");
+            for (let i = 0; i < text.length; i++) {
+                curSize = parseInt($(text[i]).css('font-size')) + 2;
+                $(text[i]).css('font-size', curSize);
+            }
+
             var t1 = document.getElementById("textProgress1");
             var t2 = document.getElementById("textProgress2");
             var t3 = document.getElementById("textProgress3");
@@ -74,18 +73,11 @@ window.onload=function(){
             textCount++;        
         }
         else if (textCount == 1) {
-            curSize = parseInt($('.section1').css('font-size')) + 2;
-            $('.section1').css('font-size', curSize);
-            curSize = parseInt($('.section2').css('font-size')) + 2;
-            $('.section2').css('font-size', curSize);
-            curSize = parseInt($('.meal_plan_positioning').css('font-size')) + 2;
-            $('.meal_plan_positioning').css('font-size', curSize);
-            curSize = parseInt($('.createAccountText').css('font-size')) + 2;
-            $('.createAccountText').css('font-size', curSize);
-            curSize = parseInt($('.mealPlans').css('font-size')) + 2;
-            $('.mealPlans').css('font-size', curSize);
-            curSize = parseInt($('.accessMenu').css('font-size')) + 2;
-            $('.accessMenu').css('font-size', curSize);   
+            let text = document.querySelectorAll("[data-fontSize]");
+            for (let i = 0; i < text.length; i++) {
+                curSize = parseInt($(text[i]).css('font-size')) + 2;
+                $(text[i]).css('font-size', curSize);
+            }
 
             var t2 = document.getElementById("textProgress2");
             t2.style.backgroundColor="#72B844";
@@ -93,38 +85,32 @@ window.onload=function(){
             textCount++;        
         }
         else if (textCount == 2) {
-            curSize = parseInt($('.section1').css('font-size')) + 2;
-            $('.section1').css('font-size', curSize);
-            curSize = parseInt($('.section2').css('font-size')) + 2;
-            $('.section2').css('font-size', curSize);
-            curSize = parseInt($('.meal_plan_positioning').css('font-size')) + 2;
-            $('.meal_plan_positioning').css('font-size', curSize);
-            curSize = parseInt($('.createAccountText').css('font-size')) + 2;
-            $('.createAccountText').css('font-size', curSize);
-            curSize = parseInt($('.mealPlans').css('font-size')) + 2;
-            $('.mealPlans').css('font-size', curSize);
-            curSize = parseInt($('.accessMenu').css('font-size')) + 2;
-            $('.accessMenu').css('font-size', curSize);  
+
+            let text = document.querySelectorAll("[data-fontSize]");
+            for (let i = 0; i < text.length; i++) {
+                curSize = parseInt($(text[i]).css('font-size')) + 2;
+                $(text[i]).css('font-size', curSize);
+            }
 
             var t3 = document.getElementById("textProgress3");
             t3.style.backgroundColor="#72B844";
             
             textCount++;        
         }
-        else if (textCount == 3) {
-            curSize = parseInt($('.section1').css('font-size')) + 2;
-            $('.section1').css('font-size', "");
-            curSize = parseInt($('.section2').css('font-size')) + 2;
-            $('.section2').css('font-size', "");
-            curSize = parseInt($('.meal_plan_positioning').css('font-size')) + 2;
-            $('.meal_plan_positioning').css('font-size', "");
-            curSize = parseInt($('.createAccountText').css('font-size')) + 2;
-            $('.createAccountText').css('font-size', "");
-            curSize = parseInt($('.mealPlans').css('font-size')) + 2;
-            $('.mealPlans').css('font-size', "");
-            curSize = parseInt($('.accessMenu').css('font-size')) + 2;
-            $('.accessMenu').css('font-size', "");  
-        
+        else {
+
+            let text = document.querySelectorAll("[data-fontSize]");
+            for (let i = 0; i < text.length; i++) {
+                if ($(text).css('font-family') == 'opendyslexic') {
+                    $(text[i]).css('font-size', "");
+                    curSize = parseInt($(text[i]).css('font-size')) - 5;
+                    $(text[i]).css('font-size', curSize);   
+                } else {
+                    $(text[i]).css('font-size', "");                   
+                }
+
+            }
+
             var t1 = document.getElementById("textProgress1");
             var t2 = document.getElementById("textProgress2");
             var t3 = document.getElementById("textProgress3");
@@ -144,36 +130,23 @@ window.onload=function(){
     dyslexiaBtn.addEventListener("click", function() {
         
         if (fontFamCount == 0) {
-            $('body').css('font-family', 'opendyslexic');
-            $('.section1').css('font-family', 'opendyslexic');
-            $('.section2').css('font-family', 'opendyslexic');
-            $('.meal_plan_positioning').css('font-family', 'opendyslexic');
-            $('.createAccountText').css('font-family', 'opendyslexic');
-            $('.mealPlans').css('font-family', 'opendyslexic');
-            $('.accessMenu').css('font-family', 'opendyslexic');  
-            $('.createAccountTitle').css('font-family', 'opendyslexic');  
-            $('.createAccountTitle').css('font-size', "24px");  
-            $('.hours').css('font-family', 'opendyslexic');  
-            $('.hours').css('font-size', "24px");  
-            $('.discoPerks').css('font-family', 'opendyslexic');  
-            $('.discoPerks').css('font-size', "24px");  
+
+            let od = 'opendyslexic';
+            let text = document.querySelectorAll("[data-fontSize]");
+            for (let i = 0; i < text.length; i++) {
+                $(text[i]).css('font-family', od);
+                curSize = parseInt($(text[i]).css('font-size')) - 5;
+                $(text[i]).css('font-size', curSize);
+            }           
 
             fontFamCount++;        
         } else {
-            $('body').css('font-family', "");
-            $('.section1').css('font-family', "");
-            $('.section2').css('font-family', "");
-            $('.meal_plan_positioning').css('font-family', "");
-            $('.createAccountText').css('font-family', "");
-            $('.mealPlans').css('font-family', "");
-            $('.accessMenu').css('font-family', ""); 
-            $('.createAccountTitle').css('font-family', "");  
-            $('.createAccountTitle').css('font-size', "");  
-            $('.hours').css('font-family', "");  
-            $('.hours').css('font-size', "");  
-            $('.discoPerks').css('font-family', "");  
-            $('.discoPerks').css('font-size', "");  
 
+            let text = document.querySelectorAll("[data-fontSize]");
+            for (let i = 0; i < text.length; i++) {
+                $(text[i]).css('font-family', "");
+                $(text[i]).css('font-size', "");
+            }             
 
             fontFamCount = 0;
         }
