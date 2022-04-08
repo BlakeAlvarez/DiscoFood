@@ -137,6 +137,40 @@ window.onload=function(){
 
             textCount = 0;
         }
+    });
 
-    })
+    let fontFamCount = 0;
+    let dyslexiaBtn = document.querySelector("#dyslexiaToggle");
+    dyslexiaBtn.addEventListener("click", function() {
+        
+        if (fontFamCount == 0) {
+            $('body').css('font-family', 'opendyslexic');
+            $('.section1').css('font-family', 'opendyslexic');
+            $('.section2').css('font-family', 'opendyslexic');
+            $('.meal_plan_positioning').css('font-family', 'opendyslexic');
+            $('.createAccountText').css('font-family', 'opendyslexic');
+            $('.mealPlans').css('font-family', 'opendyslexic');
+            $('.accessMenu').css('font-family', 'opendyslexic');  
+            $('.createAccountTitle').css('font-family', 'opendyslexic');  
+            $('.createAccountTitle').css('font-size', "24px");  
+            fontFamCount++;        
+        } else {
+            $('body').css('font-family', "");
+            $('.section1').css('font-family', "");
+            $('.section2').css('font-family', "");
+            $('.meal_plan_positioning').css('font-family', "");
+            $('.createAccountText').css('font-family', "");
+            $('.mealPlans').css('font-family', "");
+            $('.accessMenu').css('font-family', ""); 
+            $('.createAccountTitle').css('font-family', "");  
+            $('.createAccountTitle').css('font-size', "");  
+            fontFamCount = 0;
+        }
+
+       
+
+    });
+
+
 }
+

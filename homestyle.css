@@ -6,11 +6,12 @@ html {
   scroll-behavior: smooth;
 }
 p{
-  font-family: Helvetica, Arial, sans-serif;
+
 }
 body{
   overflow-x: hidden;  
   font-size: 1rem;
+  font-family: sans-serif;
 }
 
 .header{
@@ -196,9 +197,12 @@ a:link {
   }
   
   /* mouse over link */
-  a:hover {
+  a:hover{
     color: white;
     text-decoration: none;
+  }
+  .text:hover{
+    color: black;
   }
   
   /* selected link */
@@ -632,8 +636,10 @@ div[theme="dark"]{
   transition: background-color 0.6s ease;
 }
 
-
-
+@font-face {
+  font-family: 'opendyslexic';
+  src: url('./Images/Accessibility/OpenDyslexic-Regular.otf');
+}
 
 .Grill_Section{
   display:block;
