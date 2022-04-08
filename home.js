@@ -40,8 +40,8 @@ window.onload=function(){
         let theme = document.querySelectorAll("[theme]");
         for (let i = 0; i < theme.length; i++) {
             theme[i].setAttribute('theme', theme[i].getAttribute('theme') === 'dark' ? 'light' : 'dark');
-            
         }
+
     });
 
     let textCount = 0;
@@ -153,6 +153,11 @@ window.onload=function(){
             $('.accessMenu').css('font-family', 'opendyslexic');  
             $('.createAccountTitle').css('font-family', 'opendyslexic');  
             $('.createAccountTitle').css('font-size', "24px");  
+            $('.hours').css('font-family', 'opendyslexic');  
+            $('.hours').css('font-size', "24px");  
+            $('.discoPerks').css('font-family', 'opendyslexic');  
+            $('.discoPerks').css('font-size', "24px");  
+
             fontFamCount++;        
         } else {
             $('body').css('font-family', "");
@@ -164,6 +169,12 @@ window.onload=function(){
             $('.accessMenu').css('font-family', ""); 
             $('.createAccountTitle').css('font-family', "");  
             $('.createAccountTitle').css('font-size', "");  
+            $('.hours').css('font-family', "");  
+            $('.hours').css('font-size', "");  
+            $('.discoPerks').css('font-family', "");  
+            $('.discoPerks').css('font-size', "");  
+
+
             fontFamCount = 0;
         }
 

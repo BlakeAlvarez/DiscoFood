@@ -5,9 +5,6 @@ html, body, footer {
 html {
   scroll-behavior: smooth;
 }
-p{
-
-}
 body{
   overflow-x: hidden;  
   font-size: 1rem;
@@ -542,11 +539,6 @@ a:link {
     text-align: center;
   
 }
-
-/* might need later */
-/* #accessBtn {
-
-} */
 
 #accessBtn img {
   height: 55px;
