@@ -206,15 +206,7 @@ window.onload=function(){
                 }
             });           
         }
-
-
-
-
-
-
-
-
-        alert(ttsCount);
+        
     });
     
 
