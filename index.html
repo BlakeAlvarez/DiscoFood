@@ -5,6 +5,7 @@
 <script type="module" src="database.js"></script>
 <script type="module" src="food.js"> </script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src='./Images/Accessibility/voicerss-tts.min.js'></script>
 <link rel="stylesheet" href="homestyle.css">
 <div class ="header">
     <img src = "Images/Home/mlog_v2.png" style="margin: 20px" align="right" alt="Logo for The University of North Texas" title="University of North Texas">
@@ -27,6 +28,7 @@
 
 </head>
 <body data-theme = "light">
+
     <div class="top_strip">
     <div class="row">
         <div class="first_col"></div>
@@ -188,6 +190,14 @@
         <a id="dyslexiaToggle" class="theme-btn"> <img src="Images/Accessibility/lightmode.png" width="75px" height="75px">
             <p class = "text">Dyslexia Friendly</p> 
         </a>
+
+        <a id="textSpeech" class="theme-btn"> <img src="Images/Accessibility/lightmode.png" width="75px" height="75px">
+            <div>
+                <span id="ttsToggle"></span>
+            </div>            
+            <p class = "text">TTS</p> 
+        </a>
+
     </div>
 
     <button onclick = "openAccessMenu()" id = "accessBtn" title = "Accessibility Features"> 

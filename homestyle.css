@@ -648,6 +648,16 @@ div[data-theme="dark"]{
   transition: background-color 0.6s ease;
 }
 
+#ttsToggle {
+  display: inline-block;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
 @font-face {
   font-family: 'opendyslexic';
   src: url('./Images/Accessibility/OpenDyslexic-Regular.otf');

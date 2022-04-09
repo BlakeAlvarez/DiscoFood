@@ -151,9 +151,72 @@ window.onload=function(){
             fontFamCount = 0;
         }
 
-       
-
     });
+
+
+
+
+    var ttsCount = 0;
+    let tts = document.getElementById('textSpeech');
+    const delay = 10000;
+    let lastExecution = 0;
+    tts.addEventListener("click",  function() {
+
+        if (ttsCount == 0) {
+            ttsCount++;
+            var toggle = document.getElementById("ttsToggle");
+            toggle.style.display="inline-block";
+            toggle.style.backgroundColor="#72B844";
+
+              
+        } else {
+
+            var toggle = document.getElementById("ttsToggle");
+            toggle.style.display="";
+            toggle.style.backgroundColor= "";
+
+            ttsCount = 0;
+        }    
+
+        if (ttsCount == 1 && ((lastExecution + delay) < Date.now())) {
+
+            $(document).mouseup(function(){
+                var highlightedText = "";
+                if (ttsCount == 1 && ((lastExecution + delay) < Date.now())) {
+                    var highlightedText = "";
+                    if (window.getSelection) {
+                        highlightedText = window.getSelection().toString();
+                    } 
+                    else if (document.selection && document.selection.type != "Control") {
+                        highlightedText = document.selection.createRange().text;
+                    }
+                    if(highlightedText != "") {
+                        VoiceRSS.speech({
+                            key: '1463989e69f145c784a02965f9a1e505',
+                            src: highlightedText,
+                            hl: 'en-us',
+                            v: 'Linda',
+                            r: 0, 
+                            c: 'mp3',
+                            f: '44khz_16bit_stereo',
+                            ssml: false
+                        });    
+                        lastExecution = Date.now();
+                    }             
+                }
+            });           
+        }
+
+
+
+
+
+
+
+
+        alert(ttsCount);
+    });
+    
 
 
 }
