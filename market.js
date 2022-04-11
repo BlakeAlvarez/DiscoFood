@@ -1,7 +1,7 @@
 
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { getDatabase, ref,push, onValue, set } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBaJmGl7QLJTiJ6ZnkKNCbfo-qT_Qagymk",
@@ -40,7 +40,7 @@ if(something=="true"){
 
 const db = getDatabase();
 const Menu = ref(db);
-//Lines 19-43 Creates Market List that is displayed on Food Page
+//Lines 19-43 Creates Market List that is displayed on Market Page
 let div = document.createElement('div');
 onValue(Menu, (snapshot) => {
 const data = snapshot.val(); //Data is string array
@@ -669,7 +669,7 @@ function AddReview(){
       set(newPostRef, {
         Review_Date:date,
         Review_Description:Review,
-        Review_Page:'Market',
+        Review_Page:"Market",
         Review_Rating:rating,
         User_Name:GetUser
       })

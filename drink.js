@@ -311,7 +311,7 @@ document.getElementById("prevSlide").addEventListener("click", function(){
   showSlides(slideIndex += -1);
 });
 
-//Lines 78-348 is used to display the first 5 reviews on drink Page
+//Lines 78-348 is used to display the first 5 reviews on Food Page
 let Reviews = document.createElement('div');
 //var UsersTest = document.createElement('p'); //TEST STATEMENT DELETE LATER
 onValue(Menu, (snapshot) => {
