@@ -920,6 +920,43 @@ div[data-theme="dark"]{
   resize: none;
 }
 
+.MarketReviewInput{
+  display: block;
+  margin-top: 80px;
+  margin-left:100px;
+  width:400px ;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 80px;
+  padding-top: 5px;
+  background-color: #F6F5F5;
+  border: none;
+  border-bottom:5px solid #00853E;
+  outline: none;
+  font-size: 1em;
+  resize: none;
+}
+.MarketReviewInput:focus::placeholder{
+  color: transparent;
+  white-space:normal;
+  font-size: 1em;
+  padding-left: 2px;
+  padding-top: 5px;
+  outline: none;
+  resize: none;
+}
+.MarketReviewInput::placeholder{
+  color: black;
+  white-space:normal;
+  font-size: 1em;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  outline: none;
+  white-space:normal;
+  resize: none;
+}
+
 #CloseWriteAReviewPopup {
   background-color: white;
   border: none;
@@ -971,6 +1008,25 @@ div[data-theme="dark"]{
   margin-top: 30px;
   margin-bottom: 50px;
   border-radius: 10px;
+}
+
+#SubmitMarketReview{
+  background-color: #00853E;
+  border: none;
+  color: white;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+
 }
 
 

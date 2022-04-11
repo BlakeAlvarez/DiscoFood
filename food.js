@@ -20,6 +20,9 @@ var GetUser = sessionStorage.getItem("USER");
 if(something=="true"){
   document.getElementById("WriteAReviewButton").addEventListener("click", DisplayWriteReviewsPopup);
   document.getElementById("UserButton").innerHTML="Manage Account";
+  var manage = document.getElementById("UserButton");
+  manage.innerHTML="Manage Account";
+  manage.setAttribute("href","manage_account.html");
   }
   else
   {
