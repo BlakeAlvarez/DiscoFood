@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { getDatabase, ref, onValue, set,push } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBaJmGl7QLJTiJ6ZnkKNCbfo-qT_Qagymk",
@@ -546,10 +546,11 @@ for(let x in data.Reviews){
     ReviewDes.style.cssText="display:block;transform:translateX(70px);margin-top:-20px;";
     Review.appendChild(ReviewDes);
     Reviews.appendChild(Review);
-    }
     MaxReviews++;
     if(MaxReviews == 5)
       break;
+    }
+    
 }
 /*
 // EXAMPLE- How to loop through database regardless of the key is 
