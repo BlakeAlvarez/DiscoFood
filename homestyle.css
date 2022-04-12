@@ -610,10 +610,10 @@ a:link {
   border: 2px solid #72b844;
 }
 
-.accessMenu button:hover, a:hover{
+/* .accessMenu button:hover, a:hover{
   color: black;
   cursor: pointer;
-}
+} */
 
 .theme-btn {
   appearance: button;
