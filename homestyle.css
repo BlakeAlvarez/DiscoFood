@@ -18,7 +18,7 @@ body{
     color:white;
     font-size: medium;
     font-family: Helvetica, Arial, sans-serif;
-    line-height: 50%;
+    line-height: 100%;
 }
 
 .discoPerks, .hours, .createAccountTitle{
@@ -1194,4 +1194,18 @@ div[data-theme="dark"]{
   .footer-3 p{
     margin-bottom: 5px;
   }
+}
+@media only screen and (max-width:940px){
+  .header{
+    padding:5px 10px 10px 100px;
+    text-align: left;
+    background: #00853E;
+    color:white;
+    font-size: medium;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 100%;
+}
+.header img{
+  display: none;
+}
 }
