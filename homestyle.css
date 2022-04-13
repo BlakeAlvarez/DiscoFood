@@ -956,6 +956,24 @@ div[data-theme="dark"]{
   white-space:normal;
   resize: none;
 }
+#DeleteReview{
+  background-color:#00853E;
+  border: none;
+  color:white;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transform: translateX(100px);
+  margin-top: 30px;
+  margin-right: -110px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
 
 #CloseWriteAReviewPopup {
   background-color: white;
@@ -970,7 +988,8 @@ div[data-theme="dark"]{
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  margin-left: 260px;
+  margin-left: 0px;
+  transform: translateX(260px);
   margin-top: 30px;
   margin-bottom: 50px;
   border-radius: 10px;
@@ -984,6 +1003,7 @@ div[data-theme="dark"]{
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  transform: translateX(260px);
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
@@ -1001,6 +1021,7 @@ div[data-theme="dark"]{
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  transform: translateX(260px);
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
@@ -1019,6 +1040,7 @@ div[data-theme="dark"]{
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  transform: translateX(260px);
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;

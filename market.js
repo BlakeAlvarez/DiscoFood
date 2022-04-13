@@ -1,7 +1,7 @@
 
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref,push, onValue, set } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { getDatabase, ref,push, onValue, set,remove,update } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBaJmGl7QLJTiJ6ZnkKNCbfo-qT_Qagymk",
@@ -129,7 +129,14 @@ for(let x in data.Reviews){
     Name.style.color = 'black';
     Name.style.display="inline";
     Review.appendChild(Name);
-
+    if(data.Reviews[x].User_Name == GetUser && something=="true"){
+      var edit_dots = document.createElement('span');
+      edit_dots.className ="edit_dots";
+      edit_dots.onclick = function(){
+        EditReview(data.Reviews[x].Review_Rating,data.Reviews[x].Review_Description,x);
+      };
+      Review.appendChild(edit_dots);
+    }
     var star = data.Reviews[x].Review_Rating;
     if(star == 1){
       
@@ -400,7 +407,17 @@ for(let x in data.Reviews){
     Name.style.color = 'black';
     Name.style.display="inline";
     Review.appendChild(Name);
-
+    if(data.Reviews[x].User_Name == GetUser && something=="true"){
+      var edit_dots = document.createElement('span');
+      edit_dots.className ="edit_dots";
+      edit_dots.onclick = function(){
+        EditReview(data.Reviews[x].Review_Rating,data.Reviews[x].Review_Description,x);
+      };
+      
+      edit_dots.style.marginLeft="150px";
+      Review.appendChild(edit_dots);
+      
+    }
     var star = data.Reviews[x].Review_Rating;
     if(star == 1){
       
@@ -621,26 +638,77 @@ document.getElementById("CloseWriteAReviewPopup").addEventListener("click", Clos
 var WriteReviewsPopup = document.getElementById("WriteReviewsModal");
 document.getElementById("Usernamebox").innerHTML = GetUser;
 function DisplayWriteReviewsPopup() {
-  
+  var DisplayDeleteButton = document.getElementById("DeleteReview");
+  DisplayDeleteButton.style.display="none";
+  var changeTitle = document.getElementById("ReviewTitle");
+  changeTitle.innerText="Write Review";
   WriteReviewsPopup.style.display ="block";
   document.querySelector("body").style.overflow = 'hidden'; //Stops Body Scroll
   var errorcheck = document.getElementById("ratingerror");
   errorcheck.style.display='none';
   var errorcheck2 = document.getElementById("reviewerror");
-     errorcheck2.style.display='none';
+  errorcheck2.style.display='none';
+  var changePostButton = document.getElementById("SubmitMarketReview");
+  changePostButton.value="Post";
 }
 function CloseWriteReviewsPopup(){
   WriteReviewsPopup.style.display ="none";
-  document.querySelector("body").style.overflow = 'visible'; //Enables Body Scroll
+  //document.querySelector("body").style.overflow = 'visible'; //Enables Body Scroll
   document.getElementById("MarketReviewInput").value='';
   var ele = document.getElementsByName('MakeRating');
               
            for(let i = 0; i < ele.length; i++) {
                        ele[i].checked = false;
            }
+  var ValueButton = document.getElementById("SubmitMarketReview");
+  if(ValueButton.value =="value")
+  document.querySelector("body").style.overflow = 'hidden'; //Enables Body Scroll
+  if(ValueButton.value =="Post")
+  document.querySelector("body").style.overflow = 'visible'; //Enables Body Scroll
   
 }
-
+var KEY;
+const updateUserRev = ref(db, 'Reviews/');
+document.getElementById("DeleteReview").addEventListener("click",DeleteReview);
+function DeleteReview(){
+  var Deletekey = "Reviews/"+KEY;
+  const DeletePosition = ref(db,Deletekey);
+  remove(DeletePosition);
+  alert("Review Deleted!");
+}
+function EditReview(UserRatingEdit,UserReviewEdit,ReviewKey){
+  var DisplayDeleteButton = document.getElementById("DeleteReview");
+  DisplayDeleteButton.style.display="inline-block";
+   var changeTitle = document.getElementById("ReviewTitle");
+   var changePostButton = document.getElementById("SubmitMarketReview");
+   document.getElementById("MarketReviewInput").value=UserReviewEdit;
+   var ele = document.getElementsByName('MakeRating');
+   if(UserRatingEdit==5){
+     ele[0].checked = true;
+   }
+   if(UserRatingEdit==4){
+     ele[1].checked = true;
+   }
+   if(UserRatingEdit==3){
+     ele[2].checked = true;
+   }
+   if(UserRatingEdit==2){
+     ele[3].checked = true;
+   }
+   if(UserRatingEdit==1){
+     ele[4].checked = true;
+   }
+   changeTitle.innerText="Edit Review";
+   changePostButton.value="Save";
+   WriteReviewsPopup.style.display ="block";
+   document.querySelector("body").style.overflow = 'hidden'; //Stops Body Scroll
+   var errorcheck = document.getElementById("ratingerror");
+   errorcheck.style.display='none';
+   var errorcheck2 = document.getElementById("reviewerror");
+   errorcheck2.style.display='none';
+   KEY = ReviewKey;
+   
+ }
 document.getElementById("SubmitMarketReview").addEventListener("click",AddReview);
 function AddReview(){
   var rating;
@@ -664,6 +732,23 @@ function AddReview(){
   if((Review!="") && (rating!=null)){
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var ValueButton = document.getElementById("SubmitMarketReview");
+    if(ValueButton.value == "Save"){
+      var path1 = KEY + "/Review_Date";
+      var path2 = KEY + "/Review_Description";
+      var path3 = KEY + "/Review_Page";
+      var path4 = KEY + "/Review_Rating";
+      var path5 = KEY + "/User_Name";
+      update(updateUserRev,{
+        [path1]:date,
+        [path2]:Review,
+        [path3]:"Market",
+        [path4]:rating,
+        [path5]:GetUser
+      });
+      alert("Review Updated!");
+    }
+    else{
     const postListRef = ref(db, 'Reviews/'); //Potential Solution 1
       const newPostRef = push(postListRef);
       set(newPostRef, {
@@ -684,7 +769,7 @@ function AddReview(){
         
         alert("ERROR: Unable to add review");
       });
-   
+    }
   }
  
 }
