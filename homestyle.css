@@ -198,10 +198,6 @@ a:link {
     color: white;
     text-decoration: none;
   }
-  .text:hover{
-    color: black;
-  }
-  
   /* selected link */
   a:active {
     color: white;
@@ -582,6 +578,7 @@ a:link {
   overflow-x: hidden; 
   transition: 0.5s; 
   overflow-y: auto;
+  text-align: center;
 }
 
 .accessMenu-content {
@@ -613,10 +610,10 @@ a:link {
   border: 2px solid #72b844;
 }
 
-.accessMenu button:hover, a:hover:not(.text){
-  color: #f1f1f1;
+/* .accessMenu button:hover, a:hover{
+  color: black;
   cursor: pointer;
-}
+} */
 
 .theme-btn {
   appearance: button;
@@ -624,22 +621,28 @@ a:link {
   width: 75px;
   background-color: white;
 }
+
 div[data-theme="dark"]{
-  background: rgb(44, 44, 44);
+  background: rgba(29,42,53,255);
   color: white;
 }
 [data-theme="dark"]{
-  background: rgb(44, 44, 44);
+  background: rgba(29,42,53,255);
   color: white;
 }
-
 [data-theme="darkMenu"]{
-  background: rgb(44, 44, 44);
+  background: rgba(29,42,53,255);
   color: white;
 }
+/* [data-theme="darkIcon"]{
+  background-color: black;
+  background: black;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+} */
 
-#textProgress1, #textProgress2, #textProgress3 {
-  display: none;
+#themeToggle {
+  display: inline-block;
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -647,7 +650,15 @@ div[data-theme="dark"]{
   border-radius: 50%;
   transition: background-color 0.6s ease;
 }
-
+#textProgress1, #textProgress2, #textProgress3 {
+  display: inline-block;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
 #ttsToggle {
   display: inline-block;
   cursor: pointer;
@@ -657,6 +668,16 @@ div[data-theme="dark"]{
   border-radius: 50%;
   transition: background-color 0.6s ease;
 }
+#dyslexiaToggleDot {
+  display: inline-block;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
 
 @font-face {
   font-family: 'opendyslexic';

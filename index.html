@@ -164,7 +164,10 @@
         <br>
         <a class="sign_up" href="registration.html">SIGN UP</a> <!-- change href link later-->
     </div>
-        
+</div>
+
+<!-- code below for access menu and accessibility functions -->
+<div>
     <button onclick = "toTheTop()" id = "topButton" title = "Go to Top">
         <span>^</span> 
         <br/>
@@ -175,10 +178,13 @@
     <div data-theme="lightMenu" id="accessMenu" class="accessMenu" data-fontSize="">
         <div class="closeBtn" onclick="closeAccessMenu()" >&times;</div>
         
-        <a id="switch-theme" class="theme-btn"> <img src="Images/Accessibility/lightmode.png" width="75px" height="75px">
+        <a id="switch-theme" class="theme-btn"> <img id="lightIcon" data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/lightMode.png" width="75px" height="75px">
+            <div>
+                <span id="themeToggle"></span>
+            </div>
         <p class = "text">Switch Theme</p> </a>
 
-        <a id="text-size" class="theme-btn" type="button"> <img src="Images/Accessibility/textSize.png" width="75px" height="75px">
+        <a id="text-size" class="theme-btn" type="button"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/textSize.png" width="75px" height="75px">
             <div>
                 <span id="textProgress1"></span>
                 <span id="textProgress2"></span>
@@ -187,11 +193,14 @@
             <p class = "text">Increase Text Size</p> 
         </a>        
 
-        <a id="dyslexiaToggle" class="theme-btn"> <img src="Images/Accessibility/lightmode.png" width="75px" height="75px">
+        <a id="dyslexiaToggle" class="theme-btn"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/opendyslexic.jpg" width="75px" height="75px">
+            <div>
+                <span id="dyslexiaToggleDot"></span>
+            </div>
             <p class = "text">Dyslexia Friendly</p> 
         </a>
 
-        <a id="textSpeech" class="theme-btn"> <img src="Images/Accessibility/lightmode.png" width="75px" height="75px">
+        <a id="textSpeech" class="theme-btn"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/text-to-speech.png" width="75px" height="75px">
             <div>
                 <span id="ttsToggle"></span>
             </div>            
