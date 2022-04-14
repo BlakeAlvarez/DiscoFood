@@ -194,15 +194,16 @@ a:link {
   }
   
   /* mouse over link */
-  a:hover{
+  /* a:hover {
     color: white;
     text-decoration: none;
-  }
+  } */
   /* selected link */
-  a:active {
+  /* a:active {
     color: white;
     text-decoration: none;
-  }
+  } */
+  
   .first_col, .second_col, .third_col, .fourth_col {
     float: left;
     width: 25%;
@@ -698,7 +699,6 @@ div[data-theme="dark"]{
   background-size: auto;
   background-repeat: no-repeat;
   background-image: url("Images/Food/avesta-plate_back1_edited.png");
-  
 }
 .DrinkReviewsSection{
   display:block;
@@ -709,7 +709,6 @@ div[data-theme="dark"]{
   background-size: auto;
   background-repeat: no-repeat;
   background-image: url("Images/Food/avesta-plate_back1_edited.png");
-  
 }
 #MoreReviewsLink{
   display: block;
@@ -820,7 +819,7 @@ div[data-theme="dark"]{
 .rateDisplay > input:checked ~ label {
   color: #72B844;    
 }
-.rateDisplay:not(:checked) > label:hover,
+.rateDisplay:not(:checked) > label:f,
 .rate:not(:checked) > label:hover ~ label {
   color: #72B844;  
 }
