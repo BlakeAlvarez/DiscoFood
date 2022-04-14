@@ -52,13 +52,12 @@ for(let x in data.Market){
     
     let Name = document.createElement("p");	// Create a new element
     Name.innerText = data.Market[x].Name;	// Change the text of the element
-    Name.style.color = 'black';
     Name.style.display='inline';
     Name.style.cssText="margin-bottom:-15px;margin-left:400px;text-align:left";
     div.appendChild(Name);
     let Price = document.createElement("p");	// Create a new element
     Price.innerText = data.Market[x].Price;	// Change the text of the element
-    Price.style.cssText= "color:black; padding-left:100px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+    Price.style.cssText= "padding-left:100px;margin-left:670px;margin-top:0;";	// Change the text color of the element
     div.appendChild(Price);
     var line = document.createElement("HR");
     line.style.cssText="text-align:left;margin-left:400px;width:410px;";;
@@ -126,7 +125,6 @@ for(let x in data.Reviews){
     Review.appendChild(Icon);
     let Name = document.createElement("p");	// Create a new element
     Name.innerText = data.Reviews[x].User_Name; 	// Change the text of the element
-    Name.style.color = 'black';
     Name.style.display="inline";
     Review.appendChild(Name);
     if(data.Reviews[x].User_Name == GetUser && something=="true"){
@@ -340,7 +338,6 @@ for(let x in data.Reviews){
     }
     let ReviewDes = document.createElement("p");	// Create a new element
     ReviewDes.innerText = data.Reviews[x].Review_Description; 	// Change the text of the element
-    ReviewDes.style.color = 'black';
     ReviewDes.style.cssText="display:block;transform:translateX(70px);margin-top:-20px;";
     Review.appendChild(ReviewDes);
     Reviews.appendChild(Review);
@@ -404,7 +401,6 @@ for(let x in data.Reviews){
     Review.appendChild(Icon);
     let Name = document.createElement("p");	// Create a new element
     Name.innerText = data.Reviews[x].User_Name; 	// Change the text of the element
-    Name.style.color = 'black';
     Name.style.display="inline";
     Review.appendChild(Name);
     if(data.Reviews[x].User_Name == GetUser && something=="true"){
@@ -621,7 +617,6 @@ for(let x in data.Reviews){
     }
     let ReviewDes = document.createElement("p");	// Create a new element
     ReviewDes.innerText = data.Reviews[x].Review_Description; 	// Change the text of the element
-    ReviewDes.style.color = 'black';
     ReviewDes.style.cssText="display:block;transform:translateX(70px);margin-top:-20px;";
     Review.appendChild(ReviewDes);
     AllReviews.appendChild(Review);

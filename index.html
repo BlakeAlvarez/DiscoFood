@@ -7,6 +7,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src='./Images/Accessibility/voicerss-tts.min.js'></script>
 <link rel="stylesheet" href="homestyle.css">
+<link rel="stylesheet" href="accessibility.css">
 <div class ="header">
     <img src = "Images/Home/mlog_v2.png" style="margin: 20px" align="right" alt="Logo for The University of North Texas" title="University of North Texas">
     <h2><a href="https://www.unt.edu" style="font-size: small;" >UNIVERSITY OF NORTH TEXAS</a></h2>
@@ -27,7 +28,7 @@
 </div>
 
 </head>
-<body data-theme = "light">
+<body data-theme = "light" data-fontSize="">
 
     <div class="top_strip">
     <div class="row">
@@ -40,11 +41,11 @@
     </div>
     <div>
 
-    <div class = "section1" data-fontSize="" style = "text-align: center;padding-right: 250px;" >
+    <div class = "section1"  style = "text-align: center;padding-right: 250px;" >
         <div data-theme = "light" style = "display: inline-block; text-align: left;">
             <br/>
-            <p1 data-fontSize="" class="discoPerks"> Discovery Perks <br /></p1>
-            <p2 data-fontSize="" class = marketGrill > Market & Grill<br/></p2>
+            <p1  class="discoPerks"> Discovery Perks <br /></p1>
+            <p2  class = marketGrill > Market & Grill<br/></p2>
             <p3 class = p3>Room G110 (across from the library, behind the student lounge)
                 <img id="map" src = "Images/Home/map.png" alt="Icon of Map" style="transform: translateX(100px);margin-bottom: 5px;"/>
                 <p style = "padding-left: 130px;padding-bottom: 50px;display: inline-block;">3940 N Elm St, Denton, TX 76207</p>
@@ -71,10 +72,10 @@
         </div>
     </div>
 
-    <div data-theme = "light" class = "section2" data-fontSize="">
+    <div data-theme = "light" class = "section2" >
         <div style = "display: inline-block; text-align: left;">
             <br/>
-            <p data-fontSize="" class = "hours"> Hours of Operation</p>
+            <p  class = "hours"> Hours of Operation</p>
             <p>Hours are subject to change. Please bookmark <a href="https://dining.unt.edu/hours/" style="color: black; text-decoration: underline;">dining.unt.edu/hours</a><br/>
                  and check back frequently for updates on future schedules.
             </p>
@@ -135,11 +136,11 @@
     </div>
         
 </div>
-<div class="meal_plan_positioning" data-fontSize="">
+<div class="meal_plan_positioning" >
     <div class="meal_plan_alignment">
-        <p data-fontSize="" id = "mealPlanTitle" >Meal Plan</p>
+        <p  id = "mealPlanTitle" >Meal Plan</p>
         <p  style="margin-bottom:50px;text-align:left;">Discovery Perks Market & Grill accepts Flex, Declining Balance, cash, <br>credit cards, and Apple Pay.</p>
-        <p data-fontSize="" class="mealPlanText" >Discovery Perks Grill Combo Meal</p>
+        <p  class="mealPlanText" >Discovery Perks Grill Combo Meal</p>
         <div data-theme = "light" class="meal_cube1">
         <p style="font-family: Helvetica;font-size: x-large;"><b>Daily entrée</b></p>
         <img src="Images/Home/PlusSign.png">
@@ -148,7 +149,7 @@
         <p style="font-family: Helvetica;font-size: x-large;"><b>Fountain Beverage</b></p>
         </div>
         <div data-theme = "light" class="meal_cube2">
-        <p class="mealPlans" data-fontSize="" data-fontSize="">These Meal Plan swipes can be used at Discovery Park to purchase a Discovery Perks Grill Combo Meal:</p>
+        <p class="mealPlans"  >These Meal Plan swipes can be used at Discovery Park to purchase a Discovery Perks Grill Combo Meal:</p>
         <a id="meal_cube2_light_links" href="https://dining.unt.edu/plans/#Five">Five to Thrive</a>
         <a id="meal_cube2_dark_links" href="https://dining.unt.edu/plans/#Eight">Eight's Enough</a>
         <a id="meal_cube2_light_links" href="https://dining.unt.edu/plans/#Swipes" >Simply Swipes 80, 60 & 40</a>
@@ -159,8 +160,8 @@
 <div class="home_bottom_banner">
     <div class="Create_Account_Today_Box">
        
-        <p class="createAccountTitle" data-fontSize="" style="color: #407C51; margin-bottom: 15px;margin-top: 0px;">Create an Account Today!</p>
-        <p class="createAccountText" data-fontSize="">We will love to hear from you! If you create an account, you will be able to<br> write reviews for foods and drinks offered at <br>Discovery Perks Market & Grill!</p>
+        <p class="createAccountTitle"  style="color: #407C51; margin-bottom: 15px;margin-top: 0px;">Create an Account Today!</p>
+        <p class="createAccountText" >We will love to hear from you! If you create an account, you will be able to<br> write reviews for foods and drinks offered at <br>Discovery Perks Market & Grill!</p>
         <br>
         <a class="sign_up" href="registration.html">SIGN UP</a> <!-- change href link later-->
     </div>
@@ -173,45 +174,49 @@
         <br/>
         <span>Top</span>
     </button>
-    <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="accessibility.js"></script>
 
-    <div data-theme="lightMenu" id="accessMenu" class="accessMenu" data-fontSize="">
+    <div data-theme="lightMenu" id="accessMenu" class="accessMenu">
         <div class="closeBtn" onclick="closeAccessMenu()" >&times;</div>
-        
         <a id="switch-theme" class="theme-btn"> <img id="lightIcon" data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/lightMode.png" width="75px" height="75px">
             <div>
                 <span id="themeToggle"></span>
+                <br>
+                <span id = "text">Switch Theme</span> 
             </div>
-        <p class = "text">Switch Theme</p> </a>
+
+        </a>
 
         <a id="text-size" class="theme-btn" type="button"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/textSize.png" width="75px" height="75px">
             <div>
                 <span id="textProgress1"></span>
                 <span id="textProgress2"></span>
                 <span id="textProgress3"></span>
+                <span id = "text">Increase Text Size</span> 
             </div>
-            <p class = "text">Increase Text Size</p> 
+
         </a>        
 
         <a id="dyslexiaToggle" class="theme-btn"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/opendyslexic.jpg" width="75px" height="75px">
             <div>
                 <span id="dyslexiaToggleDot"></span>
+                <span id = "text">Dyslexia Friendly</span> 
             </div>
-            <p class = "text">Dyslexia Friendly</p> 
+
         </a>
 
         <a id="textSpeech" class="theme-btn"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/text-to-speech.png" width="75px" height="75px">
             <div>
                 <span id="ttsToggle"></span>
             </div>            
-            <p class = "text">TTS</p> 
+            <span id = "text">TTS</span> 
         </a>
 
     </div>
 
-    <button onclick = "openAccessMenu()" id = "accessBtn" title = "Accessibility Features"> 
+    <div onclick = "openAccessMenu()" id = "accessBtn" title = "Accessibility Features"> 
         <img src="Images/Accessibility/accessibility.png" width="50px" height="50px">
-    </button>
+    </div>
 </div>
 
 <div class = "footer-container">
@@ -238,7 +243,5 @@
        </div>
    </div>
 </div>
-
 </body>
-
 </html>

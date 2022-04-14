@@ -9,10 +9,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src='./Images/Accessibility/voicerss-tts.min.js'></script>
+<link rel="stylesheet" href="accessibility.css">
 <div class ="header">
     <img src = "Images/Home/mlog_v2.png" style="margin: 20px" align="right" alt="Logo for The University of North Texas" title="University of North Texas">
     <h2><a href="https://www.unt.edu" style="font-size: small;" >UNIVERSITY OF NORTH TEXAS</a></h2>
-    <h1><a href="index.html" >Discovery Perks Market & Grill <a> </h2><!-- Make headings clickable (links) -->
+    <h1><a href="index.html" >Discovery Perks Market & Grill </a> </h2><!-- Make headings clickable (links) -->
 </div>
 
 <div class ="navbar">
@@ -28,7 +31,7 @@
 </div>
 
 </head>
-<body>
+<body data-theme = "light" data-fontSize="">
     <div class="top_strip">
         <div class="market_section_1"></div>
         <div class ="center_title"><b>Market</b></div>
@@ -75,14 +78,15 @@
 
     
 
-    <div class="MarketReviewsSection">
+    <div data-theme = "light" class="MarketReviewsSection">
+      <img src="Images/Food/avesta.png" style="position: absolute; right: 0;">
         <h1 style="margin-left:400px;text-align:left;color: #00853e;">Reviews</h1>
         <div id="ReviewList"></div>
     
         <p id="MoreReviewsLink" >More Market Reviews</p>
         
         <div id="MoreReviewsModal" class="MoreReviewsModal">
-          <div class="MoreReviewsModal-content">
+          <div data-theme = "light" class="MoreReviewsModal-content">
             <span class="close" id="CloseMoreReviewsModal">&times;</span>
             <h1 style="margin-left:0px;text-align:left;color: #00853e;">Market Reviews</h1>
             <hr>
@@ -91,14 +95,14 @@
         </div>
         <button id="WriteAReviewButton" class ="WriteAReviewButton">Write A Review</button>
         <div id="WriteReviewsModal" class="WriteReviewsModal">
-          <div class="WriteReviewsModal-content">
+          <div class="WriteReviewsModal-content" >
             
             <div class="WriteAReview">
               <h1 id ="ReviewTitle" style="text-align:center;color: #00853e;">Write A Market Review</h1>
               <div style="height:70px;width:70px;margin-left:20px;display:inline-block">
                 <img src ="Images/Food/Small_Icon.svg" style="width:100%;height: 100%;max-width: 500px;max-height: 500px;vertical-align: middle;">
               </div>
-              <p id="Usernamebox" style="color:black;display: inline;font-size: 1.2em;">Username</p>
+              <p id="Usernamebox" style="display: inline;font-size: 1.2em;">Username</p>
               <form onsubmit="checkUser()">
               <div style="display:block;margin-bottom:-30px;transform:translateX(80px);margin-top:10px;">
                 <div class="MakeRating"> 
@@ -128,7 +132,61 @@
         </div>
        
       </div>
-</body>
+
+<!-- code below for access menu and accessibility functions -->
+<div>
+  <button onclick = "toTheTop()" id = "topButton" title = "Go to Top">
+      <span>^</span> 
+      <br/>
+      <span>Top</span>
+  </button>
+  <script type="text/javascript" src="accessibility.js"></script>
+
+  <div data-theme="lightMenu" id="accessMenu" class="accessMenu">
+    <div class="closeBtn" onclick="closeAccessMenu()" >&times;</div>
+    <a id="switch-theme" class="theme-btn"> <img id="lightIcon" data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/lightMode.png" width="75px" height="75px">
+        
+        <div>
+            <span id="themeToggle"></span>
+            <br>
+            <span id = "text">Switch Theme</span> 
+        </div>
+
+    </a>
+
+    <a id="text-size" class="theme-btn" type="button"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/textSize.png" width="75px" height="75px">
+        <div>
+            <span id="textProgress1"></span>
+            <span id="textProgress2"></span>
+            <span id="textProgress3"></span>
+            <span id = "text">Increase Text Size</span> 
+        </div>
+
+    </a>        
+
+    <a id="dyslexiaToggle" class="theme-btn"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/opendyslexic.jpg" width="75px" height="75px">
+        <div>
+            <span id="dyslexiaToggleDot"></span>
+            <span id = "text">Dyslexia Friendly</span> 
+        </div>
+
+    </a>
+
+    <a id="textSpeech" class="theme-btn"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/text-to-speech.png" width="75px" height="75px">
+        <div>
+            <span id="ttsToggle"></span>
+        </div>            
+        <span id = "text">TTS</span> 
+    </a>
+
+</div>
+
+
+  <div onclick = "openAccessMenu()" id = "accessBtn" title = "Accessibility Features"> 
+      <img src="Images/Accessibility/accessibility.png" width="50px" height="50px">
+  </div>
+</div>
+
 
 <div class = "footer-container">
     <div class = "footer">
@@ -156,4 +214,5 @@
        </div>
    </div>
 </div>
+</body>
 </html>

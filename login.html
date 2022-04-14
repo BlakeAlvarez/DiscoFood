@@ -9,13 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src='./Images/Accessibility/voicerss-tts.min.js'></script>
+    <link rel="stylesheet" href="accessibility.css">
     <div class ="header">
         <img src = "Images/Home/mlog_v2.png" style="margin: 20px" align="right" alt="Logo for The University of North Texas" title="University of North Texas">
         <h2><a href="https://www.unt.edu" style="font-size: small;" >UNIVERSITY OF NORTH TEXAS</a></h2>
         <h1><a href="index.html" >Discovery Perks Market & Grill <a> </h2><!-- Make headings clickable (links) -->
     </div>
 </head>
-<body>
+<body data-theme = "light" data-fontSize="">
         <ul>
             <li>
                 <h1 class="signin-prompt">Sign In</h1>
@@ -36,7 +39,59 @@
             </li>
         </ul>   
     
-   
+<!-- code below for access menu and accessibility functions -->
+<div>
+    <button onclick = "toTheTop()" id = "topButton" title = "Go to Top">
+        <span>^</span> 
+        <br/>
+        <span>Top</span>
+    </button>
+    <script type="text/javascript" src="accessibility.js"></script>
+
+    <div data-theme="lightMenu" id="accessMenu" class="accessMenu">
+        <div class="closeBtn" onclick="closeAccessMenu()" >&times;</div>
+        <a id="switch-theme" class="theme-btn"> <img id="lightIcon" data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/lightMode.png" width="75px" height="75px">
+            <div>
+                <span id="themeToggle"></span>
+                <br>
+                <span id = "text">Switch Theme</span> 
+            </div>
+
+        </a>
+
+        <a id="text-size" class="theme-btn" type="button"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/textSize.png" width="75px" height="75px">
+            <div>
+                <span id="textProgress1"></span>
+                <span id="textProgress2"></span>
+                <span id="textProgress3"></span>
+                <span id = "text">Increase Text Size</span> 
+            </div>
+
+        </a>        
+
+        <a id="dyslexiaToggle" class="theme-btn"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/opendyslexic.jpg" width="75px" height="75px">
+            <div>
+                <span id="dyslexiaToggleDot"></span>
+                <span id = "text">Dyslexia Friendly</span> 
+            </div>
+
+        </a>
+
+        <a id="textSpeech" class="theme-btn"> <img data-theme="lightIcon" class = "accessIcon" src="Images/Accessibility/text-to-speech.png" width="75px" height="75px">
+            <div>
+                <span id="ttsToggle"></span>
+            </div>            
+            <span id = "text">TTS</span> 
+        </a>
+
+    </div>
+
+    <div onclick = "openAccessMenu()" id = "accessBtn" title = "Accessibility Features"> 
+        <img src="Images/Accessibility/accessibility.png" width="50px" height="50px">
+    </div>
+</div>  
+
+
     <div class = "footer-container">
          <div class = "footer">
             <img src = "Images/Home/unt-logo-stacked-green.png"  width="200" height="100" style="margin: 80px" align="left" alt="Logo for The University of North Texas" title="University of North Texas">

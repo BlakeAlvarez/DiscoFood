@@ -212,7 +212,6 @@ for(let x in data.Drinks){
 
     let Name = document.createElement("p");	// Create a new element
     Name.innerText = data.Drinks[x].Name;	// Change the text of the element
-    Name.style.color = 'black';
     Name.style.display='inline';
     Name.style.cssText="margin-bottom:-15px;margin-left:400px;text-align:left";
     div.appendChild(Name);
@@ -220,14 +219,14 @@ for(let x in data.Drinks){
     if(data.Drinks[x].Price != undefined){
         let Price = document.createElement("p");	// Create a new element
         Price.innerText = data.Drinks[x].Price;	// Change the text of the element
-        Price.style.cssText= "display: inline-block; color:black; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+        Price.style.cssText= "display: inline-block; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
         div.appendChild(Price);
     }
 
     if(data.Drinks[x].tallPrice != undefined){
         let tallPrice = document.createElement("p");	// Create a new element
         tallPrice.innerText = data.Drinks[x].tallPrice;	// Change the text of the element
-        tallPrice.style.cssText= "display: inline-block; color:black; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+        tallPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
         div.appendChild(tallPrice);
     }
 
@@ -236,13 +235,13 @@ for(let x in data.Drinks){
         grandePrice.innerText = data.Drinks[x].grandePrice;	// Change the text of the element
         //espresso has a string in its price
         if(data.Drinks[x].Name == "Espresso"){
-            grandePrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:35px;margin-top:0;";	// Change the text color of the element
+            grandePrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:35px;margin-top:0;";	// Change the text color of the element
         }
         else if(data.Drinks[x].Name == "Coffee" || data.Drinks[x].Name == "Caramel" || data.Drinks[x].Name == "Vanilla Bean" || data.Drinks[x].Name == "Mocha"){
-            grandePrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+            grandePrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
         }
         else{
-            grandePrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
+            grandePrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
 
         }
         div.appendChild(grandePrice);
@@ -252,21 +251,21 @@ for(let x in data.Drinks){
     if(data.Drinks[x].ventiPrice != undefined){
         let ventiPrice = document.createElement("p");	// Create a new element
         ventiPrice.innerText = data.Drinks[x].ventiPrice;	// Change the text of the element
-        ventiPrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
+        ventiPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
         div.appendChild(ventiPrice);
     }
 
     if(data.Drinks[x].ventiHotPrice != undefined){
         let ventiHotPrice = document.createElement("p");	// Create a new element
         ventiHotPrice.innerText = data.Drinks[x].ventiHotPrice;	// Change the text of the element
-        ventiHotPrice.style.cssText= "display: inline-block;color:black; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
+        ventiHotPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
         div.appendChild(ventiHotPrice);
     }
 
     if(data.Drinks[x].ventiIcedPrice != undefined){
         let ventiIcedPrice = document.createElement("p");	// Create a new element
         ventiIcedPrice.innerText = data.Drinks[x].ventiIcedPrice;	// Change the text of the element
-        ventiIcedPrice.style.cssText = "color:black; padding-left:10px;margin-left:910px;margin-top:0;";	// Change the text color of the element
+        ventiIcedPrice.style.cssText = " padding-left:10px;margin-left:910px;margin-top:0;";	// Change the text color of the element
         div.appendChild(ventiIcedPrice);
     }
     
@@ -335,7 +334,6 @@ for(let x in data.Reviews){
     Review.appendChild(Icon);
     let Name = document.createElement("p");	// Create a new element
     Name.innerText = data.Reviews[x].User_Name; 	// Change the text of the element
-    Name.style.color = 'black';
     Name.style.display="inline";
     Review.appendChild(Name);
     if(data.Reviews[x].User_Name == GetUser && something=="true"){
@@ -549,7 +547,7 @@ for(let x in data.Reviews){
     }
     let ReviewDes = document.createElement("p");	// Create a new element
     ReviewDes.innerText = data.Reviews[x].Review_Description; 	// Change the text of the element
-    ReviewDes.style.color = 'black';
+    // ReviewDes.style.color = 'black';
     ReviewDes.style.cssText="display:block;transform:translateX(70px);margin-top:-20px;";
     Review.appendChild(ReviewDes);
     Reviews.appendChild(Review);
@@ -613,7 +611,6 @@ for(let x in data.Reviews){
     Review.appendChild(Icon);
     let Name = document.createElement("p");	// Create a new element
     Name.innerText = data.Reviews[x].User_Name; 	// Change the text of the element
-    Name.style.color = 'black';
     Name.style.display="inline";
     Review.appendChild(Name);
     if(data.Reviews[x].User_Name == GetUser && something=="true"){
@@ -830,7 +827,6 @@ for(let x in data.Reviews){
     }
     let ReviewDes = document.createElement("p");	// Create a new element
     ReviewDes.innerText = data.Reviews[x].Review_Description; 	// Change the text of the element
-    ReviewDes.style.color = 'black';
     ReviewDes.style.cssText="display:block;transform:translateX(70px);margin-top:-20px;";
     Review.appendChild(ReviewDes);
     AllReviews.appendChild(Review);

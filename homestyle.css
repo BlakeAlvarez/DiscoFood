@@ -56,7 +56,7 @@ body{
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 5;
 }
 
 nav{
@@ -193,16 +193,7 @@ a:link {
     text-decoration: none;
   }
   
-  /* mouse over link */
-  a:hover{
-    color: white;
-    text-decoration: none;
-  }
-  /* selected link */
-  a:active {
-    color: white;
-    text-decoration: none;
-  }
+
   .first_col, .second_col, .third_col, .fourth_col {
     float: left;
     width: 25%;
@@ -490,28 +481,7 @@ a:link {
   color: grey;
 }
 
-#topButton {
-  display: none;
-  position: fixed;
-  right: 100px;
-  bottom: 65px;
-  z-index: 10000;
-  border: 2px solid white;
-  outline: none;
-  background-color: rgb(43,83,54);
-  color: white;
-  cursor: pointer;
-  padding: 0px;
-  border-radius: 50px;
-  height: 45px;
-  width: 45px;
-  font-size: 13px;
-  line-height: 12px;
-}
 
-#topButton:hover {
-  background-color: grey;
-}
 
 .food_section_1{
   background-image: url("Images/Food/disco-park_banner2.jpg");
@@ -550,139 +520,7 @@ a:link {
   
 }
 
-#accessBtn img {
-  height: 55px;
-  width: 55px;
-  border-radius: 30px;
-  background-color: rgb(223, 210, 208);
-  position: fixed;
-  border:none;
-  right: 100px;
-  bottom: 500px;
-  z-index: 10000;
-  outline: none;
-  cursor: pointer;
-  text-align:center
-}
 
-.accessMenu{
-  height: 50%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  right: 0;
-  top: 25%;
-  bottom: -25%;
-  border-radius: 25px;
-  background-color: rgba(243, 239, 238, 1); 
-  overflow-x: hidden; 
-  transition: 0.5s; 
-  overflow-y: auto;
-  text-align: center;
-}
-
-.accessMenu-content {
-  position: relative;
-  top: 25%;
-  text-align: center;
-  margin: 30px;
-  float: left;
-  height: 75px;
-  width: 75px; 
-}
-
-.accessMenu .closeBtn {
-  position: absolute;
-  color: white;
-  top: 7%;
-  right: 0;
-  font-size: 72px;
-  margin-right: 50px;
-  cursor: pointer;
-}
-
-.accessMenu > a{
-  width: 75px;
-  height: 75px;
-  float: left;
-  background: white;   
-  margin: 25px;
-  border: 2px solid #72b844;
-}
-
-/* .accessMenu button:hover, a:hover{
-  color: black;
-  cursor: pointer;
-} */
-
-.theme-btn {
-  appearance: button;
-  height: 75px;
-  width: 75px;
-  background-color: white;
-}
-
-div[data-theme="dark"]{
-  background: rgba(29,42,53,255);
-  color: white;
-}
-[data-theme="dark"]{
-  background: rgba(29,42,53,255);
-  color: white;
-}
-[data-theme="darkMenu"]{
-  background: rgba(29,42,53,255);
-  color: white;
-}
-/* [data-theme="darkIcon"]{
-  background-color: black;
-  background: black;
-  -webkit-filter: invert(1);
-  filter: invert(1);
-} */
-
-#themeToggle {
-  display: inline-block;
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  transition: background-color 0.6s ease;
-}
-#textProgress1, #textProgress2, #textProgress3 {
-  display: inline-block;
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  transition: background-color 0.6s ease;
-}
-#ttsToggle {
-  display: inline-block;
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  transition: background-color 0.6s ease;
-}
-#dyslexiaToggleDot {
-  display: inline-block;
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  transition: background-color 0.6s ease;
-}
-
-
-@font-face {
-  font-family: 'opendyslexic';
-  src: url('./Images/Accessibility/OpenDyslexic-Regular.otf');
-}
 
 .Grill_Section .Drink_Section{
   display:block;
@@ -697,7 +535,7 @@ div[data-theme="dark"]{
   background-color: #fafafa;
   background-size: auto;
   background-repeat: no-repeat;
-  background-image: url("Images/Food/avesta-plate_back1_edited.png");
+  /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
   
 }
 .DrinkReviewsSection{
@@ -708,7 +546,7 @@ div[data-theme="dark"]{
   background-color: #fafafa;
   background-size: auto;
   background-repeat: no-repeat;
-  background-image: url("Images/Food/avesta-plate_back1_edited.png");
+  /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
   
 }
 #MoreReviewsLink{
@@ -716,7 +554,6 @@ div[data-theme="dark"]{
   margin-left: 410px;
   margin-top: 40px;
   margin-bottom: 20px;
-  color: black;
   text-decoration: underline;
   cursor: pointer;
   font-size: 1.2rem;
@@ -724,7 +561,7 @@ div[data-theme="dark"]{
 .MoreReviewsModal,.WriteReviewsModal{
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 5; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -744,6 +581,7 @@ div[data-theme="dark"]{
   width: 500px;
   height: 600px;
   overflow: auto; 
+  z-index: 5;
 }
 .close {
   margin-top: 10px;
@@ -1143,7 +981,7 @@ div[data-theme="dark"]{
     margin-top: 90px;
     background-color: #fafafa;
     background-repeat: no-repeat;
-    background-image: url("Images/Food/avesta-plate_back1_edited.png");
+    /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
   }
   .DrinkReviewsSection{
     display:block;
@@ -1154,7 +992,7 @@ div[data-theme="dark"]{
     margin-top: 90px;
     background-color: #fafafa;
     background-repeat: no-repeat;
-    background-image: url("Images/Food/avesta-plate_back1_edited.png");
+    /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
   }
   .MoreReviewsModal-content{
     background-color: #fefefe;
