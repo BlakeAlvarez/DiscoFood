@@ -1,0 +1,181 @@
+.management-sign{
+    text-align: center;
+    padding-left: 20 px; 
+    background-color: #00853E;
+    border-radius: 5px;
+    height: 40px;
+    width: 590px;
+    color:white;
+    position: relative;
+    left: 35%;
+    top: 10px;
+    font: Poppins semi bold;
+    border: 2px solid #00853E;
+    z-index: 10;
+    font-weight: bold;
+  }
+
+
+.management-container{
+    border-radius: 10px;
+    text-align: center;
+    width: 590px;
+    height: 360px;
+    border: 2px solid rgb(172, 164, 164);
+    padding: 0px;
+    position: relative;
+    left: 35%;
+    bottom: 20px;
+  }
+
+  .manage-accounts-sign, .manage-system-sign, .manage-reviews-sign{
+    text-align: center;
+    padding-left: 20 px; 
+    background-color: #00853E;
+    border-radius: 5px;
+    height: 40px;
+    width: 900px;
+    color:white;
+    position: relative;
+    left: 25%;
+    top: 10px;
+    font: Poppins semi bold;
+    border: 2px solid #00853E;
+    z-index: 10;
+    font-weight: bold;
+  }
+
+
+  .accounts-container, .reviews-container, .system-container{
+    border-radius: 10px;
+    text-align: center;
+    width: 900px;
+    height: 500px;
+    border: 2px solid rgb(172, 164, 164);
+    padding: 0px;
+    position: relative;
+    left: 25%;
+    bottom: 20px;
+  }
+
+
+
+
+.man{
+    color: rgb(70, 62, 62);
+    padding: 10px;
+    margin-top: 40px;
+    box-shadow: 1px 1px 1px 1px grey;
+    width: 335px;
+    height: 55px;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    background-color: rgb(240, 240, 240);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    font-size: large;
+  }
+
+.man:hover{
+    color:  rgb(240, 240, 240);
+    background-color: #00853E;
+    cursor: pointer;
+    transition: .8s;
+  }
+
+  .man-buttons{
+    padding: 10px;
+    width: 335px;
+    height: 45px;
+    position: relative;
+    left: 590px;
+    top: 20px;
+    background-color: #00853E;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    font-size: large;
+  }
+  .man-buttons:hover{
+    color: grey;
+    cursor: pointer;
+    transition: .4s;
+  }
+
+
+
+.footer-container{
+    position: relative;
+    margin-top:201px;
+    clear: both;
+    background-color: black;
+    }
+.footer{
+    width: 80%;
+    color:#72B844;
+    display:inline-block;
+    
+}
+.footer-1 h2{
+    color:#72B844; 
+    transform: translateX(-5px);
+    }
+
+
+
+/* makes webpage responsive */
+@media only screen and (min-width: 300px){
+    .management-sign{
+      left: 20%;
+    }
+    .management-container{
+      left: 20%;
+    }
+   }
+  
+   @media only screen and (min-width: 1100px){
+    .management-sign{
+      left: 25%;
+    }
+    .management-container{
+      left: 25%;
+    }
+   }
+  
+   @media only screen and (min-width: 1300px){
+    .management-sign{
+      left: 30%;
+    }
+    .management-container{
+      left: 30%;
+    }
+   }
+  
+   @media (max-width:1400px) {
+    .footer{
+      display:inline-flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .footer img{
+      display: none;
+    }
+    .footer-1{
+     margin-left: 40px;
+      }
+    .footer-2{
+      margin-right: 75px;
+      text-align: left;
+     
+    }
+    .footer-3{
+      transform: translateY(-11px);
+      flex-direction: column;
+    }
+    .footer-3 p{
+      margin-bottom: 5px;
+    }
+  }
