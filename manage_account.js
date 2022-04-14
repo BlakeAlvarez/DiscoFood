@@ -54,9 +54,14 @@ function checkUserName(){
         errorcheck.style.display='none';
         break;
       }
+      if(username == GetUser){
+        errorcheck.style.display='none';
+        break;
+      }
         if(data.Users[x].User_Username == username)
         {
-          
+          var errorcheck2 = document.getElementById("UsernameFieldBlank");
+          errorcheck2.style.display='none';
           errorcheck.style.display='block';
           validUsername = false;
           break;
@@ -83,6 +88,8 @@ var name = document.getElementById("name").value.trim();
 var email = document.getElementById("email").value.trim();
 var username = document.getElementById("username").value.trim();
 var password = document.getElementById("password").value.trim();
+if ((name.length != 0) && (email.length!=0) && (username.length!=0) && (password.length!=0) && (validUsername ==true))
+{
   onValue(reg, (snapshot) => {
     const data = snapshot.val(); //Data is string array
     
@@ -90,44 +97,86 @@ var password = document.getElementById("password").value.trim();
       
         if(data.Users[x].User_Username == GetUser)
         {
-          alert("Updating User!");
-          if(name.length !=0){
-            name =document.getElementById("name").value.split(" ").join('');
-            
-          }
-          if(email.length !=0){
-            email =document.getElementById("email").value.split(" ").join('');
-          }
-          if((username.length !=0) && (validUsername ==true)){
-            username =document.getElementById("username").value.split(" ").join('');
-            var path = x + "/User_Username";
+          //alert("Updating User!");
+          //alert(GetUser);
             validsubmission=true;
+            name =document.getElementById("name").value.split(" ").join('');
+            var path1 = x + "/User_Name";
+            email =document.getElementById("email").value.split(" ").join('');
+            var path2 = x + "/User_Email";
+            username =document.getElementById("username").value.split(" ").join('');
+            var path3 = x + "/User_Username";
+            password =document.getElementById("password").value.split(" ").join('');
+            var path4 = x + "/User_Password";
             update(updateUser,{
-                [path]: username
+                [path1]: name,
+                [path2]: email,
+                [path3]: username,
+                [path4]: password
             });
             for(let j in data.Reviews){
               if(data.Reviews[j].User_Name == GetUser){
                 var path2 = j + "/User_Name";
-               
                 update(updateUserRev,{
                 [path2]: username
                 });
               }
             }
-            sessionStorage.setItem("USER",username);
             
+            sessionStorage.setItem("USER",username);   
             window.location.replace("index.html");
-          }
-          if(password.length !=0){
-            password =document.getElementById("password").value.split(" ").join('');
-          }
-          
-        }
-        
-        
-    }
-  
+            break;
+          }      
+      }    
   });
   
 }
-
+else{
+    
+  if(name.length==0)
+  {
+    var errorcheck = document.getElementById("NameFieldBlank");
+    errorcheck.style.display='block';
+  }
+  else
+  {
+    var errorcheck = document.getElementById("NameFieldBlank");
+    errorcheck.style.display='none';
+  }
+  if(email.length==0)
+  {
+    var errorcheck = document.getElementById("EmailFieldBlank");
+    errorcheck.style.display='block';
+  }
+  else
+  {
+    var errorcheck = document.getElementById("EmailFieldBlank");
+    errorcheck.style.display='none';
+  }
+  if(username.length==0)
+  {
+    var errorcheck = document.getElementById("UsernameFieldBlank");
+    errorcheck.style.display='block';
+  }
+  else
+  {
+    var errorcheck = document.getElementById("UsernameFieldBlank");
+    errorcheck.style.display='none';
+  }
+  if(password.length==0)
+  {
+    var errorcheck = document.getElementById("PasswordFieldBlank");
+    errorcheck.style.display='block';
+  }
+  else
+  {
+    var errorcheck = document.getElementById("PasswordFieldBlank");
+    errorcheck.style.display='none';
+  }
+}
+}
+document.getElementById("logout").addEventListener('click',LogoutUser);
+function LogoutUser(){
+    sessionStorage.setItem("LOGGED_IN","false");
+    window.location.replace("index.html");
+}

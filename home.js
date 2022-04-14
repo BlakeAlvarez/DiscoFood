@@ -45,10 +45,24 @@ window.onload=function(){
         for (let i = 0; i < theme.length; i++) {
             if ((theme[i].getAttribute('data-theme') === 'lightMenu') || (theme[i].getAttribute('data-theme') === 'darkMenu')) {
                 theme[i].setAttribute('data-theme', theme[i].getAttribute('data-theme') === 'darkMenu' ? 'lightMenu' : 'darkMenu');                
+            } else if ((theme[i].getAttribute('data-theme') === 'lightIcon') || (theme[i].getAttribute('data-theme') === 'darkIcon')) {
+                // theme[i].setAttribute('data-theme', theme[i].getAttribute('data-theme') === 'darkIcon' ? 'lightIcon' : 'darkIcon')
             } else {
                 theme[i].setAttribute('data-theme', theme[i].getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
             }
+        }
+        if (theme[0].getAttribute('data-theme') === 'dark') {
+            var toggle = document.getElementById("themeToggle");    
+            toggle.style.backgroundColor="#72B844";  
 
+            document.getElementById("lightIcon").src="Images/Accessibility/darkMode.png"
+
+
+        } else if (theme[0].getAttribute('data-theme') === 'light') {
+            var toggle = document.getElementById("themeToggle");    
+            toggle.style.backgroundColor="";    
+
+            document.getElementById("lightIcon").src="Images/Accessibility/lightMode.png"
         }
     });
 
@@ -67,9 +81,6 @@ window.onload=function(){
             var t1 = document.getElementById("textProgress1");
             var t2 = document.getElementById("textProgress2");
             var t3 = document.getElementById("textProgress3");
-            t1.style.display="inline-block";
-            t2.style.display="inline-block";
-            t3.style.display="inline-block";
             t1.style.backgroundColor="#72B844";
 
             textCount++;        
@@ -140,6 +151,8 @@ window.onload=function(){
                 curSize = parseInt($(text[i]).css('font-size')) - 5;
                 $(text[i]).css('font-size', curSize);
             }           
+            var toggle = document.getElementById("dyslexiaToggleDot");    
+            toggle.style.backgroundColor="#72B844";  
 
             fontFamCount++;        
         } else {
@@ -149,6 +162,8 @@ window.onload=function(){
                 $(text[i]).css('font-family', "");
                 $(text[i]).css('font-size', "");
             }             
+            var toggle = document.getElementById("dyslexiaToggleDot");    
+            toggle.style.backgroundColor="";  
 
             fontFamCount = 0;
         }

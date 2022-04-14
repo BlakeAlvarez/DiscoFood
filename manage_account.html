@@ -19,10 +19,14 @@
         <div class="createacc-container">
             <form method="post" action="">
                 <input id="name" type="text" name="name" placeholder="Name" required>
+                <p id="NameFieldBlank" style="display:none;margin-left:-170px;color:red;margin-bottom: -20px;">*The Name field is required</p>
                 <input id="email" type="text" name="email" placeholder="Email" required>
+                <p id="EmailFieldBlank" style="display:none;margin-left:-170px;color:red;margin-bottom: -20px;">*The Email field is required</p>
                 <input id="username" type="text" name="username" placeholder="Username" required>
                 <p id="UserTaken" style="display:none;margin-left:-170px;color:red;margin-bottom: -20px;">*Username Already Taken</p>
+                <p id="UsernameFieldBlank" style="display:none;margin-left:-140px;color:red;margin-bottom: -20px;">*The Username field is required</p>
                 <input id="password" type="password" name="password" placeholder="Password" required>
+                <p id="PasswordFieldBlank" style="display:none;margin-left:-140px;color:red;margin-top: -5px;margin-bottom: -15px;">*The Password field is required</p>
                 <button type="button" id = "save_changes">Save Changes</button>
                 <button style="margin-top: 20px;" type="button" id = "logout">Logout</button>
             </form>
