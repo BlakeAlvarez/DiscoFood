@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'opendyslexic';
+  src: url('./Images/Accessibility/OpenDyslexic-Regular.otf');
+}
+
+#topButton {
+  display: none;
+  position: fixed;
+  right: 100px;
+  bottom: 65px;
+  z-index: 10000;
+  border: 2px solid white;
+  outline: none;
+  background-color: rgb(43,83,54);
+  color: white;
+  cursor: pointer;
+  padding: 0px;
+  border-radius: 50px;
+  height: 45px;
+  width: 45px;
+  font-size: 13px;
+  line-height: 12px;
+}
+
+#topButton:hover {
+  background-color: grey;
+}
+
+#accessBtn img {
+  height: 55px;
+  width: 55px;
+  border-radius: 30px;
+  background-color: rgb(223, 210, 208);
+  position: fixed;
+  border:none;
+  right: 100px;
+  bottom: 500px;
+  z-index: 10000;
+  outline: none;
+  cursor: pointer;
+  text-align:center
+}
+
+.accessMenu{
+  height: 50%;
+  width: 0;
+  position: fixed;
+  z-index: 11;
+  right: 0;
+  top: 25%;
+  bottom: -25%;
+  border-radius: 25px;
+  background-color: rgba(243, 239, 238, 1); 
+  overflow-x: hidden; 
+  transition: 0.5s; 
+  overflow-y: auto;
+  text-align: center;
+}
+
+.accessMenu-content {
+  position: relative;
+  top: 25%;
+  text-align: center;
+  margin: 30px;
+  float: left;
+  height: 75px;
+  width: 75px; 
+}
+
+.accessMenu .closeBtn {
+  position: absolute;
+  color: white;
+  top: 7%;
+  right: 0;
+  font-size: 72px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.accessMenu > a{
+  width: 75px;
+  height: 75px;
+  float: left;
+  background: white;   
+  margin: 25px;
+  border: 2px solid #72b844;
+  cursor: pointer;
+  display: block;
+}
+
+.theme-btn {
+  appearance: button;
+  height: 75px;
+  width: 75px;
+  background-color: white;
+  /* text-align:center  */
+}
+
+
+div[data-theme="dark"]{
+  background: rgba(29,42,53,255);
+  color: white;
+}
+[data-theme="dark"]{
+  background: rgba(29,42,53,255);
+  color: white;
+}
+[data-theme="darkMenu"]{
+  background: rgba(29,42,53,255);
+  color: white;
+}
+
+
+#themeToggle {
+  display: inline-block;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+#textProgress1, #textProgress2, #textProgress3 {
+  display: inline-block;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+#ttsToggle {
+  display: inline-block;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+#dyslexiaToggleDot {
+  display: inline-block;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
