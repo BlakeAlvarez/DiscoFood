@@ -64,6 +64,7 @@ onValue(Menu, (snapshot) => {
     }
 });
 
+
 //cancels changes
 document.getElementById("cancel_account_changes").addEventListener("click", function(){
     if(confirm("CHANGES WILL NOT BE SAVED!")){
@@ -77,12 +78,12 @@ document.getElementById("cancel_account_changes").addEventListener("click", func
     if(confirm("CHANGES CANNOT BE UNDONE, ARE YOU SURE YOU WANT TO SAVE?")){
 
         var inputs = document.getElementById("accounts-container").elements;
-        for (var i = 0; i < inputs.length; i+=3) {
-            onValue(Menu, (snapshot) => {
+        onValue(Menu, (snapshot) => {
+            for (var i = 0; i < inputs.length; i+=3) {
                 const data = snapshot.val(); //Data is string array
-                alert(data.Users.length.value)
                 for(let x in data.Users){
                     if(inputs[i].value==data.Users[x].User_Username){
+                        console.log(inputs[i].value)
                         var path1 = x + "/User_Name";
                         var path2 = x + "/User_Email";
                         update(updateUser,{
@@ -91,10 +92,11 @@ document.getElementById("cancel_account_changes").addEventListener("click", func
                         });
                     }
                 }
-            });
-        }
-
-        alert("Changes Saved Successfully!")
+            
+            }
+        });
         window.location.href="manage_admin.html";
+        alert("Changes Saved Successfully!")
+        
     }
   });

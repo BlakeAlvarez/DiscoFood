@@ -75,7 +75,7 @@ var password = document.getElementById("password").value.trim();
       validsubmission=true;
       sessionStorage.setItem("LOGGED_IN", "true");
       sessionStorage.setItem("USER",username);
-      const postListRef = ref(db, 'Users/'); //Potential Solution 1
+      const postListRef = ref(db, 'Users/' + username); //Potential Solution 1
       const newPostRef = push(postListRef);
       set(newPostRef, {
         User_Email: email,
