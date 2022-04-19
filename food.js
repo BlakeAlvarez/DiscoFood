@@ -83,9 +83,11 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+  
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
@@ -95,6 +97,20 @@ document.getElementById("nextSlide").addEventListener("click", function(){
 document.getElementById("prevSlide").addEventListener("click", function(){
   showSlides(slideIndex += -1);
 });
+
+document.getElementById("dot1").addEventListener("click", function(){
+  currentSlide(1);
+});
+
+document.getElementById("dot2").addEventListener("click", function(){
+  currentSlide(2);
+});
+
+document.getElementById("dot3").addEventListener("click", function(){
+  currentSlide(3);
+});
+
+
 
 //Lines 78-348 is used to display the first 5 reviews on Food Page
 let Reviews = document.createElement('div');

@@ -70,7 +70,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 }
 
 /* The dots/bullets/indicators */
-.dot {
+#dot1, #dot2, #dot3 {
   cursor: pointer;
   height: 15px;
   width: 15px;

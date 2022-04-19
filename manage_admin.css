@@ -46,17 +46,58 @@
   }
 
 
-  .accounts-container, .reviews-container, .system-container{
-    border-radius: 10px;
-    text-align: center;
-    width: 900px;
-    height: 500px;
-    border: 2px solid rgb(172, 164, 164);
-    padding: 0px;
-    position: relative;
-    left: 25%;
-    bottom: 20px;
-  }
+  /* .system-container */
+.accounts-container, .reviews-container{ 
+  border-radius: 10px;
+  text-align: center;
+  width: 900px;
+  height: 500px;
+  border: 2px solid rgb(172, 164, 164);
+  padding: 0px;
+  position: relative;
+  left: 25%;
+  bottom: 20px;
+}
+
+#grillContainer{
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  width: 900px;
+  height: 500px;
+  border: 2px solid rgb(172, 164, 164);
+  padding: 0px;
+  position: relative;
+  left: 25%;
+  bottom: 20px;
+}
+
+#marketContainer{
+  display: none;
+  border-radius: 10px;
+  text-align: center;
+  width: 900px;
+  height: 500px;
+  border: 2px solid rgb(172, 164, 164);
+  padding: 0px;
+  position: relative;
+  left: 25%;
+  bottom: 20px;
+}
+
+#drinkContainer{
+  display: none;
+  border-radius: 10px;
+  text-align: center;
+  width: 900px;
+  height: 500px;
+  border: 2px solid rgb(172, 164, 164);
+  padding: 0px;
+  position: relative;
+  left: 25%;
+  bottom: 20px;
+}
+
 
 
 

@@ -314,6 +314,19 @@ document.getElementById("prevSlide").addEventListener("click", function(){
   showSlides(slideIndex += -1);
 });
 
+document.getElementById("dot1").addEventListener("click", function(){
+  showSlides(1);
+});
+
+document.getElementById("dot2").addEventListener("click", function(){
+  showSlides(2);
+});
+
+document.getElementById("dot3").addEventListener("click", function(){
+  showSlides(3);
+});
+
+
 //Lines 78-348 is used to display the first 5 reviews on Food Page
 let Reviews = document.createElement('div');
 //var UsersTest = document.createElement('p'); //TEST STATEMENT DELETE LATER
