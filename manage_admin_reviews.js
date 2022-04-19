@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, push, update, onValue, set} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { getDatabase, ref, push, update, onValue, set, get, child} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
 
 
 const firebaseConfig = {
@@ -24,7 +24,7 @@ let div = document.getElementById("reviews-container");
 div.style.overflow='auto';
 
 
-onValue(Menu, (snapshot) => {
+get(child(Menu, 'Reviews/')).then((snapshot) => {
     const data = snapshot.val(); //Data is string array
     let DateHeader = document.createElement("h2");
     
@@ -53,7 +53,7 @@ onValue(Menu, (snapshot) => {
     div.appendChild(DesHeader);
     div.appendChild(br)
     
-    for(let x in data.Reviews){
+    for(let x in data){
 
         let user = document.createElement("input");
         let date = document.createElement("input");
@@ -73,11 +73,11 @@ onValue(Menu, (snapshot) => {
         rating.setAttribute("readonly", "true");
         page.setAttribute("readonly", "true");
 
-        user.value = data.Reviews[x].User_Name;	// Change the text of the element
-        date.value = data.Reviews[x].Review_Date;	// Change the text of the element
-        rating.value = data.Reviews[x].Review_Rating;	// Change the text of the element
-        page.value = data.Reviews[x].Review_Page;
-        description.value = data.Reviews[x].Review_Description;
+        user.value = data[x].User_Name;	// Change the text of the element
+        date.value = data[x].Review_Date;	// Change the text of the element
+        rating.value = data[x].Review_Rating;	// Change the text of the element
+        page.value = data[x].Review_Page;
+        description.value = data[x].Review_Description;
 
         div.appendChild(user);
         div.appendChild(date);
@@ -98,25 +98,24 @@ document.getElementById("cancel_reviews_changes").addEventListener("click", func
 });
 
   //saves changes made to accounts
-  document.getElementById("save_reviews_changes").addEventListener("click", function(){
+document.getElementById("save_reviews_changes").addEventListener("click", function(){
     const updateReviews = ref(db, 'Reviews/');
     if(confirm("CHANGES CANNOT BE UNDONE, ARE YOU SURE YOU WANT TO SAVE?")){
 
         var inputs = document.getElementById("reviews-container").elements;
-        for (var i = 0; i < inputs.length; i+=5) {
-            onValue(Menu, (snapshot) => {
+        onValue(Menu, (snapshot) => {
+            for (var i = 0; i < inputs.length; i+=5) {
                 const data = snapshot.val(); //Data is string array
                 for(let x in data.Reviews){
-                    if(inputs[i].value==data.Reviews[x].User_Name && inputs[i+1].value==data.Reviews[x].Review_Date && inputs[i+2].value==data.Reviews[x].Review_Rating && inputs[i+3].value==data.Reviews[x].Review_Page  ){
+                    if(inputs[i].value==data.Reviews[x].User_Name && inputs[i+1].value==data.Reviews[x].Review_Date && inputs[i+2].value==data.Reviews[x].Review_Rating && inputs[i+3].value==data.Reviews[x].Review_Page){
                         var path1 = x + "/Review_Description";
                         update(updateReviews,{
-                            [path1]: inputs[i+4].value,
+                            [path1]: inputs[i+4].value
                         });
                     }
                 }
-            });
-        }
-
+            }
+        });
         alert("Changes Saved Successfully!")
         window.location.href="manage_admin.html";
     }
