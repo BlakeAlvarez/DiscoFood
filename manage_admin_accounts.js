@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, push, update, onValue, set} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { getDatabase, ref, push, update, onValue, set, child,get} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
 
 
 const firebaseConfig = {
@@ -25,8 +25,8 @@ let div = document.getElementById("accounts-container");
 div.style.overflow='auto';
 
 
-onValue(Menu, (snapshot) => {
-    const data = snapshot.val(); //Data is string array
+get(child(Menu, 'Users/')).then((snapshot) => {
+    const data = snapshot.val();
     let NameHeader = document.createElement("h2");
     NameHeader.innerText = "Name";
     NameHeader.style="display: inline; padding: 20px; position:relative; right: 50px; top: 10px";
@@ -43,7 +43,7 @@ onValue(Menu, (snapshot) => {
     div.appendChild(EmailHeader);
     div.appendChild(br)
     
-    for(let x in data.Users){
+    for(let x in data){
 
         let Name = document.createElement("input");
         let Email = document.createElement("input");
@@ -53,9 +53,9 @@ onValue(Menu, (snapshot) => {
         Email.style = "margin-left: 20px; display: inline;padding: 10px; position: relative; top: 10px; ";
         Name.style = "margin-left: 20px; display: inline;padding: 10px; position: relative; top: 10px;";
         Username.setAttribute("readonly", "true");
-        Name.value = data.Users[x].User_Name;	// Change the text of the element
-        Email.value = data.Users[x].User_Email;	// Change the text of the element
-        Username.value = data.Users[x].User_Username;	// Change the text of the element
+        Name.value = data[x].User_Name;	// Change the text of the element
+        Email.value = data[x].User_Email;	// Change the text of the element
+        Username.value = data[x].User_Username;	// Change the text of the element
         div.appendChild(Username);
         div.appendChild(Name);
         div.appendChild(Email);
@@ -88,15 +88,15 @@ document.getElementById("cancel_account_changes").addEventListener("click", func
                         var path2 = x + "/User_Email";
                         update(updateUser,{
                             [path1]: inputs[i+1].value,
-                            [path2]: inputs[i+2].value,
+                            [path2]: inputs[i+2].value
                         });
                     }
                 }
-            
             }
         });
-        window.location.href="manage_admin.html";
         alert("Changes Saved Successfully!")
+        window.location.href="manage_admin.html";
+        
         
     }
   });

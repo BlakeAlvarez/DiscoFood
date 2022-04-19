@@ -258,7 +258,7 @@ for(let x in data.Drinks){
     if(data.Drinks[x].ventiHotPrice != undefined){
         let ventiHotPrice = document.createElement("p");	// Create a new element
         ventiHotPrice.innerText = data.Drinks[x].ventiHotPrice;	// Change the text of the element
-        ventiHotPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
+        ventiHotPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:55px;margin-top:0;";	// Change the text color of the element
         div.appendChild(ventiHotPrice);
     }
 
