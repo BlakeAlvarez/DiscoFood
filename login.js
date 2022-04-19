@@ -23,6 +23,7 @@ function checkUser(){
 var inputusername = document.getElementById("InputUsername").value.trim();
 var inputpassword = document.getElementById("InputPassword").value.trim();
 var found;
+var UserIsAdmin;
   onValue(dbcheck, (snapshot) => {
     const data = snapshot.val(); //Data is string array
     
@@ -33,6 +34,8 @@ var found;
           
         
           found=true;
+          if(data.Users[x].User_Type =="Admin")
+          UserIsAdmin=true;
           break;
         }
         else
@@ -41,7 +44,15 @@ var found;
         }
         
     }
-    if(found==true){
+    if(UserIsAdmin==true && found==true)
+    {
+      alert("Welcome back admin "+ inputusername+"!");
+      sessionStorage.setItem("LOGGED_IN","true");
+      sessionStorage.setItem("USER",inputusername);
+      sessionStorage.setItem("ADMIN_LOGGED_IN","true");
+      window.location.replace("index.html");
+    }
+    else if(UserIsAdmin==undefined && found==true){
     alert("Welcome back " + inputusername+"!");
     sessionStorage.setItem("LOGGED_IN","true");
     sessionStorage.setItem("USER",inputusername);

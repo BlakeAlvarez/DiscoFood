@@ -526,10 +526,14 @@ a:link {
 
 
 
-.Grill_Section .Drink_Section{
+.Grill_Section {
   display:block;
-  height: 1000px;
-  
+ 
+
+}
+.Drink_Section{
+  display:block;
+  white-space: nowrap;
 }
 .FoodReviewsSection{
   display:block;
@@ -540,7 +544,7 @@ a:link {
   background-size: auto;
   background-repeat: no-repeat;
   /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
-  
+ 
 }
 .DrinkReviewsSection{
   display:block;
@@ -969,21 +973,20 @@ a:link {
  
 }
 @media only screen and (max-width:900px){
-  .Grill_Section{
+  .Grill_Section,.Drink_Section,.Market-Section{
     display:block;
-    height: 1000px;
-    transform: translateX(-400px); 
-    
-  
+    transform: translateX(-400px);  
   }
   
-  .FoodReviewsSection{
+  
+  
+  .FoodReviewsSection,.MarketReviewsSection{
     display:block;
     height:auto;
-    width: 200%;
-    margin-left: -400px;
-   
-    margin-top: 90px;
+    width: 500%;
+    margin-left: -400px;  
+    
+    margin-top: 20px;  
     background-color: #fafafa;
     background-repeat: no-repeat;
     /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
@@ -991,10 +994,10 @@ a:link {
   .DrinkReviewsSection{
     display:block;
     height:auto;
-    width: 200%;
+    width: 500%;
     margin-left: -400px;
-   
-    margin-top: 90px;
+    
+    margin-top: 20px;
     background-color: #fafafa;
     background-repeat: no-repeat;
     /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
@@ -1041,7 +1044,9 @@ a:link {
   .footer-3 p{
     margin-bottom: 5px;
   }
-  
+  #HideImage{
+    display: none;
+  }
 }
 @media only screen and (max-width:940px){
   .header{
@@ -1062,5 +1067,5 @@ a:link {
     display: inline-block;
     transform: translateX(-178px);
     margin-top: 10px;
-  }
+  }  
 }

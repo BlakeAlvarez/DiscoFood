@@ -20,7 +20,7 @@
     border-radius: 10px;
     text-align: center;
     width: 590px;
-    height: 360px;
+    height: 480px;
     border: 2px solid rgb(172, 164, 164);
     padding: 0px;
     position: relative;
@@ -179,3 +179,4 @@
       margin-bottom: 5px;
     }
   }
+  

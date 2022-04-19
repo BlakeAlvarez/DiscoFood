@@ -16,7 +16,7 @@
 <div class ="header">
     <img src = "Images/Home/mlog_v2.png" style="margin: 20px" align="right" alt="Logo for The University of North Texas" title="University of North Texas">
     <h2><a href="https://www.unt.edu" style="font-size: small;" >UNIVERSITY OF NORTH TEXAS</a></h2>
-    <h1><a href="index.html" >Discovery Perks Market & Grill </a> </h2><!-- Make headings clickable (links) -->
+    <h1 style="line-height: normal;margin-top: -10px;margin-bottom: 0px;"><a href="index.html" >Discovery Perks Market & Grill </a> </h1><!-- Make headings clickable (links) -->
 </div>
 
 <div class ="navbar">
@@ -37,13 +37,13 @@
     <div class="food_section_1"></div>
     <div class ="center_title"><b>Food</b></div>
     </div>
-
+    
     <div class="Grill_Section" >
         <h1 style="margin-left:400px;text-align:left;color: #00853e;">Grill</h1>
         <div id="FoodList" ></div><!--RENAME ID LATER-->
 
     </div>
-    <div class="slideshow-container">
+     <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
@@ -70,20 +70,21 @@
         
     </div>
       <br>
-      
+
       <!-- The dots/circles -->
-      <div style="text-align:center">
+       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
+      </div>   
 
+    
+    
+      
+      <div data-theme = "light" class="FoodReviewsSection">
 
-
-
-    <div data-theme = "light" class="FoodReviewsSection">
-      <img src="Images/Food/avesta.png" style="position: absolute; right: 0;"> 
-    <h1 style="margin-left:400px;text-align:left;color: #00853e;">Reviews</h1>
+      <img id="HideImage" src="Images/Food/avesta.png" style="position: absolute; right: 0;"> 
+    <h1 style="margin-top:20px;margin-left:400px;text-align:left;color: #00853e;">Reviews</h1>
     <div id="ReviewList"></div>
 
     <p id="MoreReviewsLink">More Food Reviews</p>
@@ -135,7 +136,7 @@
     </div>
    
   </div>
- 
+      
 <!-- code below for access menu and accessibility functions -->
 <div>
   <button onclick = "toTheTop()" id = "topButton" title = "Go to Top">
