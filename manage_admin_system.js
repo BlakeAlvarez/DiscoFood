@@ -34,10 +34,6 @@ var marketClicks = 0
 var drinkClicks = 0
 
 get((Menu)).then((snapshot)=> {
-    console.log(snapshot.val())
-
-
-
     document.getElementById("grillInfo").addEventListener("click", function(){
 
 
@@ -144,19 +140,17 @@ document.getElementById("drinksInfo").addEventListener("click", function(){
         var data = snapshot.child("Drinks/").val(); //Data is string array
         let Name2Header = document.createElement("h2");
         Name2Header.innerText = "Name";
-        Name2Header.style="display: inline; padding: 20px; position:relative; bottom:20px; right: 150px;";
+        Name2Header.style="display: inline; padding: 20px; position:relative; bottom:20px; right: 200px;";
         let TallHeader = document.createElement("h2");
-        TallHeader.style="display: inline; padding: 20px; position: relative; right:10px; bottom:20px;";
+        TallHeader.style="display: inline; padding: 20px; position: relative; right:150px; bottom:20px;";
         TallHeader.innerText = "Tall";
         let GrandeHeader = document.createElement("h2");
-        GrandeHeader.style="display: inline; padding: 20px; position: relative; left:50px; bottom:20px;";
+        GrandeHeader.style="display: inline; padding: 20px; position: relative; right:100px; bottom:20px;";
         GrandeHeader.innerText = "Grande";
-        let VentiHotHeader = document.createElement("h2");
-        VentiHotHeader.style="display: inline; padding: 20px; position: relative; left:100px; bottom:20px;";
-        VentiHotHeader.innerText = "Venti Hot";
-        let VentiIcedHeader = document.createElement("h2");
-        VentiIcedHeader.style="display: inline; padding: 20px; position: relative; left:100px; bottom:20px;";
-        VentiIcedHeader.innerText = "Venti Iced";
+        let VentiHeader = document.createElement("h2");
+        VentiHeader.style="display: inline; padding: 20px; position: relative; left:40px; bottom:20px;";
+        VentiHeader.innerText = "Venti";
+
 
         let  br2 = document.createElement("br");
         let  hr2 = document.createElement("hr");
@@ -166,38 +160,62 @@ document.getElementById("drinksInfo").addEventListener("click", function(){
         drinkDiv.appendChild(Name2Header);
         drinkDiv.appendChild(TallHeader);
         drinkDiv.appendChild(GrandeHeader)
-        drinkDiv.appendChild(VentiHotHeader);
-        drinkDiv.appendChild(VentiIcedHeader);
+        drinkDiv.appendChild(VentiHeader);
         drinkDiv.appendChild(br2);
 
         for(let x in data){
-
             
             let  br = document.createElement("br");
+            let  br2 = document.createElement("br");
             let name = document.createElement("input");
+            let price = document.createElement("input");
             let tall = document.createElement("input");
             let grande = document.createElement("input");
             let ventiHot = document.createElement("input");
             let  ventiIced= document.createElement("input");
+            let  venti= document.createElement("input");
 
-            name.style = "display: inline; padding: 7px; position: relative; width:20%; right:120px";
-            tall.style = "display: inline; padding: 7px; position: relative; width:10%; right:80px;";
-            grande.style = "display: inline; padding: 7px; position: relative; width:10%; right:40px;" ;
-            ventiHot.style = "display: inline;padding: 7px; position: relative; width:10%; left: 30px;";
-            ventiIced.style = "display: inline; padding: 7px; position: relative; width:10%;left: 70px;";
+            name.style = "float: left; display: inline; padding: 7px; position: relative; width: 160px;";
+            price.style = "float: left;display: inline; padding: 7px; position: relative; width:120px; left: 10px;";
+            tall.style = "float: left;display: inline; padding: 7px; position: relative; width:120px; left: 20px;";
+            grande.style = "float: left;display: inline; padding: 7px; position: relative; width:120px; left: 30px; " ;
+            ventiHot.style = "float: left;display: inline;padding: 7px; position: relative; width:120px; left: 40px;";
+            venti.style = "float: left;display: inline;padding: 7px; position: relative; width:120px; left: 40px;";
+            ventiIced.style = "float: left;display: inline; padding: 7px; position: relative; width:120px; left: 50px;";
+ 
 
-            name.value = data[x].Name;	// Change the text of the element
+            name.value = data[x].Name;
+            price.value = data[x].Price;	// Change the text of the element
             tall.value = data[x].tallPrice;	// Change the text of the element
             grande.value = data[x].grandePrice;
+            venti.value = data[x].ventiPrice;
             ventiHot.value = data[x].ventiHotPrice;
             ventiIced.value = data[x].ventiIcedPrice;
-            // // Username.value = data.Users[x].User_Username;	// Change the text of the element
-            drinkDiv.appendChild(name);
-            drinkDiv.appendChild(tall);
-            drinkDiv.appendChild(grande);
-            drinkDiv.appendChild(ventiHot);
-            drinkDiv.appendChild(ventiIced);
+
+            if(data[x].Name!= undefined){
+                drinkDiv.appendChild(name);
+            }
+            if(data[x].Price!= undefined){
+                drinkDiv.appendChild(price);
+            }
+            if(data[x].tallPrice!= undefined){
+                drinkDiv.appendChild(tall)
+            }
+            if(data[x].grandePrice!= undefined){
+                drinkDiv.appendChild(grande);
+            }
+            if(data[x].ventiPrice!= undefined){
+                drinkDiv.appendChild(venti);
+            }
+            if(data[x].ventiHotPrice!= undefined){
+                drinkDiv.appendChild(ventiHot);
+            }
+            if(data[x].ventiIcedPrice!= undefined){
+                drinkDiv.appendChild(ventiIced);
+            }
+        
             drinkDiv.appendChild(br)
+            drinkDiv.appendChild(br2)
         }
     }
 });
@@ -210,28 +228,118 @@ document.getElementById("cancel_system_changes").addEventListener("click", funct
 });
 
   //saves changes made to system
-  document.getElementById("save_account_changes").addEventListener("click", function(){
-    const updateUser = ref(db, 'Foods/');
+  document.getElementById("save_system_changes").addEventListener("click", function(){
+    const updateFoods = ref(db, 'Foods/');
+    const updateMarket = ref(db, 'Market/');
+    const updateDrinks = ref(db, 'Drinks/');
+
     if(confirm("CHANGES CANNOT BE UNDONE, ARE YOU SURE YOU WANT TO SAVE?")){
 
-        // var inputs = document.getElementById("system-container").elements;
-        // onValue(Menu, (snapshot) => {
-        //     for (var i = 0; i < inputs.length; i+=3) {
-        //         const data = snapshot.val(); //Data is string array
-        //         for(let x in data.Users){
-        //             if(inputs[i].value==data.Users[x].User_Username){
-        //                 console.log(inputs[i].value)
-        //                 var path1 = x + "/User_Name";
-        //                 var path2 = x + "/User_Email";
-        //                 update(updateUser,{
-        //                     [path1]: inputs[i+1].value,
-        //                     [path2]: inputs[i+2].value,
-        //                 });
-        //             }
-        //         }
-            
-        //     }
-        // });
+        var inputs = document.getElementById("grillContainer").elements;
+        var inputs2 = document.getElementById("marketContainer").elements;
+        var inputs3 = document.getElementById("drinkContainer").elements;
+
+        onValue(Menu, (snapshot) => {
+            for (var i = 0; i < inputs.length; i+=2) {
+                const data = snapshot.val(); //Data is string array
+                for(let x in data.Foods){
+                    
+                    if( (i+2)/2 ==data.Foods[x].id){
+                        var path1 = x + "/Name";
+                        var path2 = x + "/Price";
+                        update(updateFoods,{
+                            [path1]: inputs[i].value,
+                            [path2]: inputs[i+1].value
+                        });
+                    }
+                }
+            }
+
+            for (var i = 0; i < inputs2.length; i+=2) {
+                const data = snapshot.val(); //Data is string array
+                for(let x in data.Market){
+                    
+                    if( (i+2)/2 ==data.Market[x].id){
+                        var path1 = x + "/Name";
+                        var path2 = x + "/Price";
+                        update(updateMarket,{
+                            [path1]: inputs2[i].value,
+                            [path2]: inputs2[i+1].value
+                        });
+                    }
+                }
+            }
+
+            // for (var i = 0; i < inputs3.length; i+=0) {
+            //     const data = snapshot.val(); //Data is string array
+            //     for(let x in data.Drinks){
+            //         console.log(x)
+            //         if( (i+2)/2 ==data.Drinks[x].id){
+            //             console.log(inputs3[i].value)
+            //             var path1 = x + "/Name";
+            //             var path7 = x + "/Price";
+            //             var path2 = x + "/tallPrice";
+            //             var path3 = x + "/grandePrice";
+            //             var path4 = x + "/ventiPrice";
+            //             var path5 = x + "/ventiHotPrice";
+            //             var path6 = x + "/ventiIcedPrice";
+            //             if(x<4){
+            //                 update(updateDrinks,{
+            //                     [path1]: inputs3[i].value,
+            //                     [path2]: inputs3[i+1].value,
+            //                     [path3]: inputs3[i+2].value,
+            //                     [path5]: inputs3[i+3].value,
+            //                     [path6]: inputs3[i+4].value
+            //                 });
+            //                 i+=5
+            //             }
+            //             if(x==4){
+            //                 i=-1;
+            //                 update(updateDrinks,{
+            //                     [path1]: inputs3[i].value,
+            //                     [path2]: inputs3[i+1].value,
+            //                     [path3]: inputs3[i+2].value,
+            //                     [path5]: inputs3[i+3].value
+            //                 });
+            //                 i+=4;
+            //             }
+            //             if(x==6){
+            //                 i=-1;
+            //                 update(updateDrinks,{
+            //                     [path1]: inputs3[i].value,
+            //                     [path2]: inputs3[i+1].value,
+            //                     [path3]: inputs3[i+2].value
+            //                 });
+            //                 i+=3;
+            //             }
+            //             if(x==5 || (x >6 && x<14) ){
+            //                 if(x!=5){
+            //                     i+=1;
+            //                 }
+            //                 update(updateDrinks,{
+            //                     [path1]: inputs3[i].value,
+            //                     [path2]: inputs3[i+1].value,
+            //                     [path3]: inputs3[i+2].value,
+            //                     [path4]: inputs3[i+3].value
+
+            //                 });
+            //                 i+=4;
+            //             }
+            //             if( x>13){
+            //                 i=-2;
+            //                 update(updateDrinks,{
+            //                     [path1]: inputs3[i].value,
+            //                     [path7]: inputs3[i+1].value
+
+            //                 });
+            //                 i+=2;
+            //             }
+                        
+            //         }
+            //     }
+            // }
+
+        });
         window.location.href="manage_admin.html";
         alert("Changes Saved Successfully!")
         
