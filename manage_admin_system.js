@@ -33,7 +33,50 @@ var grillClicks = 0
 var marketClicks = 0
 var drinkClicks = 0
 
+
+
 get((Menu)).then((snapshot)=> {
+    
+    drinkDiv.style.display = "none";
+    marketDiv.style.display = "none";
+    grillDiv.style.display = "block";
+    grillClicks++;
+    let SectionHeader = document.createElement("h1");
+    SectionHeader.innerText = "Grill";
+    SectionHeader.style=" padding: 0px; position:relative; color:#00853E;";
+    var data = snapshot.child("Foods/").val(); //Data is string array
+    let NameHeader = document.createElement("h2");
+    NameHeader.innerText = "Name";
+    NameHeader.style="display: inline; padding: 20px; position:relative ;right: 60px; bottom:20px;";
+    let PriceHeader = document.createElement("h2");
+    PriceHeader.style="display: inline; padding: 20px; position: relative; bottom:20px; left:40px;";
+    PriceHeader.innerText = "Price";
+    let  br = document.createElement("br");
+    let  hr = document.createElement("hr");
+    hr.style=" padding: 0px; position:relative; bottom:20px; color:#00853E;";
+    grillDiv.appendChild(SectionHeader);
+    grillDiv.appendChild(hr)
+    grillDiv.appendChild(NameHeader);
+    grillDiv.appendChild(PriceHeader);
+    grillDiv.appendChild(br)
+    
+    for(let x in data){
+        let  br = document.createElement("br");
+        let name = document.createElement("input");
+        let price = document.createElement("input");
+
+        name.style = "display: inline;padding: 10px; position: relative;";
+        price.style = "display: inline;margin-left: 20px; display: inline;padding: 10px; position: relative; ";
+
+        name.value = data[x].Name;	// Change the text of the element
+        price.value = data[x].Price;	// Change the text of the element
+        // Username.value = data.Users[x].User_Username;	// Change the text of the element
+        grillDiv.appendChild(name);
+        grillDiv.appendChild(price);
+        grillDiv.appendChild(br)
+    }
+
+
     document.getElementById("grillInfo").addEventListener("click", function(){
 
 
@@ -344,4 +387,4 @@ document.getElementById("cancel_system_changes").addEventListener("click", funct
         alert("Changes Saved Successfully!")
         
     }
-  });
+});

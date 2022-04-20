@@ -51,6 +51,10 @@ body{
   transform: translateY(-185px);
 }
 
+
+
+
+/*--------------------------------------------------------------------------*/
 /* make navbar sticky */
 .navbar{
   position: -webkit-sticky;
@@ -116,6 +120,129 @@ nav a:hover{
   background: rgb(31, 27, 27);
 }
 
+button{
+  display: none;
+}
+.page1 :hover{
+  color: black;
+  background-color: white;
+  text-decoration: underline;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  transition: .3s;
+  /* position: absolute */
+}
+.page1{
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar li:not(:first-child) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /*shows elements in a column*/
+  ul{
+    flex-direction: column;
+    
+  }
+  
+  /* deletes margin on top or bottom of the a tag*/
+   li {
+    margin: 0;
+    flex-direction: column;
+    transform: translateX(135px);
+    
+  }
+  .login{
+    margin: 0;
+    flex-direction: column;
+    
+  }
+ /* makes sure that the a tag will take the entire screen*/
+  a{
+    display: block;
+  }
+}
+@media only screen and (max-width: 775px) {
+  button{
+    /*makes the button visible*/
+    display: inline-block;
+    transform: translateX(450px);  
+    /*since we are here, we can style it a little bit!*/
+    padding: -10px 5px 10px 20px;
+   
+    font-size: medium;
+    background-color: white;
+    border: none;
+    
+    /*outline none removes the default blue border that appears anytime you click on the button*/
+   
+  }
+}
+@media only screen and (max-width: 795px) {
+  button{
+    /*makes the button visible*/
+    display: inline-block;
+    transform: translateX(350px);  
+    /*since we are here, we can style it a little bit!*/
+    padding: -10px 5px 10px 20px;
+   
+    font-size: medium;
+    background-color: white;
+    border: none;
+    
+    /*outline none removes the default blue border that appears anytime you click on the button*/
+   
+  }
+}
+@media only screen and (max-width: 750px) {
+  
+ 
+ button{
+   /*makes the button visible*/
+   display: inline-block;
+   transform: translateX(100px);  
+   /*since we are here, we can style it a little bit!*/
+   padding: -10px 5px 10px 20px;
+  
+   font-size: medium;
+   background-color: white;
+   border: none;
+   
+   /*outline none removes the default blue border that appears anytime you click on the button*/
+   outline: none;
+ }
+  .navbar .login{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 75px;
+  border-radius: 0px;
+  background-color: #72B844;
+  font-size: medium;
+  
+}
+
+.pages :hover{
+  color: black;
+  background-color: white;
+  text-decoration: underline;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 69px;
+  transition: .3s;
+  /* position: absolute */
+}
+
+}
+
+
+
+
+/*--------------------------------------------------------------------------*/
 /*table things*/
 table.table1{
   border-collapse: collapse;
