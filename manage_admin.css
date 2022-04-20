@@ -69,7 +69,7 @@ font-family: sans-serif;
   border: 2px solid rgb(172, 164, 164);
   padding: 0px;
   position: relative;
-  left: 50%;
+  left: 25%;
   bottom: 20px;
 }
 
@@ -117,7 +117,7 @@ font-family: sans-serif;
 
 
 .man{
-  display: block;
+  display: inline-block;
   color: rgb(70, 62, 62);
   padding: 10px;
   margin-top: 40px;
@@ -125,7 +125,7 @@ font-family: sans-serif;
   width: 335px;
   height: 55px;
   position: relative;
-  left: 22%;
+  left: 10px;
   top: 20px;
   background-color: rgb(240, 240, 240);
   font-weight: bold;
