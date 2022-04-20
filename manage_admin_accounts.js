@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, push, update, onValue, set, child,get} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { getDatabase, ref, push, update, onValue, set, child,get, remove} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
 
 
 const firebaseConfig = {
@@ -44,7 +44,6 @@ get(child(Menu, 'Users/')).then((snapshot) => {
     div.appendChild(br)
     
     for(let x in data){
-
         let Name = document.createElement("input");
         let Email = document.createElement("input");
         let  Username = document.createElement("input");
@@ -60,9 +59,26 @@ get(child(Menu, 'Users/')).then((snapshot) => {
         div.appendChild(Name);
         div.appendChild(Email);
         div.appendChild(br)
-
     }
+
+    //delting user by username                              ///maybe delete reviews by that user as well
+    let deleteButton = document.createElement("Button");
+    deleteButton.innerText = "Delete User by Username";
+    deleteButton.id="deleteButton";
+    deleteButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
+    div.appendChild(deleteButton)
+    
+    document.getElementById("deleteButton").addEventListener("click", function(){
+        let username=window.prompt("Enter Username to delete:");
+        for(let x in data){
+            if(data[x].User_Username==username){
+                remove(ref(db, "Users/" + x));
+                alert(username + "Successfully Deleted!")
+            }
+        }
+    });
 });
+
 
 
 //cancels changes
