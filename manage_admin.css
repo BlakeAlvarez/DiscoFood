@@ -1,49 +1,63 @@
+html, body, footer {
+  margin: 0;
+  padding: 0;  
+}
+html {
+scroll-behavior: smooth;
+}
+body{
+overflow-x: hidden;  
+font-size: 1rem;
+font-family: sans-serif;
+}
+
+
 .management-sign{
-    text-align: center;
-    padding-left: 20 px; 
-    background-color: #00853E;
-    border-radius: 5px;
-    height: 40px;
-    width: 590px;
-    color:white;
-    position: relative;
-    left: 35%;
-    top: 10px;
-    font: Poppins semi bold;
-    border: 2px solid #00853E;
-    z-index: 10;
-    font-weight: bold;
-  }
+  text-align: center;
+  padding-left: 20 px; 
+  background-color: #00853E;
+  border-radius: 5px;
+  height: 40px;
+  width: 590px;
+  color:white;
+  position: relative;
+  left: 50%;
+  top: 10px;
+  font: Poppins semi bold;
+  border: 2px solid #00853E;
+  z-index: 10;
+  font-weight: bold;
+}
 
 
 .management-container{
-    border-radius: 10px;
-    text-align: center;
-    width: 590px;
-    height: 480px;
-    border: 2px solid rgb(172, 164, 164);
-    padding: 0px;
-    position: relative;
-    left: 35%;
-    bottom: 20px;
-  }
+  border-radius: 10px;
+  text-align: center;
+  width: 590px;
+  height: 480px;
+  border: 2px solid rgb(172, 164, 164);
+  padding: 0px;
+  position: relative;
+  left: 35%;
+  bottom: 20px;
+}
 
-  .manage-accounts-sign, .manage-system-sign, .manage-reviews-sign{
-    text-align: center;
-    padding-left: 20 px; 
-    background-color: #00853E;
-    border-radius: 5px;
-    height: 40px;
-    width: 900px;
-    color:white;
-    position: relative;
-    left: 25%;
-    top: 10px;
-    font: Poppins semi bold;
-    border: 2px solid #00853E;
-    z-index: 10;
-    font-weight: bold;
-  }
+.manage-accounts-sign, .manage-system-sign, .manage-reviews-sign{
+  text-align: center;
+  padding-left: 20 px; 
+  background-color: #00853E;
+  border-radius: 5px;
+  height: 40px;
+  width: 900px;
+  color:white;
+  position: relative;
+  left: 25%;
+  top: 10px;
+  font: Poppins semi bold;
+  border: 2px solid #00853E;
+  z-index: 10;
+  font-weight: bold;
+}
 
 
   /* .system-container */
@@ -55,7 +69,7 @@
   border: 2px solid rgb(172, 164, 164);
   padding: 0px;
   position: relative;
-  left: 25%;
+  left: 50%;
   bottom: 20px;
 }
 
@@ -103,21 +117,22 @@
 
 
 .man{
-    color: rgb(70, 62, 62);
-    padding: 10px;
-    margin-top: 40px;
-    box-shadow: 1px 1px 1px 1px grey;
-    width: 335px;
-    height: 55px;
-    position: relative;
-    left: 10px;
-    top: 20px;
-    background-color: rgb(240, 240, 240);
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
-    font-size: large;
-  }
+  display: block;
+  color: rgb(70, 62, 62);
+  padding: 10px;
+  margin-top: 40px;
+  box-shadow: 1px 1px 1px 1px grey;
+  width: 335px;
+  height: 55px;
+  position: relative;
+  left: 22%;
+  top: 20px;
+  background-color: rgb(240, 240, 240);
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  font-size: large;
+}
 
 .man:hover{
     color:  rgb(240, 240, 240);
@@ -127,6 +142,7 @@
   }
 
   .man-buttons{
+    display: inline-block;
     padding: 10px;
     width: 335px;
     height: 45px;
@@ -141,6 +157,7 @@
     font-size: large;
   }
   .mans-buttons{
+    display: inline-block;
     padding: 10px;
     width: 335px;
     height: 45px;
