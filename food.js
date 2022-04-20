@@ -373,6 +373,30 @@ const USERID = Object.keys(data.Users);
 for(let x in USERID)
 UsersTest.innerHTML += USERID[x] + "<br>";
 */
+var changemargin = document.getElementById("WriteAReviewButton");
+
+var MediaQueryList = window.matchMedia('(max-width: 1400px)');
+function changeBottomSpacing(x) {
+    if (x.matches) { 
+      changemargin.style.marginBottom="50px";
+      
+    } else {
+      if(MaxReviews==0)
+      changemargin.style.marginBottom="500px";
+      if(MaxReviews==1)
+      changemargin.style.marginBottom="400px";
+      if(MaxReviews==2)
+      changemargin.style.marginBottom="300px";
+      if(MaxReviews==3)
+      changemargin.style.marginBottom="200px";
+      if(MaxReviews==4)
+      changemargin.style.marginBottom="100px";
+      if(MaxReviews==5)
+      changemargin.style.marginBottom="50px";
+    }
+  }
+  
+   MediaQueryList.addEventListener("change",changeBottomSpacing);
 });
 document.getElementById("ReviewList").appendChild(Reviews);
 
