@@ -44,6 +44,7 @@ if(something=="true"){
 const db = getDatabase();
 const Menu = ref(db);
 //Lines 19-43 Creates Drinks List that is displayed on drink Page
+
 let div = document.createElement('div');
 onValue(Menu, (snapshot) => {
 const data = snapshot.val(); //Data is string array
@@ -315,15 +316,15 @@ document.getElementById("prevSlide").addEventListener("click", function(){
 });
 
 document.getElementById("dot1").addEventListener("click", function(){
-  showSlides(1);
+  currentSlide(1);
 });
 
 document.getElementById("dot2").addEventListener("click", function(){
-  showSlides(2);
+  currentSlide(2);
 });
 
 document.getElementById("dot3").addEventListener("click", function(){
-  showSlides(3);
+  currentSlide(3);
 });
 
 
@@ -584,6 +585,31 @@ const USERID = Object.keys(data.Users);
 for(let x in USERID)
 UsersTest.innerHTML += USERID[x] + "<br>";
 */
+var changemargin = document.getElementById("WriteAReviewButton");
+
+var MediaQueryList = window.matchMedia('(max-width: 1400px)');
+function changeBottomSpacing(x) {
+    if (x.matches) { 
+      changemargin.style.marginBottom="50px";
+      
+    } else {
+      if(MaxReviews==0)
+      changemargin.style.marginBottom="500px";
+      if(MaxReviews==1)
+      changemargin.style.marginBottom="400px";
+      if(MaxReviews==2)
+      changemargin.style.marginBottom="300px";
+      if(MaxReviews==3)
+      changemargin.style.marginBottom="200px";
+      if(MaxReviews==4)
+      changemargin.style.marginBottom="100px";
+      if(MaxReviews==5)
+      changemargin.style.marginBottom="50px";
+    }
+  }
+  
+   MediaQueryList.addEventListener("change",changeBottomSpacing);
+
 });
 document.getElementById("ReviewList").appendChild(Reviews);
 
@@ -605,6 +631,7 @@ window.onclick = function(event) {
     MoreReviewsPopup.style.display = "none";
   }
 }
+
  let AllReviews = document.createElement('div');
 //var UsersTest = document.createElement('p'); //TEST STATEMENT DELETE LATER
 onValue(Menu, (snapshot) => {
