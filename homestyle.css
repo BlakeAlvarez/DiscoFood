@@ -120,9 +120,9 @@ nav a:hover{
   background: rgb(31, 27, 27);
 }
 
-button{
+/* button{
   display: none;
-}
+} */
 .page1 :hover{
   color: black;
   background-color: white;
