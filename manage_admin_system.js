@@ -213,6 +213,8 @@ document.getElementById("marketInfo").addEventListener("click", function(){
             let name = document.createElement("input");
             let price = document.createElement("input");
 
+
+            id.setAttribute("readonly", "true");
             id.style = "display: inline;padding: 10px; position: relative; width: 20px";
             name.style = "display: inline;padding: 10px;;margin-left: 10px; position: relative;";
             price.style = "display: inline;margin-left: 20px; display: inline;padding: 10px; position: relative; ";
@@ -313,6 +315,7 @@ document.getElementById("drinksInfo").addEventListener("click", function(){
             let pricing = document.createElement("input");
 
  
+            id.setAttribute("readonly", "true");
             id.style = "display: inline;padding: 10px; position: relative; width: 20px";
             name.style = "display: inline;padding: 10px;;margin-left: 10px; position: relative;width:125px;";
             pricing.style = "display: inline;margin-left: 20px;width:200px; display: inline;padding: 10px; position: relative; ";
