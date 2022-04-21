@@ -2,122 +2,91 @@
   "Drinks" : [ {
     "id" : "1",
     "Name" : "Caramel Machiato",
-    "tallPrice" : "$3.95",
-    "grandePrice" : "$4.75",
-    "ventiIcedPrice": "Iced $5.25",
-    "ventiHotPrice": "Hot $5.15"
+    "Pricing" : "$3.95 $4.75 Iced:$5.25 Hot:$5.15"
   }, {
     "id" : "2",
     "Name" : "Cafe Mocha",
-    "tallPrice" : "$3.75",
-    "grandePrice" : "$4.35",
-    "ventiIcedPrice": "Iced $5.05",
-    "ventiHotPrice": "Hot $4.75"
+    "Pricing" : "$3.75 $4.35 Iced:$5.05 Hot:$4.75"
   }, {
     "id" : "3",
     "Name" : "White Chocolate Mocha",
-    "tallPrice" : "$3.95",
-    "grandePrice" : "$4.75",
-    "ventiIcedPrice": "Iced $5.25",
-    "ventiHotPrice": "Hot $5.15"
+    "Pricing" : "$3.95 $4.75 Iced:$5.25 Hot:$5.15"
   }, {
     "id" : "4",
     "Name" : "Cafe Late",
-    "tallPrice" : "$3.25",
-    "grandePrice" : "$3.85",
-    "ventiIcedPrice": "Iced $4.55",
-    "ventiHotPrice": "Hot $4.25"
+    "Pricing" : "$3.25 $3.85 Iced:$4.55 Hot:$4.25"
   }, {
     "id" : "5",
     "Name" : "Cappuccino (Hot Only)",
-    "tallPrice" : "$3.25",
-    "grandePrice" : "$3.85",
-    "ventiHotPrice": "Hot $4.25"
+    "Pricing" : "$3.25 $3.85 Hot:$4.25"
   }, {
     "id" : "6",
     "Name" : "Cafe Americano",
-    "tallPrice" : "$1.95",
-    "grandePrice" : "$2.25",
-    "ventiPrice": "$2.65"
+    "Pricing" : "$1.95 $2.25 $2.65"
   }, {
     "id" : "7",
     "Name" : "Espresso",
-    "tallPrice" : "Solo $1.95",
-    "grandePrice" : "Doppio $2.25"
+    "Pricing" : "Solo:$1.95 Doppio:$2.25"
   } , {
     "id" : "8",
     "Name" : "Tazo Chai (hot or iced)",
-    "tallPrice" : "$3.65",
-    "grandePrice" : "$4.25",
-    "ventiPrice": "$4.45"
+    "Pricing" : "$3.65 $4.25 $4.45"
   }, {
     "id" : "9",
     "Name" : "Tazo Hot Tea",
-    "tallPrice" : "$2.25",
-    "grandePrice" : "$2.45",
-    "ventiPrice": "$2.65"
+    "Pricing" : "$2.25 $2.45 $2.65"
   }, {
     "id" : "10",
     "Name" : "Tazo Iced Tea",
-    "tallPrice" : "$1.95",
-    "grandePrice" : "$2.45",
-    "ventiPrice": "$2.75"
+    "Pricing" : "$1.95 $2.45 $2.75"
   }, {
     "id" : "11",
     "Name" : "Tazo Iced Team & Lemonade",
-    "tallPrice" : "$2.65",
-    "grandePrice" : "$3.25",
-    "ventiPrice": "$3.65"
+    "Pricing" : "$2.65 $3.25 $3.65"
   }, {
     "id" : "12",
     "Name" : "Hot Chcoloate",
-    "tallPrice" : "$2.95",
-    "grandePrice" : "$3.25",
-    "ventiPrice": "$3.65"
+    "Pricing" : "$2.95 $3.25 $3.65"
   }, {
     "id" : "13",
     "Name" : "Coffee of the Day",
-    "tallPrice" : "$1.95",
-    "grandePrice" : "$2.25",
-    "ventiPrice": "$2.65"
+    "Pricing" : "$1.95 $2.25 $2.65"
   }, {
     "id" : "14",
     "Name" : "Cold Brew",
-    "tallPrice" : "$1.95",
-    "grandePrice" : "$2.25",
-    "ventiPrice": "$3.65"
+    "Pricing" : "$1.95 $2.25 $3.65"
   }, {
     "id" : "15",
     "Name" : "Coffee",
-    "grandePrice" : "$4.25"
+    "Pricing" : "$4.25"
   }, {
     "id" : "16",
     "Name" : "Caramel",
-    "grandePrice" : "$4.25"
+    "Pricing" : "$4.25"
   }, {
     "id" : "17",
     "Name" : "Mocha",
-    "grandePrice" : "$4.65"
+    "Pricing" : "$4.65"
   }, {
     "id" : "18",
     "Name" : "Vanilla Bean",
-    "grandePrice" : "$4.25"
+    "Pricing" : "$4.25"
   }, {
     "id" : "19",
     "Name" : "Syrup",
-    "Price" : "$.50"
+    "Pricing" : "$.50"
   }, {
     "id" : "20",
     "Name" : "Soy",
-    "Price" : "$.60"
+    "Pricing" : "$.60"
   }, {
     "id" : "21",
     "Name" : "Espresso",
-    "Price" : "$.80"
+    "Pricing" : "$.80"
   }, {
     "id" : "22",
     "Name" : "Sauce",
-    "Price" : "$.60"
+    "Pricing" : "$.60"
   }],
   "Foods" : [ {
     "Name" : "Single Chesseburger",

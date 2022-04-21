@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, push, update, onValue, set, get, child} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { getDatabase, ref, push, update, onValue, set, get, child, remove} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
 
 
 const firebaseConfig = {
@@ -51,6 +51,9 @@ get((Menu)).then((snapshot)=> {
     SectionHeader.innerText = "Grill";
     SectionHeader.style=" padding: 0px; position:relative; color:#00853E;";
     var data = snapshot.child("Foods/").val(); //Data is string array
+    let IDHeader = document.createElement("h2");
+    IDHeader.innerText = "ID";
+    IDHeader.style="display: inline; padding: 20px; position:relative ;right: 110px; bottom:20px;";
     let NameHeader = document.createElement("h2");
     NameHeader.innerText = "Name";
     NameHeader.style="display: inline; padding: 20px; position:relative ;right: 60px; bottom:20px;";
@@ -62,25 +65,73 @@ get((Menu)).then((snapshot)=> {
     hr.style=" padding: 0px; position:relative; bottom:20px; color:#00853E;";
     grillDiv.appendChild(SectionHeader);
     grillDiv.appendChild(hr)
+    grillDiv.appendChild(IDHeader);
     grillDiv.appendChild(NameHeader);
     grillDiv.appendChild(PriceHeader);
     grillDiv.appendChild(br)
     
     for(let x in data){
         let  br = document.createElement("br");
+        let id = document.createElement("input");
         let name = document.createElement("input");
         let price = document.createElement("input");
 
-        name.style = "display: inline;padding: 10px; position: relative;";
+        id.setAttribute("readonly", "true");
+        id.style = "display: inline;padding: 10px; position: relative; width: 20px";
+        name.style = "display: inline;margin-left:10px;padding: 10px; position: relative;";
         price.style = "display: inline;margin-left: 20px; display: inline;padding: 10px; position: relative; ";
 
+        id.value = x
         name.value = data[x].Name;	// Change the text of the element
         price.value = data[x].Price;	// Change the text of the element
         // Username.value = data.Users[x].User_Username;	// Change the text of the element
+        grillDiv.appendChild(id);
         grillDiv.appendChild(name);
         grillDiv.appendChild(price);
         grillDiv.appendChild(br)
     }
+    //delting food by ID                          
+    let deleteFButton = document.createElement("Button");
+    deleteFButton.innerText = "Delete Food by ID";
+    deleteFButton.id="deleteFButton";
+    deleteFButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
+    grillDiv.appendChild(deleteFButton)
+    
+    document.getElementById("deleteFButton").addEventListener("click", function(){
+        let foodID=window.prompt("Enter food ID to delete:");
+        for(let x in data){
+            if(x==foodID){
+                remove(ref(db, "Foods/" + x));
+                alert(foodID + "Successfully Deleted!")
+            }
+        }
+    });
+
+    //adding A food                   
+    let addFButton = document.createElement("Button");
+    addFButton.innerText = "Add Food";
+    addFButton.id="addFButton";
+    addFButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
+    grillDiv.appendChild(addFButton)
+    
+    document.getElementById("addFButton").addEventListener("click", function(){
+        // let foodID=window.prompt("Enter food ID:");
+        let foodName =window.prompt("Enter Food Name:");
+        let foodPrice=window.prompt("Enter Food Price:");
+
+        if(foodName.length != 0 && foodPrice.length != 0){
+            const postListRef = ref(db, 'Foods/'); //Potential Solution 1
+            const newPostRef = push(postListRef);
+            set(newPostRef, {
+                Name: foodName,
+                Price: foodPrice
+            })
+            alert("Food", foodName, "Added!");
+        }else{
+            alert("Failed!");
+        }
+        
+    });
 
 
     document.getElementById("grillInfo").addEventListener("click", function(){
@@ -142,6 +193,9 @@ document.getElementById("marketInfo").addEventListener("click", function(){
         Section1Header.innerText = "Market";
         Section1Header.style=" padding: 0px; position:relative; color:#00853E;";
         var data = snapshot.child("Market/").val(); //Data is string array
+        let ID1Header = document.createElement("h2");
+        ID1Header.innerText = "ID";
+        ID1Header.style="display: inline; padding: 20px; position:relative ;right: 110px; bottom:20px;";
         let Name1Header = document.createElement("h2");
         Name1Header.innerText = "Name";
         Name1Header.style="display: inline; padding: 20px; position:relative; bottom:20px; right: 60px;";
@@ -154,25 +208,74 @@ document.getElementById("marketInfo").addEventListener("click", function(){
         hr1.style=" padding: 0px; position:relative; bottom:20px; color:#00853E;";
         marketDiv.appendChild(Section1Header);
         marketDiv.appendChild(hr1)
+        marketDiv.appendChild(ID1Header);
         marketDiv.appendChild(Name1Header);
         marketDiv.appendChild(Price1Header);
         marketDiv.appendChild(br1)
 
         for(let x in data){
             let  br = document.createElement("br");
+            let id = document.createElement("input");
             let name = document.createElement("input");
             let price = document.createElement("input");
 
-            name.style = "display: inline;padding: 10px; position: relative;";
+
+            id.setAttribute("readonly", "true");
+            id.style = "display: inline;padding: 10px; position: relative; width: 20px";
+            name.style = "display: inline;padding: 10px;;margin-left: 10px; position: relative;";
             price.style = "display: inline;margin-left: 20px; display: inline;padding: 10px; position: relative; ";
 
+            id.value=x;
             name.value = data[x].Name;	// Change the text of the element
             price.value = data[x].Price;	// Change the text of the element
             // Username.value = data.Users[x].User_Username;	// Change the text of the element
+            marketDiv.appendChild(id);
             marketDiv.appendChild(name);
             marketDiv.appendChild(price);
             marketDiv.appendChild(br)
         }
+        //delting a market item by ID                          
+        let deleteMButton = document.createElement("Button");
+        deleteMButton.innerText = "Delete Market Item by ID";
+        deleteMButton.id="deleteMButton";
+        deleteMButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
+        marketDiv.appendChild(deleteMButton)
+        
+        document.getElementById("deleteMButton").addEventListener("click", function(){
+            let marketID=window.prompt("Enter Market Item ID to delete:");
+            for(let x in data){
+                if(x==marketID){
+                    remove(ref(db, "Market/" + x));
+                    alert(marketID + "Successfully Deleted!")
+                }
+            }
+        });
+
+        //adding A market item                  
+        let addMButton = document.createElement("Button");
+        addMButton.innerText = "Add Market Item";
+        addMButton.id="addMButton";
+        addMButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
+        marketDiv.appendChild(addMButton)
+        
+        document.getElementById("addMButton").addEventListener("click", function(){
+            // let foodID=window.prompt("Enter food ID:");
+            let marketName =window.prompt("Enter Market Item Name:");
+            let marketPrice=window.prompt("Enter Market Item Price:");
+
+            if(marketName.length != 0 && marketPrice.length != 0){
+                const postListRef = ref(db, 'Market/'); 
+                const newPostRef = push(postListRef);
+                set(newPostRef, {
+                    Name: marketName,
+                    Price: marketPrice
+                })
+                alert("Food", marketName, "Added!");
+            }else{
+                alert("Failed!");
+            }
+            
+        });
     }
 });
 document.getElementById("drinksInfo").addEventListener("click", function(){
@@ -187,18 +290,16 @@ document.getElementById("drinksInfo").addEventListener("click", function(){
         Section2Header.innerText = "Drinks";
         Section2Header.style=" padding: 0px; position:relative; color:#00853E;";
         var data = snapshot.child("Drinks/").val(); //Data is string array
+        let ID2Header = document.createElement("h2");
+        ID2Header.innerText = "ID";
+        ID2Header.style="display: inline; padding: 20px; position:relative ;right: 90px; bottom:20px;";
         let Name2Header = document.createElement("h2");
         Name2Header.innerText = "Name";
-        Name2Header.style="display: inline; padding: 20px; position:relative; bottom:20px; right: 200px;";
-        let TallHeader = document.createElement("h2");
-        TallHeader.style="display: inline; padding: 20px; position: relative; right:150px; bottom:20px;";
-        TallHeader.innerText = "Tall";
-        let GrandeHeader = document.createElement("h2");
-        GrandeHeader.style="display: inline; padding: 20px; position: relative; right:100px; bottom:20px;";
-        GrandeHeader.innerText = "Grande";
-        let VentiHeader = document.createElement("h2");
-        VentiHeader.style="display: inline; padding: 20px; position: relative; left:40px; bottom:20px;";
-        VentiHeader.innerText = "Venti";
+        Name2Header.style="display: inline; padding: 20px; position:relative; bottom:20px; right: 70px;";
+        let PricingHeader = document.createElement("h2");
+        PricingHeader.style="display: inline; padding: 20px; position: relative; left:40px; bottom:20px;";
+        PricingHeader.innerText = "Pricing";
+
 
 
         let  br2 = document.createElement("br");
@@ -206,66 +307,76 @@ document.getElementById("drinksInfo").addEventListener("click", function(){
         hr2.style=" padding: 0px; position:relative; bottom:20px; color:#00853E;";
         drinkDiv.appendChild(Section2Header);
         drinkDiv.appendChild(hr2)
+        drinkDiv.appendChild(ID2Header);
         drinkDiv.appendChild(Name2Header);
-        drinkDiv.appendChild(TallHeader);
-        drinkDiv.appendChild(GrandeHeader)
-        drinkDiv.appendChild(VentiHeader);
+        drinkDiv.appendChild(PricingHeader);
         drinkDiv.appendChild(br2);
 
         for(let x in data){
             
             let  br = document.createElement("br");
             let  br2 = document.createElement("br");
+            let id = document.createElement("input");
             let name = document.createElement("input");
-            let price = document.createElement("input");
-            let tall = document.createElement("input");
-            let grande = document.createElement("input");
-            let ventiHot = document.createElement("input");
-            let  ventiIced= document.createElement("input");
-            let  venti= document.createElement("input");
+            let pricing = document.createElement("input");
 
-            name.style = "float: left; display: inline; padding: 7px; position: relative; width: 160px;";
-            price.style = "float: left;display: inline; padding: 7px; position: relative; width:120px; left: 10px;";
-            tall.style = "float: left;display: inline; padding: 7px; position: relative; width:120px; left: 20px;";
-            grande.style = "float: left;display: inline; padding: 7px; position: relative; width:120px; left: 30px; " ;
-            ventiHot.style = "float: left;display: inline;padding: 7px; position: relative; width:120px; left: 40px;";
-            venti.style = "float: left;display: inline;padding: 7px; position: relative; width:120px; left: 40px;";
-            ventiIced.style = "float: left;display: inline; padding: 7px; position: relative; width:120px; left: 50px;";
  
+            id.setAttribute("readonly", "true");
+            id.style = "display: inline;padding: 10px; position: relative; width: 20px";
+            name.style = "display: inline;padding: 10px;;margin-left: 10px; position: relative;width:125px;";
+            pricing.style = "display: inline;margin-left: 20px;width:200px; display: inline;padding: 10px; position: relative; ";
 
+            id.value = x;
             name.value = data[x].Name;
-            price.value = data[x].Price;	// Change the text of the element
-            tall.value = data[x].tallPrice;	// Change the text of the element
-            grande.value = data[x].grandePrice;
-            venti.value = data[x].ventiPrice;
-            ventiHot.value = data[x].ventiHotPrice;
-            ventiIced.value = data[x].ventiIcedPrice;
+            pricing.value = data[x].Pricing;	// Change the text of the element
 
-            if(data[x].Name!= undefined){
-                drinkDiv.appendChild(name);
-            }
-            if(data[x].Price!= undefined){
-                drinkDiv.appendChild(price);
-            }
-            if(data[x].tallPrice!= undefined){
-                drinkDiv.appendChild(tall)
-            }
-            if(data[x].grandePrice!= undefined){
-                drinkDiv.appendChild(grande);
-            }
-            if(data[x].ventiPrice!= undefined){
-                drinkDiv.appendChild(venti);
-            }
-            if(data[x].ventiHotPrice!= undefined){
-                drinkDiv.appendChild(ventiHot);
-            }
-            if(data[x].ventiIcedPrice!= undefined){
-                drinkDiv.appendChild(ventiIced);
-            }
-        
+            drinkDiv.appendChild(id)
+            drinkDiv.appendChild(name)
+            drinkDiv.appendChild(pricing)
             drinkDiv.appendChild(br)
-            drinkDiv.appendChild(br2)
+            // drinkDiv.appendChild(br2)
         }
+                //delting a market item by ID                          
+                let deleteDButton = document.createElement("Button");
+                deleteDButton.innerText = "Delete Drink by ID";
+                deleteDButton.id="deleteDButton";
+                deleteDButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
+                drinkDiv.appendChild(deleteDButton)
+                
+                document.getElementById("deleteDButton").addEventListener("click", function(){
+                    let drinkID=window.prompt("Enter Drink ID to delete:");
+                    for(let x in data){
+                        if(x==drinkID){
+                            remove(ref(db, "Drinks/" + x));
+                            alert(drinkID + "Successfully Deleted!")
+                        }
+                    }
+                });
+        
+                //adding A market item                  
+                let addDButton = document.createElement("Button");
+                addDButton.innerText = "Add Market Item";
+                addDButton.id="addDButton";
+                addDButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
+                drinkDiv.appendChild(addDButton)
+                
+                document.getElementById("addDButton").addEventListener("click", function(){
+                    let drinkName =window.prompt("Enter Drink Name:");
+                    let drinkPrice=window.prompt("Enter Drink Price (if multiple prices: seperate by spaces):");
+        
+                    if(drinkName.length != 0 && drinkPrice.length != 0){
+                        const postListRef = ref(db, 'Drinks/'); 
+                        const newPostRef = push(postListRef);
+                        set(newPostRef, {
+                            Name: drinkName,
+                            Pricing: drinkPrice
+                        })
+                        alert("Drink", drinkName, "Added!");
+                    }else{
+                        alert("Failed!");
+                    }
+                    
+                });
     }
 });
 });
@@ -319,74 +430,22 @@ document.getElementById("cancel_system_changes").addEventListener("click", funct
                 }
             }
 
-            // for (var i = 0; i < inputs3.length; i+=0) {
-            //     const data = snapshot.val(); //Data is string array
-            //     for(let x in data.Drinks){
-            //         console.log(x)
-            //         if( (i+2)/2 ==data.Drinks[x].id){
-            //             console.log(inputs3[i].value)
-            //             var path1 = x + "/Name";
-            //             var path7 = x + "/Price";
-            //             var path2 = x + "/tallPrice";
-            //             var path3 = x + "/grandePrice";
-            //             var path4 = x + "/ventiPrice";
-            //             var path5 = x + "/ventiHotPrice";
-            //             var path6 = x + "/ventiIcedPrice";
-            //             if(x<4){
-            //                 update(updateDrinks,{
-            //                     [path1]: inputs3[i].value,
-            //                     [path2]: inputs3[i+1].value,
-            //                     [path3]: inputs3[i+2].value,
-            //                     [path5]: inputs3[i+3].value,
-            //                     [path6]: inputs3[i+4].value
-            //                 });
-            //                 i+=5
-            //             }
-            //             if(x==4){
-            //                 i=-1;
-            //                 update(updateDrinks,{
-            //                     [path1]: inputs3[i].value,
-            //                     [path2]: inputs3[i+1].value,
-            //                     [path3]: inputs3[i+2].value,
-            //                     [path5]: inputs3[i+3].value
-            //                 });
-            //                 i+=4;
-            //             }
-            //             if(x==6){
-            //                 i=-1;
-            //                 update(updateDrinks,{
-            //                     [path1]: inputs3[i].value,
-            //                     [path2]: inputs3[i+1].value,
-            //                     [path3]: inputs3[i+2].value
-            //                 });
-            //                 i+=3;
-            //             }
-            //             if(x==5 || (x >6 && x<14) ){
-            //                 if(x!=5){
-            //                     i+=1;
-            //                 }
-            //                 update(updateDrinks,{
-            //                     [path1]: inputs3[i].value,
-            //                     [path2]: inputs3[i+1].value,
-            //                     [path3]: inputs3[i+2].value,
-            //                     [path4]: inputs3[i+3].value
+            for (var i = 0; i < inputs3.length; i+=2) {
+                const data = snapshot.val(); //Data is string array
+                for(let x in data.Drinks){
+                    
+                    if( (i+2)/2 ==data.Drinks[x].id){
+                        var path1 = x + "/Name";
+                        var path2 = x + "/Pricing";
+                        update(updateDrinks,{
+                            [path1]: inputs3[i].value,
+                            [path2]: inputs3[i+1].value
+                        });
+                    }
+                }
+            }
 
-            //                 });
-            //                 i+=4;
-            //             }
-            //             if( x>13){
-            //                 i=-2;
-            //                 update(updateDrinks,{
-            //                     [path1]: inputs3[i].value,
-            //                     [path7]: inputs3[i+1].value
 
-            //                 });
-            //                 i+=2;
-            //             }
-                        
-            //         }
-            //     }
-            // }
 
         });
         window.location.href="manage_admin.html";
