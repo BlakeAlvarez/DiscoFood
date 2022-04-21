@@ -166,55 +166,62 @@ nav a:hover{
     display: block;
   }
 }
+/* Hamburger Button Media Queries
 @media only screen and (max-width: 775px) {
-  button{
-    /*makes the button visible*/
+
+  HamburgerbuttonIDHere{  //
+    //makes the button visible
     display: inline-block;
     transform: translateX(450px);  
-    /*since we are here, we can style it a little bit!*/
+    //since we are here, we can style it a little bit!
     padding: -10px 5px 10px 20px;
    
     font-size: medium;
     background-color: white;
     border: none;
     
-    /*outline none removes the default blue border that appears anytime you click on the button*/
+    //outline none removes the default blue border that appears anytime you click on the button
    
   }
+  
 }
+
+
 @media only screen and (max-width: 795px) {
-  button{
-    /*makes the button visible*/
+  HamburgerbuttonIDHere{
+    //makes the button visible
     display: inline-block;
     transform: translateX(350px);  
-    /*since we are here, we can style it a little bit!*/
+    //since we are here, we can style it a little bit!
     padding: -10px 5px 10px 20px;
    
     font-size: medium;
     background-color: white;
     border: none;
     
-    /*outline none removes the default blue border that appears anytime you click on the button*/
+    //outline none removes the default blue border that appears anytime you click on the button
    
   }
 }
+*/
 @media only screen and (max-width: 750px) {
   
- 
- button{
-   /*makes the button visible*/
+ /*
+ HamburgerbuttonIDHere{
+   //makes the button visible
    display: inline-block;
    transform: translateX(100px);  
-   /*since we are here, we can style it a little bit!*/
+   //since we are here, we can style it a little bit!
    padding: -10px 5px 10px 20px;
   
    font-size: medium;
    background-color: white;
    border: none;
    
-   /*outline none removes the default blue border that appears anytime you click on the button*/
+   //outline none removes the default blue border that appears anytime you click on the button
    outline: none;
  }
+ */
   .navbar .login{
   padding-top: 0px;
   padding-bottom: 0px;

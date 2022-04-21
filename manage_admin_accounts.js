@@ -18,7 +18,13 @@ const app = initializeApp(firebaseConfig);
 
 const db = getDatabase();
 const Menu = ref(db);
-
+/* PREVENT USERS/ADMINS FROM DIRECT ACCESS TO PAGE THROUGH URL, THE USER/ADMIN MUST LOGGED IN FIRST!
+var checkAdmin = sessionStorage.getItem("ADMIN_LOGGED_IN");
+if(checkAdmin!="true"){
+ alert("Access Denied");
+ window.location.replace("index.html");
+}
+*/
 //this works on the admin manage accounts page
 //creates div for users and makes it scrollable
 let div = document.getElementById("accounts-container");

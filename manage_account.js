@@ -14,9 +14,13 @@ const firebaseConfig = {
   };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase();
-
-
-
+/* PREVENT USERS/ADMINS FROM DIRECT ACCESS TO PAGE THROUGH URL, THE USER/ADMIN MUST LOGGED IN FIRST!
+var checkLOGGED_IN = sessionStorage.getItem("LOGGED_IN");
+if(checkLOGGED_IN!="true"){
+ alert("Access Denied");
+ window.location.replace("index.html");
+}
+*/
 
 var GetUser = sessionStorage.getItem("USER");
 var validUsername = true;
