@@ -98,6 +98,7 @@ var password = document.getElementById("password").value.trim();
         User_Email: email,
         User_Name: name,
         User_Password: password,
+        User_Type: "User",
         User_Username: username
       })
       

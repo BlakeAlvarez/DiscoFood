@@ -220,24 +220,26 @@ for(let x in data.Drinks){
     Name.style.display='inline';
     Name.style.cssText="margin-bottom:-15px;margin-left:400px;text-align:left";
     div.appendChild(Name);
+
+    const prices = data.Drinks[x].Pricing.split(' ');
     
-    if(data.Drinks[x].Price != undefined){
+    if(prices[0] != undefined){
         let Price = document.createElement("p");	// Create a new element
-        Price.innerText = data.Drinks[x].Price;	// Change the text of the element
+        Price.innerText = prices[0];	// Change the text of the element
         Price.style.cssText= "display: inline-block; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
         div.appendChild(Price);
     }
 
-    if(data.Drinks[x].tallPrice != undefined){
+    if(prices[1] != undefined){
         let tallPrice = document.createElement("p");	// Create a new element
-        tallPrice.innerText = data.Drinks[x].tallPrice;	// Change the text of the element
-        tallPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+        tallPrice.innerText = prices[1];	// Change the text of the element
+        tallPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:60px;margin-top:0;";	// Change the text color of the element
         div.appendChild(tallPrice);
     }
 
-    if(data.Drinks[x].grandePrice != undefined){
+    if(prices[2] != undefined){
         let grandePrice = document.createElement("p");	// Create a new element
-        grandePrice.innerText = data.Drinks[x].grandePrice;	// Change the text of the element
+        grandePrice.innerText = prices[2];	// Change the text of the element
         //espresso has a string in its price
         if(data.Drinks[x].Name == "Espresso"){
             grandePrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:35px;margin-top:0;";	// Change the text color of the element
@@ -253,26 +255,28 @@ for(let x in data.Drinks){
     }
     
 
-    if(data.Drinks[x].ventiPrice != undefined){
+    if(prices[3] != undefined){
+        let break1 = document.createElement("br");
+        div.appendChild(break1);
         let ventiPrice = document.createElement("p");	// Create a new element
-        ventiPrice.innerText = data.Drinks[x].ventiPrice;	// Change the text of the element
-        ventiPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:70px;margin-top:0;";	// Change the text color of the element
+        ventiPrice.innerText = prices[3];	// Change the text of the element
+        ventiPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:915px;margin-top:0;";	// Change the text color of the element
         div.appendChild(ventiPrice);
     }
 
-    if(data.Drinks[x].ventiHotPrice != undefined){
-        let ventiHotPrice = document.createElement("p");	// Create a new element
-        ventiHotPrice.innerText = data.Drinks[x].ventiHotPrice;	// Change the text of the element
-        ventiHotPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:55px;margin-top:0;";	// Change the text color of the element
-        div.appendChild(ventiHotPrice);
-    }
+    // if(prices[4] != undefined){
+    //     let ventiHotPrice = document.createElement("p");	// Create a new element
+    //     ventiHotPrice.innerText = prices[4];	// Change the text of the element
+    //     ventiHotPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:55px;margin-top:0;";	// Change the text color of the element
+    //     div.appendChild(ventiHotPrice);
+    // }
 
-    if(data.Drinks[x].ventiIcedPrice != undefined){
-        let ventiIcedPrice = document.createElement("p");	// Create a new element
-        ventiIcedPrice.innerText = data.Drinks[x].ventiIcedPrice;	// Change the text of the element
-        ventiIcedPrice.style.cssText = " padding-left:10px;margin-left:910px;margin-top:0;";	// Change the text color of the element
-        div.appendChild(ventiIcedPrice);
-    }
+    // if(data.Drinks[x].ventiIcedPrice != undefined){
+    //     let ventiIcedPrice = document.createElement("p");	// Create a new element
+    //     ventiIcedPrice.innerText = data.Drinks[x].ventiIcedPrice;	// Change the text of the element
+    //     ventiIcedPrice.style.cssText = " padding-left:10px;margin-left:910px;margin-top:0;";	// Change the text color of the element
+    //     div.appendChild(ventiIcedPrice);
+    // }
     
     var line = document.createElement("HR");
     line.style.cssText="text-align:left;margin-left:400px;width:600px;";

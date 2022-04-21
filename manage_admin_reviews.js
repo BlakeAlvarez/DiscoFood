@@ -29,7 +29,7 @@ get(child(Menu, 'Reviews/')).then((snapshot) => {
     let DateHeader = document.createElement("h2");
     
     let idHeader = document.createElement("h2");
-    idHeader.style="display: inline; padding: 20px; position: relative; right: 150px; top: 10px";
+    idHeader.style="display: inline; padding: 20px; position: relative; right: 140px; top: 10px";
     idHeader.innerText = "ID";
 
     let UsernameHeader = document.createElement("h2");
@@ -98,7 +98,7 @@ get(child(Menu, 'Reviews/')).then((snapshot) => {
     }
 
 
-    //delting user by username                              ///maybe delete reviews by that user as well
+    //delting review by id                              ///maybe delete reviews by that user as well
     let deleteButton = document.createElement("Button");
     deleteButton.innerText = "Delete Review by ID";
     deleteButton.id="deleteButton";

@@ -63,7 +63,7 @@ get(child(Menu, 'Users/')).then((snapshot) => {
 
     //delting user by username                              ///maybe delete reviews by that user as well
     let deleteButton = document.createElement("Button");
-    deleteButton.innerText = "Delete User by Username";
+    deleteButton.innerText = "Delete User";
     deleteButton.id="deleteButton";
     deleteButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
     div.appendChild(deleteButton)
@@ -74,6 +74,27 @@ get(child(Menu, 'Users/')).then((snapshot) => {
             if(data[x].User_Username==username){
                 remove(ref(db, "Users/" + x));
                 alert(username + "Successfully Deleted!")
+            }
+        }
+    });
+
+    //making user admin                        
+    let makeAdminButton = document.createElement("Button");
+    makeAdminButton.innerText = "Make User Admin";
+    makeAdminButton.id="makeAdminButton";
+    makeAdminButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
+    div.appendChild(makeAdminButton)
+    
+    document.getElementById("makeAdminButton").addEventListener("click", function(){
+        const updateUser = ref(db, 'Users/');
+        let username=window.prompt("Enter Username to make Admin:");
+        for(let x in data){
+            if(data[x].User_Username==username){
+                var path1 = x + "/User_Type";
+                update(updateUser,{
+                    [path1]: "Admin",
+                });
+                alert(username + "is now an Admin!")
             }
         }
     });
