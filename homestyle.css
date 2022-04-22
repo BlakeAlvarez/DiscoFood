@@ -1,54 +1,54 @@
 html, body, footer {
-    margin: 0;
-    padding: 0;  
-  }
+  margin: 0;
+  padding: 0;  
+}
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 body{
-  overflow-x: hidden;  
-  font-size: 1rem;
-  font-family: sans-serif;
+overflow-x: hidden;  
+font-size: 1rem;
+font-family: sans-serif;
 }
 
 .header{
-    padding:5px 10px 10px 100px;
-    text-align: left;
-    background: #00853E;
-    color:white;
-    font-size: medium;
-    font-family: Helvetica, Arial, sans-serif;
-    line-height: 100%;
+  padding:5px 10px 10px 100px;
+  text-align: left;
+  background: #00853E;
+  color:white;
+  font-size: medium;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 100%;
 }
 
 .discoPerks, .hours, .createAccountTitle{
-  font-size: 3rem; 
-  font-family: serif; 
-  color: rgb(43,83,54);
+font-size: 3rem; 
+font-family: serif; 
+color: rgb(43,83,54);
 }
 
 .createAccountText {
-  font-size: 1.125rem;
-  font-family:Helvetica,Arial,serif;
-  color: black;
-  margin-top: 0px;
-  margin-bottom: 30px;
+font-size: 1.125rem;
+font-family:Helvetica,Arial,serif;
+color: black;
+margin-top: 0px;
+margin-bottom: 30px;
 }
 
 .mealPlans{
-  font-size: 1.125rem;
-  font-family: Helvetica, Arial, sans-serif;
+font-size: 1.125rem;
+font-family: Helvetica, Arial, sans-serif;
 }
 .marketGrill{
-  color: rgb(237,88,41); 
-  font-size: 1.5rem;
+color: rgb(237,88,41); 
+font-size: 1.5rem;
 }
 
 .section2{
-  text-align: center; 
-  padding-right: 640px; 
-  background-color: rgb(249,249,249); 
-  transform: translateY(-185px);
+text-align: center; 
+padding-right: 640px; 
+background-color: rgb(249,249,249); 
+transform: translateY(-185px);
 }
 
 
@@ -57,191 +57,185 @@ body{
 /*--------------------------------------------------------------------------*/
 /* make navbar sticky */
 .navbar{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 5;
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+z-index: 5;
 }
 
 nav{
-  white-space: nowrap;
+white-space: nowrap;
 }
 
 /* removes bullet points from navbar */
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 3px;
+list-style-type: none;
+margin: 0;
+padding: 3px;
 }
 /* styles list items of the navbar */
 nav li {
-  /* vertical-align: baseline; */
-  display: inline-block ;
-  font-size: medium;
-  font-family:  Helvetica, Arial, sans-serif;
-  width: 7%;
-  text-transform: uppercase;
-  font-weight: bold;
+/* vertical-align: baseline; */
+display: inline-block ;
+font-size: medium;
+font-family:  Helvetica, Arial, sans-serif;
+width: 7%;
+text-transform: uppercase;
+font-weight: bold;
 }
 
 /* login attributes */
 nav .login{
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 0px;
-  background-color: #72B844;
-  font-size: medium;
-  
+padding-top: 7px;
+padding-bottom: 7px;
+padding-left: 50px;
+padding-right: 50px;
+border-radius: 0px;
+background-color: #72B844;
+font-size: medium;
+
 }
 
 /* login list item hover action */
 nav a:hover{
-  color: grey;
-  transition: .3s;
+color: grey;
+transition: .3s;
 }
 
 /* some hover action for navbar */
 .pages :hover{
-  color: black;
-  background-color: white;
-  text-decoration: underline;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  transition: .3s;
-  /* position: absolute */
+color: black;
+background-color: white;
+text-decoration: underline;
+padding-top: 5px;
+padding-bottom: 10px;
+transition: .3s;
+/* position: absolute */
 }
 
 
 /* navigation bar properties */
 .navbar{
-  padding: 5px 100px;
-  background: rgb(31, 27, 27);
+padding: 5px 100px;
+background: rgb(31, 27, 27);
 }
 
-/* button{
-  display: none;
-} */
+
 .page1 :hover{
-  color: black;
-  background-color: white;
-  text-decoration: underline;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  transition: .3s;
-  /* position: absolute */
+color: black;
+background-color: white;
+text-decoration: underline;
+padding-top: 5px;
+padding-bottom: 10px;
+transition: .3s;
+/* position: absolute */
 }
 .page1{
-  display: none;
+display: none;
+}
+
+.navbar button{
+display: none;
 }
 
 @media screen and (max-width: 800px) {
-  .navbar li:not(:first-child) {
-    display: none;
-  }
+.navbar li:not(:first-child) {
+  display: none;
+}
 }
 
 @media only screen and (max-width: 500px) {
-  /*shows elements in a column*/
-  ul{
-    flex-direction: column;
-    
+/*shows elements in a column*/
+ul{
+  flex-direction: column;
   }
+
+/* deletes margin on top or bottom of the a tag*/
+ li {
+  margin: 0;
+  flex-direction: column;
+  transform: translateX(135px);
   
-  /* deletes margin on top or bottom of the a tag*/
-   li {
-    margin: 0;
-    flex-direction: column;
-    transform: translateX(135px);
-    
-  }
-  .login{
-    margin: 0;
-    flex-direction: column;
-    
-  }
- /* makes sure that the a tag will take the entire screen*/
-  a{
-    display: block;
-  }
+  
 }
-/* Hamburger Button Media Queries
+.login{
+  margin: 0;
+  flex-direction: column;
+  
+}
+a{
+  display: block;
+}
+}
 @media only screen and (max-width: 775px) {
-
-  HamburgerbuttonIDHere{  //
-    //makes the button visible
-    display: inline-block;
-    transform: translateX(450px);  
-    //since we are here, we can style it a little bit!
-    padding: -10px 5px 10px 20px;
-   
-    font-size: medium;
-    background-color: white;
-    border: none;
-    
-    //outline none removes the default blue border that appears anytime you click on the button
-   
-  }
-  
-}
-
-
-@media only screen and (max-width: 795px) {
-  HamburgerbuttonIDHere{
-    //makes the button visible
-    display: inline-block;
-    transform: translateX(350px);  
-    //since we are here, we can style it a little bit!
-    padding: -10px 5px 10px 20px;
-   
-    font-size: medium;
-    background-color: white;
-    border: none;
-    
-    //outline none removes the default blue border that appears anytime you click on the button
-   
-  }
-}
-*/
-@media only screen and (max-width: 750px) {
-  
- /*
- HamburgerbuttonIDHere{
-   //makes the button visible
-   display: inline-block;
-   transform: translateX(100px);  
-   //since we are here, we can style it a little bit!
-   padding: -10px 5px 10px 20px;
-  
-   font-size: medium;
-   background-color: white;
-   border: none;
-   
-   //outline none removes the default blue border that appears anytime you click on the button
-   outline: none;
- }
- */
-  .navbar .login{
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 75px;
-  border-radius: 0px;
-  background-color: #72B844;
+.navbar button{
+  /*makes the button visible*/
+  display: inline-block;
+  transform: translateX(450px);  
+  padding: -10px 5px 10px 20px;
   font-size: medium;
+  background-color: white;
+  border: none;
   
+  /*outline none removes the default blue border that appears anytime you click on the button*/
+ 
 }
+}
+@media only screen and (max-width: 795px) {
+.navbar button{
+  /*makes the button visible*/
+  display: inline-block;
+  transform: translateX(350px);  
+  
+  padding: -10px 5px 10px 20px;
+ 
+  font-size: medium;
+  background-color: white;
+  border: none;
+  
+  /*outline none removes the default blue border that appears anytime you click on the button*/
+ 
+}
+}
+@media only screen and (max-width: 750px) {
+
+
+.navbar button{
+ /*makes the button visible*/
+ display: inline-block;
+ transform: translateX(100px);  
+
+ padding: -10px 5px 10px 20px;
+
+ font-size: medium;
+ background-color: white;
+ border: none;
+ 
+ /*outline none removes the default blue border that appears anytime you click on the button*/
+ outline: none;
+}
+.navbar .login{
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 85px;
+border-radius: 0px;
+background-color: #72B844;
+font-size: medium;
+
+}
+
+
 
 .pages :hover{
-  color: black;
-  background-color: white;
-  text-decoration: underline;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  padding-right: 69px;
-  transition: .3s;
-  /* position: absolute */
+color: black;
+background-color: white;
+text-decoration: underline;
+padding-top: 5px;
+padding-bottom: 10px;
+padding-right: 69px;
+transition: .3s;
+/* position: absolute */
 }
 
 }
@@ -252,954 +246,954 @@ nav a:hover{
 /*--------------------------------------------------------------------------*/
 /*table things*/
 table.table1{
-  border-collapse: collapse;
-  table-layout: auto;
+border-collapse: collapse;
+table-layout: auto;
 }
 table.table1 table,th,td{
-  border: 1px solid black;
+border: 1px solid black;
 }
 table.table1 th,td{
-  padding: 10px;
+padding: 10px;
 }
 table.table1 th, tr{
-  text-align: center;
+text-align: center;
 }
 table.table1 tr:nth-child(even){
-  background-color: rgba(238,237,238,255);
+background-color: rgba(238,237,238,255);
 }
 table.table1 tr:nth-child(odd){
-  background-color: white;
+background-color: white;
 }
 
 table.table2{
-  border-collapse: collapse;
-  table-layout: auto;
+border-collapse: collapse;
+table-layout: auto;
 }
 table.table2 table,th,td{
-  border: 1px solid black;
+border: 1px solid black;
 }
 table.table2 th,td{
-  padding: 10px;
+padding: 10px;
 }
 table.table2 th, tr{
-  text-align: center;
+text-align: center;
 }
 table.table2 tr:nth-child(odd){
-  background-color: rgba(238,237,238,255);
+background-color: rgba(238,237,238,255);
 }
 table.table2 tr:nth-child(even){
-  background-color: white;
+background-color: white;
 }
 
 /*positions the map image*/
 img#map{
-  position: relative;
-  top: -10px;
-  bottom: 100px;
-  left: 180px;
+position: relative;
+top: -10px;
+bottom: 100px;
+left: 180px;
 }
 /*positions the food image*/
 img#food{
-  height: 225px;
-  width: 450px;
-  position: relative;
-  top: -150px;
-  bottom: 100px;
-  left: 425px;
+height: 225px;
+width: 450px;
+position: relative;
+top: -150px;
+bottom: 100px;
+left: 425px;
 }
 /*positions the calendar image*/
 img#calendar{
-  position: relative;
-  top: 0px;
-  bottom: 0px;
-  left: 425px;
+position: relative;
+top: 0px;
+bottom: 0px;
+left: 425px;
 }
 
 /* unvisited link */
 a:link {
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .first_col, .second_col, .third_col, .fourth_col {
-    float: left;
-    width: 25%;
-    padding: 10px;
-    height: 400px; /* Should be removed. Only for demonstration */
-    box-sizing: border-box;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .first_col{
-    background-image: url("Images/Home/disco-park-grill_portfolio-cover1.jpeg");
-  }
-  .second_col{
-    background-image: url("Images/Home/disco-park_banner2.jpg");
-  }
-  .third_col{
-      background-image: url("Images/Home/starbucks_banner_cropped2-1.jpg");
-  }
-  .fourth_col{
-      background-image: url("Images/Home/disco-park_banner1.jpeg");
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    box-sizing: border-box;
-  }
-  .top_strip{
-        position: relative;
-        text-align: center;
-        color: white;
-  }
-  .center_title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family:Helvetica, Arial, sans-serif;
-    font-size: 43px;
-    font-style: italic;
-    border: 5px solid white;
-    padding: 10px;
-    box-shadow: 10px 10px black;
-  }
+  color: white;
+  text-decoration: none;
+}
 
-  .footer-container{
-    background-color: black;
-    font-family: Helvetica;
-    position: bottom;
-    min-height: 8cm;
-  }
-  .footer{
-    width: 80%;
-    color:#72B844;
-    display:inline-block;
-    height:5cm;
-  }
-  .footer-1 h2{
-    color:#72B844;
-    content: none; 
-    
-  }
-  .footer-1{
-    display: inline-block;
-    flex-direction: row;
-    margin-right: 4rem;
-   
-  }
-  .footer-1 :not(:first-child):not(:last-child)::after { 
-    content: " |";
-    
-  }
-  .footer-2 h2{
-    color:#72B844
-  }
-  .footer-2{
-    color: white;
-  }
-  .footer-3{
-    display: flex;
-    flex-direction: column;
-    margin-right:2rem;
-    float: right;
-    transform: translateY(-200px);
-  }
-  .footer-3 h2{
-    text-align: center;
-   
-    transform: translateY(10px);
-  }
-  .footer-3 p{
-    color: white;
-    text-align: center;
-  }
-  #DP_Location{
-    display: inline-block;
-    transform: translateX(0px);
-    margin-top: 10px;
-  }
-  .meal_plan_positioning{
-    text-align: center;
-    transform: translateY(-185px);
-    padding-left: 0px;
-    margin-right: -100px;
-    padding-bottom: 25px;
-  }
-  .meal_plan_alignment{
-    text-align: left;  
-    display: inline-block;
-    
-  }
-  #mealPlanTitle{
-    font-size: 3em;  
-    color: rgb(43,83,54);
-    margin-bottom: 0px;
-    margin-top: 10px;
-    font-family: serif; 
-  }
-  .mealPlanText{
-    font-size:1.75rem; 
-    font-family:serif;
-    font-weight:bold;
-    color:#72b844;
-    margin-bottom: 50px;
-  }
-  .meal_cube1{
-    text-align: center;
-    background-color: #fafafa;
-    display: inline-block;
-    padding: 15px 100px;
-    transform: translateY(-120px);
-    margin-top: 100px;
-    margin-right: 130px;
-    margin-bottom: 30px;
-    border-radius: 25px;
-    border: 2px solid #72b844;
+/* visited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
 
-  }
-  .meal_cube2{
-    text-align: center;
-    background-color: #fafafa;
-    display: inline-block;
-    padding: 40px 50px;
-    margin-left: 0px;
-    width: 600px;
-    transform: translateY(-100px);
-    border-radius: 25px;
-    border: 2px solid #72b844;
-  }
-  #meal_cube2_light_links:link {
-    font-size: 2rem; 
-    font-family:Helvetica, Arial, sans-serif;
-    color: #72b844;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-  }
+.first_col, .second_col, .third_col, .fourth_col {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 400px; /* Should be removed. Only for demonstration */
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.first_col{
+  background-image: url("Images/Home/disco-park-grill_portfolio-cover1.jpeg");
+}
+.second_col{
+  background-image: url("Images/Home/disco-park_banner2.jpg");
+}
+.third_col{
+    background-image: url("Images/Home/starbucks_banner_cropped2-1.jpg");
+}
+.fourth_col{
+    background-image: url("Images/Home/disco-park_banner1.jpeg");
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  box-sizing: border-box;
+}
+.top_strip{
+      position: relative;
+      text-align: center;
+      color: white;
+}
+.center_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family:Helvetica, Arial, sans-serif;
+  font-size: 43px;
+  font-style: italic;
+  border: 5px solid white;
+  padding: 10px;
+  box-shadow: 10px 10px black;
+}
+
+.footer-container{
+  background-color: black;
+  font-family: Helvetica;
+  position: bottom;
+  min-height: 8cm;
+}
+.footer{
+  width: 80%;
+  color:#72B844;
+  display:inline-block;
+  height:5cm;
+}
+.footer-1 h2{
+  color:#72B844;
+  content: none; 
   
-  /* visited link */
-  #meal_cube2_light_links:visited {
-    font-size: 2rem; 
-    font-family:Helvetica, Arial, sans-serif;
-    color: #72b844;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  /* mouse over link */
-  #meal_cube2_light_links:hover {
-    font-size: 2rem; 
-    font-family:Helvetica, Arial, sans-serif;
-    color: #72b844;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  #meal_cube2_light_links:active {
-    font-size:2rem; 
-    font-family:Helvetica, Arial, sans-serif;
-    color: #72b844;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  #meal_cube2_dark_links:link {
-    font-size: 2rem; 
-    font-family:Helvetica, Arial, sans-serif;
-    color:#407C51;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  /* visited link */
-  #meal_cube2_dark_links:visited {
-    font-size: 2rem; 
-    font-family: Helvetica, Arial, sans-serif;
-    color: #407C51;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  /* mouse over link */
-  #meal_cube2_dark_links:hover {
-    font-size:2rem; 
-    font-family:Helvetica, Arial, sans-serif;
-    color: #407C51;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  #meal_cube2_dark_links:active{
-    font-size:2rem; 
-    font-family:Helvetica, Arial, sans-serif;
-    color: #407C51;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .home_bottom_banner{
-    background-image: url("Images/Home/student-mp_flex-banner2.jpeg");
-    width: 100%;
-    position: relative;
-    height: 600px; /* Should be removed. Only for demonstration */
-    box-sizing: border-box;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    margin-top: -200px;
+}
+.footer-1{
+  display: inline-block;
+  flex-direction: row;
+  margin-right: 4rem;
  
-  }
-  .Create_Account_Today_Box{
-   background-color: white;
-   height: 250px;
-   width: 750px;
-   text-align: center;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   padding: 20px;
-  }
-  .sign_up{
-    padding:20px 40px;
-    background-color: #BADA55;
-    color: white;
-    font-size: large;
-    font-family: Helvetica, Arial, sans-serif;
-    /*transition: color 500ms ease-out 10ms */ /*(Hover animation; add later)*/
-  }
+}
+.footer-1 :not(:first-child):not(:last-child)::after { 
+  content: " |";
+  
+}
+.footer-2 h2{
+  color:#72B844
+}
+.footer-2{
+  color: white;
+}
+.footer-3{
+  display: flex;
+  flex-direction: column;
+  margin-right:2rem;
+  float: right;
+  transform: translateY(-200px);
+}
+.footer-3 h2{
+  text-align: center;
+ 
+  transform: translateY(10px);
+}
+.footer-3 p{
+  color: white;
+  text-align: center;
+}
+#DP_Location{
+  display: inline-block;
+  transform: translateX(0px);
+  margin-top: 10px;
+}
+.meal_plan_positioning{
+  text-align: center;
+  transform: translateY(-185px);
+  padding-left: 0px;
+  margin-right: -100px;
+  padding-bottom: 25px;
+}
+.meal_plan_alignment{
+  text-align: left;  
+  display: inline-block;
+  
+}
+#mealPlanTitle{
+  font-size: 3em;  
+  color: rgb(43,83,54);
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-family: serif; 
+}
+.mealPlanText{
+  font-size:1.75rem; 
+  font-family:serif;
+  font-weight:bold;
+  color:#72b844;
+  margin-bottom: 50px;
+}
+.meal_cube1{
+  text-align: center;
+  background-color: #fafafa;
+  display: inline-block;
+  padding: 15px 100px;
+  transform: translateY(-120px);
+  margin-top: 100px;
+  margin-right: 130px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  border: 2px solid #72b844;
+
+}
+.meal_cube2{
+  text-align: center;
+  background-color: #fafafa;
+  display: inline-block;
+  padding: 40px 50px;
+  margin-left: 0px;
+  width: 600px;
+  transform: translateY(-100px);
+  border-radius: 25px;
+  border: 2px solid #72b844;
+}
+#meal_cube2_light_links:link {
+  font-size: 2rem; 
+  font-family:Helvetica, Arial, sans-serif;
+  color: #72b844;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* visited link */
+#meal_cube2_light_links:visited {
+  font-size: 2rem; 
+  font-family:Helvetica, Arial, sans-serif;
+  color: #72b844;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* mouse over link */
+#meal_cube2_light_links:hover {
+  font-size: 2rem; 
+  font-family:Helvetica, Arial, sans-serif;
+  color: #72b844;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+#meal_cube2_light_links:active {
+  font-size:2rem; 
+  font-family:Helvetica, Arial, sans-serif;
+  color: #72b844;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+#meal_cube2_dark_links:link {
+  font-size: 2rem; 
+  font-family:Helvetica, Arial, sans-serif;
+  color:#407C51;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* visited link */
+#meal_cube2_dark_links:visited {
+  font-size: 2rem; 
+  font-family: Helvetica, Arial, sans-serif;
+  color: #407C51;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* mouse over link */
+#meal_cube2_dark_links:hover {
+  font-size:2rem; 
+  font-family:Helvetica, Arial, sans-serif;
+  color: #407C51;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+#meal_cube2_dark_links:active{
+  font-size:2rem; 
+  font-family:Helvetica, Arial, sans-serif;
+  color: #407C51;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+.home_bottom_banner{
+  background-image: url("Images/Home/student-mp_flex-banner2.jpeg");
+  width: 100%;
+  position: relative;
+  height: 600px; /* Should be removed. Only for demonstration */
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: -200px;
+
+}
+.Create_Account_Today_Box{
+ background-color: white;
+ height: 250px;
+ width: 750px;
+ text-align: center;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ padding: 20px;
+}
+.sign_up{
+  padding:20px 40px;
+  background-color: #BADA55;
+  color: white;
+  font-size: large;
+  font-family: Helvetica, Arial, sans-serif;
+  /*transition: color 500ms ease-out 10ms */ /*(Hover animation; add later)*/
+}
 .sign_up:hover{
-  color: grey;
+color: grey;
 }
 
 
 
 .food_section_1{
-  background-image: url("Images/Food/disco-park_banner2.jpg");
-  width: 100%;
-    position: relative;
-    height: 400px; /* Should be removed. Only for demonstration */
-    box-sizing: border-box;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-  
+background-image: url("Images/Food/disco-park_banner2.jpg");
+width: 100%;
+  position: relative;
+  height: 400px; /* Should be removed. Only for demonstration */
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
 }
 .drink_section_1{
-  background-image: url("Images/Drink/starbucks_banner_cropped2-1.jpg");
-  width: 100%;
-    position: relative;
-    height: 400px; /* Should be removed. Only for demonstration */
-    box-sizing: border-box;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-  
+background-image: url("Images/Drink/starbucks_banner_cropped2-1.jpg");
+width: 100%;
+  position: relative;
+  height: 400px; /* Should be removed. Only for demonstration */
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
 }
 .market_section_1{
-  background-image: url("Images/Market/disco-park_banner1.jpeg");
-  width: 100%;
-    position: relative;
-    height: 400px; /* Should be removed. Only for demonstration */
-    box-sizing: border-box;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-  
+background-image: url("Images/Market/disco-park_banner1.jpeg");
+width: 100%;
+  position: relative;
+  height: 400px; /* Should be removed. Only for demonstration */
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
 }
 
 
 
 .Grill_Section {
-  display:block;
- 
+display:block;
+
 
 }
 .Drink_Section{
-  display:block;
-  white-space: nowrap;
+display:block;
+white-space: nowrap;
 }
 .FoodReviewsSection{
-  display:block;
-  height: auto;
-  width: auto;
-  margin-top: 20px;
-  background-color: #fafafa;
-  background-size: auto;
-  background-repeat: no-repeat;
-  /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
- 
+display:block;
+height: auto;
+width: auto;
+margin-top: 20px;
+background-color: #fafafa;
+background-size: auto;
+background-repeat: no-repeat;
+/* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
+
 }
 .DrinkReviewsSection{
-  display:block;
-  height: auto;
-  width: auto;
-  margin-top: 20px;
-  background-color: #fafafa;
-  background-size: auto;
-  background-repeat: no-repeat;
-  /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
-  
+display:block;
+height: auto;
+width: auto;
+margin-top: 20px;
+background-color: #fafafa;
+background-size: auto;
+background-repeat: no-repeat;
+/* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
+
 }
 #MoreReviewsLink{
-  display: block;
-  margin-left: 410px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 1.2rem;
+display: block;
+margin-left: 410px;
+margin-top: 40px;
+margin-bottom: 20px;
+text-decoration: underline;
+cursor: pointer;
+font-size: 1.2rem;
 }
 .MoreReviewsModal,.WriteReviewsModal{
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 5; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 5; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .MoreReviewsModal-content,.WriteReviewsModal-content{
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 500px;
-  height: 600px;
-  overflow: auto; 
-  z-index: 5;
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 500px;
+height: 600px;
+overflow: auto; 
+z-index: 5;
 }
 .close {
-  margin-top: 10px;
-  color: #ccc;;
-  float: right;
-  font-size: 40px;
-  font-weight: bold;
+margin-top: 10px;
+color: #ccc;;
+float: right;
+font-size: 40px;
+font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+color: #000;
+text-decoration: none;
+cursor: pointer;
 }
 .WriteAReviewButton {
-  background-color: #72b844;
-  border: none;
-  color: white;
-  padding: 15px 52px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  margin-left: 410px;
-  margin-bottom: 50px;
+background-color: #72b844;
+border: none;
+color: white;
+padding: 15px 52px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+margin-left: 410px;
+margin-bottom: 50px;
 }
 .WriteReviewsModal{
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: hidden; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .WriteReviewsModal-content{
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 600px;
-  height: 500px;
-  overflow: hidden; 
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 600px;
+height: 500px;
+overflow: hidden; 
 }
 .rateDisplay {
-  float: left;
-  height: 46 px;
-  padding: 0 10px;
-  
+float: left;
+height: 46 px;
+padding: 0 10px;
+
 }
 .rateDisplay:not(:checked) > input {
-  position:absolute;
-  top:-9999px;
+position:absolute;
+top:-9999px;
 }
 .rateDisplay:not(:checked) > label {
-  float:right;
-  width:1em;
-  overflow:hidden;
-  white-space:nowrap;
-  
-  font-size:15px;
-  color: #72B844;
+float:right;
+width:1em;
+overflow:hidden;
+white-space:nowrap;
+
+font-size:15px;
+color: #72B844;
 }
 .rateDisplay:not(:checked) > label:before {
-  content: '★ ';
+content: '★ ';
 }
 .rateDisplay > input:checked ~ label {
-  color: #72B844;    
+color: #72B844;    
 }
 .rateDisplay:not(:checked) > label:f,
 .rate:not(:checked) > label:hover ~ label {
-  color: #72B844;  
+color: #72B844;  
 }
 .rateDisplay > input:checked + label:hover,
 .rateDisplay > input:checked + label:hover ~ label,
 .rateDisplay > input:checked ~ label:hover,
 .rateDisplay > input:checked ~ label:hover ~ label,
 .rateDisplay > label:hover ~ input:checked ~ label {
-  color: #72B844;
+color: #72B844;
 }
 .MakeRating {
-  float: left;
-  height: 46 px;
-  padding: 0 10px;
-  margin-bottom: 10px;
+float: left;
+height: 46 px;
+padding: 0 10px;
+margin-bottom: 10px;
 }
 .MakeRating:not(:checked) > input {
-  position:absolute;
-  top:-9999px;
+position:absolute;
+top:-9999px;
 }
 .MakeRating:not(:checked) > label {
-  float:right;
-  width:1em;
-  overflow:hidden;
-  white-space:nowrap;
-  cursor: pointer;
-  font-size:40px;
-  color: #ccc;
+float:right;
+width:1em;
+overflow:hidden;
+white-space:nowrap;
+cursor: pointer;
+font-size:40px;
+color: #ccc;
 }
 .MakeRating:not(:checked) > label:before {
-  content: '★ ';
+content: '★ ';
 }
 .MakeRating > input:checked ~ label {
-  color: #72b844;    
+color: #72b844;    
 }
 .MakeRating:not(:checked) > label:hover,
 .MakeRating:not(:checked) > label:hover ~ label {
-  color: #72b844;  
+color: #72b844;  
 }
 .MakeRating > input:checked + label:hover,
 .MakeRating > input:checked + label:hover ~ label,
 .MakeRating > input:checked ~ label:hover,
 .MakeRating > input:checked ~ label:hover ~ label,
 .MakeRating > label:hover ~ input:checked ~ label {
-  color: #72B844;
+color: #72B844;
 }
 .FoodReviewInput{
-  display: block;
-  margin-top: 80px;
-  margin-left:100px;
-  width:400px ;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 80px;
-  padding-top: 5px;
-  background-color: #F6F5F5;
-  border: none;
-  border-bottom:5px solid #00853E;
-  outline: none;
-  font-size: 1em;
-  resize: none;
+display: block;
+margin-top: 80px;
+margin-left:100px;
+width:400px ;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 80px;
+padding-top: 5px;
+background-color: #F6F5F5;
+border: none;
+border-bottom:5px solid #00853E;
+outline: none;
+font-size: 1em;
+resize: none;
 }
 .FoodReviewInput:focus::placeholder{
-  color: transparent;
-  white-space:normal;
-  font-size: 1em;
-  padding-left: 2px;
-  padding-top: 5px;
-  outline: none;
-  resize: none;
+color: transparent;
+white-space:normal;
+font-size: 1em;
+padding-left: 2px;
+padding-top: 5px;
+outline: none;
+resize: none;
 }
 .FoodReviewInput::placeholder{
-  color: black;
-  white-space:normal;
-  font-size: 1em;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 2px;
-  outline: none;
-  white-space:normal;
-  resize: none;
+color: black;
+white-space:normal;
+font-size: 1em;
+padding-left: 2px;
+padding-right: 2px;
+padding-top: 2px;
+outline: none;
+white-space:normal;
+resize: none;
 }
 
 .DrinkReviewInput{
-  display: block;
-  margin-top: 80px;
-  margin-left:100px;
-  width:400px ;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 80px;
-  padding-top: 5px;
-  background-color: #F6F5F5;
-  border: none;
-  border-bottom:5px solid #00853E;
-  outline: none;
-  font-size: 1em;
-  resize: none;
+display: block;
+margin-top: 80px;
+margin-left:100px;
+width:400px ;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 80px;
+padding-top: 5px;
+background-color: #F6F5F5;
+border: none;
+border-bottom:5px solid #00853E;
+outline: none;
+font-size: 1em;
+resize: none;
 }
 .DrinkReviewInput:focus::placeholder{
-  color: transparent;
-  white-space:normal;
-  font-size: 1em;
-  padding-left: 2px;
-  padding-top: 5px;
-  outline: none;
-  resize: none;
+color: transparent;
+white-space:normal;
+font-size: 1em;
+padding-left: 2px;
+padding-top: 5px;
+outline: none;
+resize: none;
 }
 .DrinkReviewInput::placeholder{
-  color: black;
-  white-space:normal;
-  font-size: 1em;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 2px;
-  outline: none;
-  white-space:normal;
-  resize: none;
+color: black;
+white-space:normal;
+font-size: 1em;
+padding-left: 2px;
+padding-right: 2px;
+padding-top: 2px;
+outline: none;
+white-space:normal;
+resize: none;
 }
 
 .MarketReviewInput{
-  display: block;
-  margin-top: 80px;
-  margin-left:100px;
-  width:400px ;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 80px;
-  padding-top: 5px;
-  background-color: #F6F5F5;
-  border: none;
-  border-bottom:5px solid #00853E;
-  outline: none;
-  font-size: 1em;
-  resize: none;
+display: block;
+margin-top: 80px;
+margin-left:100px;
+width:400px ;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 80px;
+padding-top: 5px;
+background-color: #F6F5F5;
+border: none;
+border-bottom:5px solid #00853E;
+outline: none;
+font-size: 1em;
+resize: none;
 }
 .MarketReviewInput:focus::placeholder{
-  color: transparent;
-  white-space:normal;
-  font-size: 1em;
-  padding-left: 2px;
-  padding-top: 5px;
-  outline: none;
-  resize: none;
+color: transparent;
+white-space:normal;
+font-size: 1em;
+padding-left: 2px;
+padding-top: 5px;
+outline: none;
+resize: none;
 }
 .MarketReviewInput::placeholder{
-  color: black;
-  white-space:normal;
-  font-size: 1em;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 2px;
-  outline: none;
-  white-space:normal;
-  resize: none;
+color: black;
+white-space:normal;
+font-size: 1em;
+padding-left: 2px;
+padding-right: 2px;
+padding-top: 2px;
+outline: none;
+white-space:normal;
+resize: none;
 }
 #DeleteReview{
-  background-color:#00853E;
-  border: none;
-  color:white;
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-  display: none;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  transform: translateX(100px);
-  margin-top: 30px;
-  margin-right: -110px;
-  margin-bottom: 50px;
-  border-radius: 10px;
+background-color:#00853E;
+border: none;
+color:white;
+height: 50px;
+width: 100px;
+text-align: center;
+text-decoration: none;
+display: none;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+transform: translateX(100px);
+margin-top: 30px;
+margin-right: -110px;
+margin-bottom: 50px;
+border-radius: 10px;
 }
 
 #CloseWriteAReviewPopup {
-  background-color: white;
-  border: none;
-  color:#00853E;
-  border: 2px solid #00853E;
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  margin-left: 0px;
-  transform: translateX(260px);
-  margin-top: 30px;
-  margin-bottom: 50px;
-  border-radius: 10px;
+background-color: white;
+border: none;
+color:#00853E;
+border: 2px solid #00853E;
+height: 50px;
+width: 100px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+margin-left: 0px;
+transform: translateX(260px);
+margin-top: 30px;
+margin-bottom: 50px;
+border-radius: 10px;
 }
 #SubmitFoodReview{
-  background-color: #00853E;
-  border: none;
-  color: white;
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transform: translateX(260px);
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  margin-left: 30px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  border-radius: 10px;
+background-color: #00853E;
+border: none;
+color: white;
+height: 50px;
+width: 100px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+transform: translateX(260px);
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+margin-left: 30px;
+margin-top: 30px;
+margin-bottom: 50px;
+border-radius: 10px;
 }
 #SubmitDrinkReview{
-  background-color: #00853E;
-  border: none;
-  color: white;
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transform: translateX(260px);
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  margin-left: 30px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  border-radius: 10px;
+background-color: #00853E;
+border: none;
+color: white;
+height: 50px;
+width: 100px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+transform: translateX(260px);
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+margin-left: 30px;
+margin-top: 30px;
+margin-bottom: 50px;
+border-radius: 10px;
 }
 
 #SubmitMarketReview{
-  background-color: #00853E;
-  border: none;
-  color: white;
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transform: translateX(260px);
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  margin-left: 30px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  border-radius: 10px;
+background-color: #00853E;
+border: none;
+color: white;
+height: 50px;
+width: 100px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+transform: translateX(260px);
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+margin-left: 30px;
+margin-top: 30px;
+margin-bottom: 50px;
+border-radius: 10px;
 
 }
 
 
 /* makes navbar responsive */
 @media only screen and (min-width: 100px){
-  nav li {
-    position: relative;
-    right: 45px;
-    width: 20%;
-  }
-  nav .login{
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+nav li {
+  position: relative;
+  right: 45px;
+  width: 20%;
+}
+nav .login{
+  padding-left: 25px;
+  padding-right: 25px;
+}
 }
 @media only screen and (min-width: 500px){
-  nav li {
-    position: relative;
-    right: 0px;
-    width: 20%;
-  }
-  nav .login{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+nav li {
+  position: relative;
+  right: 0px;
+  width: 20%;
+}
+nav .login{
+  padding-left: 50px;
+  padding-right: 50px;
+}
 }
 @media only screen and (min-width: 800px){
-  nav li {
-    position: relative;
-    right: 0px;
-    width: 15%;
-  }
-  
+nav li {
+  position: relative;
+  right: 0px;
+  width: 15%;
+}
+
 } 
 @media only screen and (min-width: 1000px){
-  nav li {
-    position: relative;
-    right: 0px;
-    width: 12%;
-  }
+nav li {
+  position: relative;
+  right: 0px;
+  width: 12%;
+}
 } 
 @media only screen and (min-width: 1200px){
-  nav li {
-    position: relative;
-    right: 0px;
-    width: 10%;
-  }
+nav li {
+  position: relative;
+  right: 0px;
+  width: 10%;
+}
 } 
 @media only screen and (min-width: 1400px){
-  nav li {
-    position: relative;
-    right: 0px;
-    width: 7.5%;
-  }
- 
+nav li {
+  position: relative;
+  right: 0px;
+  width: 7.5%;
+}
+
 }
 @media only screen and (max-width:900px){
-  .Grill_Section,.Drink_Section,.Market-Section{
-    display:block;
-    transform: translateX(-400px);  
-  }
+.Grill_Section,.Drink_Section,.Market-Section{
+  display:block;
+  transform: translateX(-400px);  
+}
+
+
+
+.FoodReviewsSection,.MarketReviewsSection{
+  display:block;
+  height:auto;
+  width: 500%;
+  margin-left: -400px;  
   
+  margin-top: 20px;  
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
+}
+.DrinkReviewsSection{
+  display:block;
+  height:auto;
+  width: 500%;
+  margin-left: -400px;
   
-  
-  .FoodReviewsSection,.MarketReviewsSection{
-    display:block;
-    height:auto;
-    width: 500%;
-    margin-left: -400px;  
-    
-    margin-top: 20px;  
-    background-color: #fafafa;
-    background-repeat: no-repeat;
-    /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
-  }
-  .DrinkReviewsSection{
-    display:block;
-    height:auto;
-    width: 500%;
-    margin-left: -400px;
-    
-    margin-top: 20px;
-    background-color: #fafafa;
-    background-repeat: no-repeat;
-    /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
-  }
-  .MoreReviewsModal-content{
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 500px;
-  }
-  .WriteAReview{
-    margin-left: 0px;
-  }
-  #DP_Location{
-    display: inline-block;
-    transform: translateX(-178px);
-    margin-top: 10px;
-  }
-  
+  margin-top: 20px;
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
+}
+.MoreReviewsModal-content{
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px;
+}
+.WriteAReview{
+  margin-left: 0px;
+}
+#DP_Location{
+  display: inline-block;
+  transform: translateX(-178px);
+  margin-top: 10px;
+}
+
 } 
 
 @media (max-width:1400px) {
-  .footer{
-    display:inline-flex;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-  .footer img{
-    display: none;
-  }
-  .footer-1{
-   margin-left: 40px;
-    }
-  .footer-2{
-    margin-right: 75px;
-    text-align: left;
-   
-  }
-  .footer-3{
-    transform: translateY(-11px);
-    flex-direction: column;
-  }
-  .footer-3 p{
-    margin-bottom: 5px;
-  }
-  #HideImage{
-    display: none;
-  }
+.footer{
+  display:inline-flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
-@media only screen and (max-width:940px){
-  .header{
-    padding:5px 10px 10px 100px;
-    text-align: left;
-    background: #00853E;
-    color:white;
-    font-size: medium;
-    font-family: Helvetica, Arial, sans-serif;
-    line-height: 100%;
+.footer img{
+  display: none;
 }
-.header img{
+.footer-1{
+ margin-left: 40px;
+  }
+.footer-2{
+  margin-right: 75px;
+  text-align: left;
+ 
+}
+.footer-3{
+  transform: translateY(-11px);
+  flex-direction: column;
+}
+.footer-3 p{
+  margin-bottom: 5px;
+}
+#HideImage{
   display: none;
 }
 }
+@media only screen and (max-width:940px){
+.header{
+  padding:5px 10px 10px 100px;
+  text-align: left;
+  background: #00853E;
+  color:white;
+  font-size: medium;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 100%;
+}
+.header img{
+display: none;
+}
+}
 @media only screen and (max-width:1100px){
-  #DP_Location{
-    display: inline-block;
-    transform: translateX(-178px);
-    margin-top: 10px;
-  }  
+#DP_Location{
+  display: inline-block;
+  transform: translateX(-178px);
+  margin-top: 10px;
+}  
 }
