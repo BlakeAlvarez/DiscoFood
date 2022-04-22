@@ -87,6 +87,20 @@ li{
     border-radius: 5px;
     border: none;
   }
+  .submit1{
+    padding: 10px;
+    width: 335px;
+    height: 45px;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    background-color: #00853E;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    margin: 0em;
+  }
 
   input[type=password] {
     background-color: #f1efefef;
@@ -115,7 +129,7 @@ li{
   border: none;
   font-family: Helvetica;
 }
-  .registrationButton:hover, .submit1 :hover{
+  .registrationButton:hover, .submit1:hover{
     color: grey;
     cursor: pointer;
     transition: .4s;
