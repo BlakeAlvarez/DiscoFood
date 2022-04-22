@@ -92,7 +92,7 @@ get((Menu)).then((snapshot)=> {
     }
     //delting food by ID                          
     let deleteFButton = document.createElement("Button");
-    deleteFButton.innerText = "Delete Food by ID";
+    deleteFButton.innerText = "Delete Food";
     deleteFButton.id="deleteFButton";
     deleteFButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
     grillDiv.appendChild(deleteFButton)
@@ -236,7 +236,7 @@ document.getElementById("marketInfo").addEventListener("click", function(){
         }
         //delting a market item by ID                          
         let deleteMButton = document.createElement("Button");
-        deleteMButton.innerText = "Delete Market Item by ID";
+        deleteMButton.innerText = "Delete Market Item";
         deleteMButton.id="deleteMButton";
         deleteMButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
         marketDiv.appendChild(deleteMButton)
@@ -338,7 +338,7 @@ document.getElementById("drinksInfo").addEventListener("click", function(){
         }
                 //delting a market item by ID                          
                 let deleteDButton = document.createElement("Button");
-                deleteDButton.innerText = "Delete Drink by ID";
+                deleteDButton.innerText = "Delete Drink";
                 deleteDButton.id="deleteDButton";
                 deleteDButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
                 drinkDiv.appendChild(deleteDButton)
@@ -355,7 +355,7 @@ document.getElementById("drinksInfo").addEventListener("click", function(){
         
                 //adding A market item                  
                 let addDButton = document.createElement("Button");
-                addDButton.innerText = "Add Market Item";
+                addDButton.innerText = "Add Drink";
                 addDButton.id="addDButton";
                 addDButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
                 drinkDiv.appendChild(addDButton)
@@ -400,46 +400,46 @@ document.getElementById("cancel_system_changes").addEventListener("click", funct
         var inputs3 = document.getElementById("drinkContainer").elements;
 
         onValue(Menu, (snapshot) => {
-            for (var i = 0; i < inputs.length; i+=2) {
+            for (var i = 0; i < inputs.length; i+=3) {
                 const data = snapshot.val(); //Data is string array
                 for(let x in data.Foods){
                     
-                    if( (i+2)/2 ==data.Foods[x].id){
+                    if( inputs[i].value == x){
                         var path1 = x + "/Name";
                         var path2 = x + "/Price";
                         update(updateFoods,{
-                            [path1]: inputs[i].value,
-                            [path2]: inputs[i+1].value
+                            [path1]: inputs[i+1].value,
+                            [path2]: inputs[i+2].value
                         });
                     }
                 }
             }
 
-            for (var i = 0; i < inputs2.length; i+=2) {
+            for (var i = 0; i < inputs2.length; i+=3) {
                 const data = snapshot.val(); //Data is string array
                 for(let x in data.Market){
                     
-                    if( (i+2)/2 ==data.Market[x].id){
+                    if( inputs2[i].value == x){
                         var path1 = x + "/Name";
                         var path2 = x + "/Price";
                         update(updateMarket,{
-                            [path1]: inputs2[i].value,
-                            [path2]: inputs2[i+1].value
+                            [path1]: inputs2[i+1].value,
+                            [path2]: inputs2[i+2].value
                         });
                     }
                 }
             }
 
-            for (var i = 0; i < inputs3.length; i+=2) {
+            for (var i = 0; i < inputs3.length; i+=3) {
                 const data = snapshot.val(); //Data is string array
                 for(let x in data.Drinks){
                     
-                    if( (i+2)/2 ==data.Drinks[x].id){
+                    if( inputs3[i].value ==x){
                         var path1 = x + "/Name";
                         var path2 = x + "/Pricing";
                         update(updateDrinks,{
-                            [path1]: inputs3[i].value,
-                            [path2]: inputs3[i+1].value
+                            [path1]: inputs3[i+1].value,
+                            [path2]: inputs3[i+2].value
                         });
                     }
                 }
