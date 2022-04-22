@@ -1,3 +1,7 @@
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +12,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src='./Images/Accessibility/voicerss-tts.min.js'></script>
 <link rel="stylesheet" href="homestyle.css">
-<script src="jquery-3.4.0.min.js"></script>
 <link rel="stylesheet" href="accessibility.css">
 <div class ="header">
     <img src = "Images/Home/mlog_v2.png" style="margin: 20px" align="right" alt="Logo for The University of North Texas" title="University of North Texas">
@@ -21,7 +24,7 @@
         
         <ul >
             <li class="pages"><a href="index.html">Home</a></li>
-            <button> ☰ </button>
+            <button id = "collapseBtn"> ☰ </button>
             <li class="page1"><a href="index.html">Home</a></li>
             <li class="pages"><a href="food.html">Foods</a></li>
             <li class="pages"><a href="drink.html">Drinks</a></li>
@@ -48,25 +51,26 @@
     </div>
     <div>
 
-    <div class = "section1"  style = "text-align: center;padding-right: 250px;" >
+    <div class = "section1"  style = "text-align: center; padding-right: 250px;" >
         <div data-theme = "light" style = "display: inline-block; text-align: left;">
             <br/>
             <p1  class="discoPerks"> Discovery Perks <br /></p1>
             <p2  class = marketGrill > Market & Grill<br/></p2>
             <p3 class = p3>Room G110 (across from the library, behind the student lounge)
                 <div id="DP_Location" >
-                <img id="map" src = "Images/Home/map.png" alt="Icon of Map" style="transform: translateX(100px);margin-bottom: 5px;"/>
-                <p style = "padding-left: 130px;padding-bottom: 50px;display: inline-block;">3940 N Elm St, Denton, TX 76207</p>
+                    <img id="map" src = "Images/Home/map.png" alt="Icon of Map" />
+                    <p style = "padding-left: 130px;padding-bottom: 50px;display: inline-block;">3940 N Elm St, Denton, TX 76207</p>
                 </div>
 
                 <p style="margin-top: -30px;">Spend most of your time away from the main campus? <br/>
                     We’ve got you covered. Discovery Perks Market and Grill, <br/> 
                     across from the library at Discovery Park, serves up hot, <br/>
                     fresh, made-to-order entrées daily, as well as Starbucks — so  <br/>
-                    there’s no shortage of delicious options, whatever you crave.</p>
-                <div>
-                    <img id="food" src="Images/Home/About-the-Food_color_final-RGB.png" style="transform: translateX(130px);margin-top: 50px;">
-                </div>
+                    there’s no shortage of delicious options, whatever you crave.
+                </p>
+
+                <img id="itsAboutFood" src="Images/Home/About-the-Food_color_final-RGB.png" >
+
                 <br/><br/>
 
                 <p style="transform: translateY(-300px)">It’s a great place to eat delicious meals and connect with friends. <br/>

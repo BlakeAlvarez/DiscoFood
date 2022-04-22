@@ -41,6 +41,8 @@ const db = getDatabase();
 const Menu = ref(db);
 //Lines 19-43 Creates Foods List that is displayed on Food Page
 let div = document.createElement('div');
+div.setAttribute("id", "foodDiv");
+div.setAttribute("position", "relative");
 onValue(Menu, (snapshot) => {
 const data = snapshot.val(); //Data is string array
 let len = data.Foods.length;

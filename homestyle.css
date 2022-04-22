@@ -6,7 +6,7 @@ html {
 scroll-behavior: smooth;
 }
 body{
-overflow-x: hidden;  
+overflow-x: hidden;
 font-size: 1rem;
 font-family: sans-serif;
 }
@@ -138,107 +138,32 @@ display: none;
 display: none;
 }
 
-@media screen and (max-width: 800px) {
-.navbar li:not(:first-child) {
-  display: none;
-}
-}
-
-@media only screen and (max-width: 500px) {
-/*shows elements in a column*/
-ul{
-  flex-direction: column;
-  }
-
-/* deletes margin on top or bottom of the a tag*/
- li {
-  margin: 0;
-  flex-direction: column;
-  transform: translateX(135px);
-  
-  
-}
-.login{
-  margin: 0;
-  flex-direction: column;
-  
-}
-a{
-  display: block;
-}
-}
-@media only screen and (max-width: 775px) {
-.navbar button{
-  /*makes the button visible*/
-  display: inline-block;
-  transform: translateX(450px);  
-  padding: -10px 5px 10px 20px;
-  font-size: medium;
-  background-color: white;
-  border: none;
-  
-  /*outline none removes the default blue border that appears anytime you click on the button*/
- 
-}
-}
-@media only screen and (max-width: 795px) {
-.navbar button{
-  /*makes the button visible*/
-  display: inline-block;
-  transform: translateX(350px);  
-  
-  padding: -10px 5px 10px 20px;
- 
-  font-size: medium;
-  background-color: white;
-  border: none;
-  
-  /*outline none removes the default blue border that appears anytime you click on the button*/
- 
-}
-}
-@media only screen and (max-width: 750px) {
-
-
-.navbar button{
- /*makes the button visible*/
- display: inline-block;
- transform: translateX(100px);  
-
- padding: -10px 5px 10px 20px;
-
- font-size: medium;
- background-color: white;
- border: none;
- 
- /*outline none removes the default blue border that appears anytime you click on the button*/
- outline: none;
-}
-.navbar .login{
-padding-top: 0px;
-padding-bottom: 0px;
-padding-left: 0px;
-padding-right: 85px;
-border-radius: 0px;
-background-color: #72B844;
-font-size: medium;
-
-}
 
 
 
-.pages :hover{
-color: black;
-background-color: white;
-text-decoration: underline;
-padding-top: 5px;
-padding-bottom: 10px;
-padding-right: 69px;
-transition: .3s;
-/* position: absolute */
-}
 
-}
+
+/* hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -285,6 +210,11 @@ table.table2 tr:nth-child(even){
 background-color: white;
 }
 
+img { 
+  max-width: 100%; height: auto; 
+}
+
+
 /*positions the map image*/
 img#map{
 position: relative;
@@ -293,13 +223,16 @@ bottom: 100px;
 left: 180px;
 }
 /*positions the food image*/
-img#food{
-height: 225px;
-width: 450px;
-position: relative;
-top: -150px;
-bottom: 100px;
-left: 425px;
+#itsAboutFood{
+  display: inline-block;
+  height: 225px;
+  width: 450px;
+  position: relative;
+  top: -150px;
+  bottom: 100px;
+  left: 670px;
+  /* transform: translateX(130px); */
+  margin-top: 50px;
 }
 /*positions the calendar image*/
 img#calendar{
@@ -422,6 +355,8 @@ a:visited {
   display: inline-block;
   transform: translateX(0px);
   margin-top: 10px;
+  transform: translateX(100px);
+  margin-bottom: 5px;
 }
 .meal_plan_positioning{
   text-align: center;
@@ -655,7 +590,8 @@ width: 100%;
 
 
 .Grill_Section {
-display:block;
+  display: inline-block;
+  position: relative;
 
 
 }
@@ -1190,10 +1126,157 @@ nav li {
 display: none;
 }
 }
-@media only screen and (max-width:1100px){
-#DP_Location{
-  display: inline-block;
-  transform: translateX(-178px);
-  margin-top: 10px;
-}  
+@media screen and (max-width:1100px){
+
+  .section1, .section2{
+    padding-left: 75px;
+  }
+  #DP_Location{
+    display: inline-block;
+    /* transform: translateX(-178px); */
+    /* left: 500px; */
+    margin-top: 10px;
+    padding-left: 100px;
+  }  
+
+  .meal_cube1{
+    /* margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px; */
+    width: 100px;
+  }
+  .meal_cube2 {
+    width: 200px;
+  }
+
+  .meal_plan_alignment{
+    padding-left: 50px;
+  }
+
+  .Create_Account_Today_Box{
+    width: 300px;
+    height: 400px;
+  }
+
+  .foodDiv{
+    width: 10px;
+  }
+
 }
+
+
+
+
+
+
+/* testing reponse features */
+
+@media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+
+
+
+
+
+
+/* hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+
+@media screen and (max-width: 800px) {
+  .navbar li:not(:first-child) {
+    display: none;
+  }
+  }
+  
+  @media only screen and (max-width: 500px) {
+  /*shows elements in a column*/
+  ul{
+    flex-direction: column;
+    }
+  
+  /* deletes margin on top or bottom of the a tag*/
+   li {
+    margin: 0;
+    flex-direction: column;
+    transform: translateX(135px);
+    
+    
+  }
+  .login{
+    margin: 0;
+    flex-direction: column;
+    
+  }
+  a{
+    display: block;
+  }
+  }
+  @media only screen and (max-width: 775px) {
+  .navbar Button{
+    /*makes the button visible*/
+    display: inline-block;
+    transform: translateX(450px);  
+    padding: -10px 5px 10px 20px;
+    font-size: medium;
+    background-color: white;
+    border: none;
+    
+    /*outline none removes the default blue border that appears anytime you click on the button*/
+   
+  }
+  }
+  @media only screen and (max-width: 795px) {
+  .navbar button{
+    /*makes the button visible*/
+    display: inline-block;
+    transform: translateX(350px);  
+    
+    padding: -10px 5px 10px 20px;
+   
+    font-size: medium;
+    background-color: white;
+    border: none;
+    
+    /*outline none removes the default blue border that appears anytime you click on the button*/
+   
+  }
+  }
+  @media only screen and (max-width: 750px) {
+  
+  
+  .navbar button{
+   /*makes the button visible*/
+   display: inline-block;
+   transform: translateX(100px);  
+  
+   padding: -10px 5px 10px 20px;
+  
+   font-size: medium;
+   background-color: white;
+   border: none;
+   
+   /*outline none removes the default blue border that appears anytime you click on the button*/
+   outline: none;
+  }
+  .navbar .login{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 85px;
+  border-radius: 0px;
+  background-color: #72B844;
+  font-size: medium;
+  
+  }
+  
+  .pages :hover{
+  color: black;
+  background-color: white;
+  text-decoration: underline;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 69px;
+  transition: .3s;
+  /* position: absolute */
+  }
+  
+  }
