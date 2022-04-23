@@ -305,8 +305,12 @@ a:visited {
 .footer-container{
   background-color: black;
   font-family: Helvetica;
-  position: bottom;
+  /* position: fixed;
+  bottom: 0px; */
   min-height: 8cm;
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
 .footer{
   width: 80%;
@@ -351,6 +355,8 @@ a:visited {
   color: white;
   text-align: center;
 }
+
+
 #DP_Location{
   display: inline-block;
   transform: translateX(0px);
@@ -607,7 +613,6 @@ margin-top: 20px;
 background-color: #fafafa;
 background-size: auto;
 background-repeat: no-repeat;
-/* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
 
 }
 .DrinkReviewsSection{
@@ -618,7 +623,6 @@ margin-top: 20px;
 background-color: #fafafa;
 background-size: auto;
 background-repeat: no-repeat;
-/* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
 
 }
 #MoreReviewsLink{
@@ -983,6 +987,12 @@ border-radius: 10px;
 }
 
 
+#HideImage {
+  position: absolute; 
+  right: 0;
+}
+
+
 /* makes navbar responsive */
 @media only screen and (min-width: 100px){
 nav li {
@@ -1036,6 +1046,7 @@ nav li {
 }
 
 }
+
 @media only screen and (max-width:900px){
 .Grill_Section,.Drink_Section,.Market-Section{
   display:block;
@@ -1049,11 +1060,10 @@ nav li {
   height:auto;
   width: 500%;
   margin-left: -400px;  
-  
+  position: relative;
   margin-top: 20px;  
   background-color: #fafafa;
   background-repeat: no-repeat;
-  /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
 }
 .DrinkReviewsSection{
   display:block;
@@ -1064,7 +1074,6 @@ nav li {
   margin-top: 20px;
   background-color: #fafafa;
   background-repeat: no-repeat;
-  /* background-image: url("Images/Food/avesta-plate_back1_edited.png"); */
 }
 .MoreReviewsModal-content{
   background-color: #fefefe;
@@ -1081,7 +1090,6 @@ nav li {
   transform: translateX(-178px);
   margin-top: 10px;
 }
-
 } 
 
 @media (max-width:1400px) {
@@ -1128,21 +1136,19 @@ display: none;
 }
 @media screen and (max-width:1100px){
 
+  body {
+    font-size: 1rem;
+  }
   .section1, .section2{
     padding-left: 75px;
   }
   #DP_Location{
     display: inline-block;
-    /* transform: translateX(-178px); */
-    /* left: 500px; */
     margin-top: 10px;
     padding-left: 100px;
   }  
 
   .meal_cube1{
-    /* margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px; */
     width: 100px;
   }
   .meal_cube2 {
@@ -1162,20 +1168,8 @@ display: none;
     width: 10px;
   }
 
+
 }
-
-
-
-
-
-
-/* testing reponse features */
-
-@media (min-width: 640px) { body {font-size:1rem;} } 
-@media (min-width:960px) { body {font-size:1.2rem;} } 
-
-
-
 
 
 
