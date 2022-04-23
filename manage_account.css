@@ -59,7 +59,7 @@
     border-radius: 5px;
   }
   
-  button{
+  #save_changes, #logout{
     padding: 10px;
     width: 335px;
     height: 45px;
@@ -74,7 +74,7 @@
     font-size: large;
   }
   
-  button:hover{
+  #save_changes:hover, #logout:hover{
     color: grey;
     cursor: pointer;
     transition: .4s;

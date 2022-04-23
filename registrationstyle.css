@@ -60,7 +60,7 @@ input[type=password] {
   border-radius: 5px;
 }
 
-button{
+#register{
   padding: 10px;
   width: 335px;
   height: 45px;
@@ -75,7 +75,7 @@ button{
   font-size: large;
 }
 
-button:hover{
+#register:hover{
   color: grey;
   cursor: pointer;
   transition: .4s;

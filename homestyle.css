@@ -305,12 +305,11 @@ a:visited {
 .footer-container{
   background-color: black;
   font-family: Helvetica;
-  /* position: fixed;
-  bottom: 0px; */
   min-height: 8cm;
   width: 100%;
   position: relative;
   bottom: 0;
+  padding-top: 30px;
 }
 .footer{
   width: 80%;
