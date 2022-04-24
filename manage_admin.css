@@ -195,7 +195,12 @@ font-family: sans-serif;
     color:#72B844; 
     transform: translateX(-5px);
     }
-
+.footer-3 h2{
+  transform:translateY(50px);
+}
+.footer-3 p{
+  transform:translateY(35px)
+}
 
 
 /* makes webpage responsive */
@@ -226,6 +231,37 @@ font-family: sans-serif;
     }
    }
   
+   @media (max-width:1600px) {
+    .footer{
+      display:inline-flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .footer img{
+      display: none;
+    }
+    .footer-1{
+     margin-left: 25px;
+      }
+    .footer-2{
+      margin-left: -20px;
+      text-align: left;
+     
+    }
+    .footer-3{
+      transform: translateY(-55px);
+      flex-direction: column;
+      margin-left: 100px;
+     
+    }
+    .footer-3 p{
+      margin-bottom: 20px;
+    }
+    #HideImage{
+      display: none;
+    }
+    }
+
    @media (max-width:1400px) {
     .footer{
       display:inline-flex;
@@ -236,16 +272,18 @@ font-family: sans-serif;
       display: none;
     }
     .footer-1{
-     margin-left: 40px;
+     margin-left: 10px;
       }
     .footer-2{
       margin-right: 75px;
       text-align: left;
+      margin-left: -35px
      
     }
     .footer-3{
-      transform: translateY(-11px);
+      transform: translateY(-50px);
       flex-direction: column;
+      margin-left: -35px;
     }
     .footer-3 p{
       margin-bottom: 5px;
