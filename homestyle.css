@@ -1212,9 +1212,9 @@ display: none;
   
   /* deletes margin on top or bottom of the a tag*/
    li {
-    margin: 0;
+    margin-right: 50px;
     flex-direction: column;
-    transform: translateX(135px);
+    transform: translateX(100px);
     
     
   }
@@ -1234,10 +1234,11 @@ display: none;
   .Bignavbar{
     display: none;
   }
-  .navbar Button{
+  .navbar button{
     /*makes the button visible*/
     display: inline-block;
-    transform: translateX(450px);  
+    margin-left: 50px;
+      
     padding: -10px 5px 10px 20px;
     font-size: medium;
     background-color: white;
@@ -1251,7 +1252,7 @@ display: none;
   .navbar button{
     /*makes the button visible*/
     display: inline-block;
-    transform: translateX(350px);  
+    margin-left: 50px;
     
     padding: -10px 5px 10px 20px;
    
@@ -1269,7 +1270,7 @@ display: none;
   .navbar button{
    /*makes the button visible*/
    display: inline-block;
-   transform: translateX(100px);  
+   margin-left: 50px; 
   
    padding: -10px 5px 10px 20px;
   
