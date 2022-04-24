@@ -10,6 +10,10 @@ overflow-x: hidden;
 font-size: 1rem;
 font-family: sans-serif;
 }
+.pages{
+  display:none;
+  box-sizing: content-box;
+}
 
 .header{
   padding:5px 10px 10px 100px;
@@ -56,15 +60,17 @@ transform: translateY(-185px);
 
 /*--------------------------------------------------------------------------*/
 /* make navbar sticky */
-.navbar{
+.navbar,.Bignavbar{
 position: -webkit-sticky;
 position: sticky;
 top: 0;
 z-index: 5;
+
 }
 
 nav{
 white-space: nowrap;
+
 }
 
 /* removes bullet points from navbar */
@@ -107,17 +113,18 @@ transition: .3s;
 color: black;
 background-color: white;
 text-decoration: underline;
-padding-top: 5px;
-padding-bottom: 10px;
+
 transition: .3s;
+box-sizing: content-box;
 /* position: absolute */
 }
 
 
 /* navigation bar properties */
-.navbar{
+.navbar,.Bignavbar{
 padding: 5px 100px;
 background: rgb(31, 27, 27);
+
 }
 
 
@@ -128,16 +135,21 @@ text-decoration: underline;
 padding-top: 5px;
 padding-bottom: 10px;
 transition: .3s;
+width: fit-content;
+box-sizing: content-box;
 /* position: absolute */
 }
 .page1{
 display: none;
+box-sizing: content-box;
 }
 
 .navbar button{
 display: none;
 }
-
+.navbar{
+  display: none;
+}
 
 
 
@@ -1208,6 +1220,12 @@ display: none;
   }
   }
   @media only screen and (max-width: 775px) {
+  .navbar{
+    display: block;
+  }
+  .Bignavbar{
+    display: none;
+  }
   .navbar Button{
     /*makes the button visible*/
     display: inline-block;
@@ -1269,10 +1287,10 @@ display: none;
   color: black;
   background-color: white;
   text-decoration: underline;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  padding-right: 69px;
+  
   transition: .3s;
+  width: fit-content;
+  box-sizing: content-box;
   /* position: absolute */
   }
 
@@ -1280,3 +1298,4 @@ display: none;
 
   
   }
+

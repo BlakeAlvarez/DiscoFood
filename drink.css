@@ -1,4 +1,4 @@
-* {box-sizing: border-box}
+.wrapper *{box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 
 /* Slideshow container */
