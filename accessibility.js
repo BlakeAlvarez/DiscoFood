@@ -60,6 +60,7 @@ window.onload=function(){
 
     let textCount = 0;
     let textSize = document.querySelector("#text-size");
+    var changeMap = document.getElementById("map");
     textSize.addEventListener("click", function(){
 
         if (textCount == 0) {
@@ -74,8 +75,9 @@ window.onload=function(){
             var t2 = document.getElementById("textProgress2");
             var t3 = document.getElementById("textProgress3");
             t1.style.backgroundColor="#72B844";
-
-            textCount++;        
+    
+            textCount++; 
+            changeMap.style.transform="translateX(120px)";       
         }
         else if (textCount == 1) {
             let text = document.querySelectorAll("[data-fontSize]");
@@ -87,7 +89,8 @@ window.onload=function(){
             var t2 = document.getElementById("textProgress2");
             t2.style.backgroundColor="#72B844";
 
-            textCount++;        
+            textCount++;  
+            changeMap.style.transform="translateX(130px)";          
         }
         else if (textCount == 2) {
 
@@ -100,7 +103,8 @@ window.onload=function(){
             var t3 = document.getElementById("textProgress3");
             t3.style.backgroundColor="#72B844";
             
-            textCount++;        
+            textCount++;
+            changeMap.style.transform="translateX(140px)";            
         }
         else {
 
@@ -127,6 +131,7 @@ window.onload=function(){
             t3.style.backgroundColor="";
 
             textCount = 0;
+            changeMap.style.transform="translateX(100px)";
         }
     });
 

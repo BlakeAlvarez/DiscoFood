@@ -357,11 +357,12 @@ a:visited {
 
 
 #DP_Location{
-  display: inline-block;
-  transform: translateX(0px);
-  margin-top: 10px;
-  transform: translateX(100px);
+  display: block;
+  white-space: nowrap;
+  margin-top: -50px;
   margin-bottom: 5px;
+  transform: translateX(600px);
+  position: relative;
 }
 .meal_plan_positioning{
   text-align: center;
@@ -1088,6 +1089,7 @@ nav li {
   display: inline-block;
   transform: translateX(-178px);
   margin-top: 10px;
+  white-space: nowrap;
 }
 } 
 
@@ -1144,7 +1146,9 @@ display: none;
   #DP_Location{
     display: inline-block;
     margin-top: 10px;
-    padding-left: 100px;
+   
+    transform: translateX(-178px);
+    white-space: nowrap;
   }  
 
   .meal_cube1{
@@ -1271,5 +1275,8 @@ display: none;
   transition: .3s;
   /* position: absolute */
   }
+
+
+
   
   }
