@@ -39,8 +39,6 @@ window.onload=function(){
         for (let i = 0; i < theme.length; i++) {
             if ((theme[i].getAttribute('data-theme') === 'lightMenu') || (theme[i].getAttribute('data-theme') === 'darkMenu')) {
                 theme[i].setAttribute('data-theme', theme[i].getAttribute('data-theme') === 'darkMenu' ? 'lightMenu' : 'darkMenu');                
-            } else if ((theme[i].getAttribute('data-theme') === 'lightIcon') || (theme[i].getAttribute('data-theme') === 'darkIcon')) {
-                // theme[i].setAttribute('data-theme', theme[i].getAttribute('data-theme') === 'darkIcon' ? 'lightIcon' : 'darkIcon')
             } else {
                 theme[i].setAttribute('data-theme', theme[i].getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
             }
@@ -49,18 +47,18 @@ window.onload=function(){
             var toggle = document.getElementById("themeToggle");    
             toggle.style.backgroundColor="#72B844";  
             document.getElementById("lightIcon").src="Images/Accessibility/darkMode.png";
-            document.getElementById("HomePageSection1H1").style.color="#72B844";
-            document.getElementById("HomePageSection2H1").style.color="#72B844";
-            document.getElementById("HomePageSection2L1").style.color="white";
-            document.getElementById("mealPlanTitle").style.color="#72B844";
+
+            $(".tb").css({"border":"1px solid white"});
+
+            $("#untDining").css({"color":"white"});
+
         } else if (theme[0].getAttribute('data-theme') === 'light') {
             var toggle = document.getElementById("themeToggle");    
             toggle.style.backgroundColor="";    
             document.getElementById("lightIcon").src="Images/Accessibility/lightMode.png";
-            document.getElementById("HomePageSection1H1").style.color="#2B5336";
-            document.getElementById("HomePageSection2H1").style.color="#2B5336";
-            document.getElementById("HomePageSection2L1").style.color="black";
-            document.getElementById("mealPlanTitle").style.color="#2B5336";
+            
+            $(".tb").css({"border":"1px solid black"});     
+            $("#untDining").css({"color":"black"});
         }
     });
 
