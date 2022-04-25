@@ -106,7 +106,7 @@ get(child(Menu, 'Reviews/')).then((snapshot) => {
 
     //delting review by id                              ///maybe delete reviews by that user as well
     let deleteButton = document.createElement("Button");
-    deleteButton.innerText = "Delete Review by ID";
+    deleteButton.innerText = "Delete Review";
     deleteButton.id="deleteButton";
     deleteButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
     div.appendChild(deleteButton)
@@ -116,7 +116,7 @@ get(child(Menu, 'Reviews/')).then((snapshot) => {
         for(let x in data){
             if(x==review){
                 remove(ref(db, "Reviews/" + x));
-                alert(review + "Successfully Deleted!")
+                alert(review + " Successfully Deleted!")
             }
         }
     });

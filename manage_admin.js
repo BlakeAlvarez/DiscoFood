@@ -1,4 +1,4 @@
-
+//  PREVENT USERS/ADMINS FROM DIRECT ACCESS TO PAGE THROUGH URL, THE USER/ADMIN MUST LOGGED IN FIRST!
 var checkAdmin = sessionStorage.getItem("ADMIN_LOGGED_IN");
 if(checkAdmin!="true"){
  window.location.replace("index.html");
