@@ -19,15 +19,15 @@ var something = sessionStorage.getItem("LOGGED_IN");
 var GetUser = sessionStorage.getItem("USER");
 //if(GetUser!=null)
 //alert("Hello" + GetUser +" From Food")
+
 if(something=="true"){
   document.getElementById("WriteAReviewButton").addEventListener("click", DisplayWriteReviewsPopup);
-  document.getElementById("UserButton").innerHTML="Manage Account";
   var manage1 = document.getElementById("UserButton1");
-manage1.innerHTML="Manage Account";
-var manage2 = document.getElementById("UserButton2");
-manage2.innerHTML="Manage Account";
-var manage3 = document.getElementById("UserButton3");
-manage3.innerHTML="Manage Account";
+  manage1.innerHTML="Manage Account";
+  var manage2 = document.getElementById("UserButton2");
+  manage2.innerHTML="Manage Account";
+  var manage3 = document.getElementById("UserButton3");
+  manage3.innerHTML="Manage Account";
 if(checkAdmin=="true"){
     manage1.setAttribute("href","manage_admin.html");
     manage2.setAttribute("href","manage_admin.html");
@@ -37,7 +37,8 @@ if(checkAdmin=="true"){
   manage1.setAttribute("href","manage_account.html");
   manage2.setAttribute("href","manage_account.html");
   manage3.setAttribute("href","manage_account.html");
-  }}
+  }
+}
   else
   {
     document.getElementById("WriteAReviewButton").addEventListener("click", GoToLogin);
