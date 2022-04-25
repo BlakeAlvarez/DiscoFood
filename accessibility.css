@@ -16,9 +16,9 @@
   cursor: pointer;
   padding: 0px;
   border-radius: 50px;
-  height: 45px;
-  width: 45px;
-  font-size: 13px;
+  height: 35px;
+  width: 35px;
+  font-size: 10px;
   line-height: 12px;
 }
 
@@ -27,8 +27,8 @@
 }
 
 #accessBtn img {
-  height: 55px;
-  width: 55px;
+  height: 40px;
+  width: 40px;
   border-radius: 30px;
   background-color: rgb(223, 210, 208);
   position: fixed;
