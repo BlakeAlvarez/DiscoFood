@@ -73,6 +73,7 @@ for(let x in data.Drinks){
         li.innerText = data[0];
         li.style.color = 'black';
         li.style.display= 'inline-block';
+        
         li.style.cssText="list-style-type: none;margin-bottom:-15px;margin-left:400px;text-align:left; font-size:large;font-weight: bold;";
         div.appendChild(li);
 
@@ -87,18 +88,19 @@ for(let x in data.Drinks){
         li3.innerText = data[2];
         li3.style.color = 'black';
         li3.style.display= 'inline-block';
-        li3.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:780px;text-align:left; font-size:large;font-weight: bold;";
+        li3.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:795px;text-align:left; font-size:large;font-weight: bold;";
         div.appendChild(li3);
 
         let li4 = document.createElement("li");
         li4.innerText = data[3];
+        
         li4.style.color = 'black';
         li4.style.display= 'inline-block';
-        li4.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:920px;text-align:left; font-size:large;font-weight: bold;";
+        li4.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:940px;text-align:left; font-size:large;font-weight: bold;";
         div.appendChild(li4);
 
         var line = document.createElement("HR");
-        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        line.style.cssText="text-align:left;margin-left:400px;width:640px;";
         div.appendChild(line); 
     }
 
@@ -124,18 +126,18 @@ for(let x in data.Drinks){
         li3.innerText = data[2];
         li3.style.color = 'black';
         li3.style.display= 'inline-block';
-        li3.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:780px;text-align:left; font-size:large;font-weight: bold;";
+        li3.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:795px;text-align:left; font-size:large;font-weight: bold;";
         div.appendChild(li3);
 
         let li4 = document.createElement("li");
         li4.innerText = data[3];
         li4.style.color = 'black';
         li4.style.display= 'inline-block';
-        li4.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:920px;text-align:left; font-size:large;font-weight: bold;";
+        li4.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:940px;text-align:left; font-size:large;font-weight: bold;";
         div.appendChild(li4);
 
         var line = document.createElement("HR");
-        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        line.style.cssText="text-align:left;margin-left:400px;width:640px;";
         div.appendChild(line); 
     }
     if(x==12){
@@ -160,18 +162,18 @@ for(let x in data.Drinks){
         li3.innerText = data[2];
         li3.style.color = 'black';
         li3.style.display= 'inline-block';
-        li3.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:780px;text-align:left; font-size:large;font-weight: bold;";
+        li3.style.cssText="list-style-type: none;margin-bottom:-22px;margin-left:795px;text-align:left; font-size:large;font-weight: bold;";
         div.appendChild(li3);
 
         let li4 = document.createElement("li");
         li4.innerText = data[3];
         li4.style.color = 'black';
         li4.style.display= 'inline-block';
-        li4.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:920px;text-align:left; font-size:large;font-weight: bold;";
+        li4.style.cssText="list-style-type: none;margin-bottom:0px;margin-left:940px;text-align:left; font-size:large;font-weight: bold;";
         div.appendChild(li4);
 
         var line = document.createElement("HR");
-        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        line.style.cssText="text-align:left;margin-left:400px;width:640px;";
         div.appendChild(line); 
     }
     if(x==14){
@@ -193,7 +195,7 @@ for(let x in data.Drinks){
 
 
         var line = document.createElement("HR");
-        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        line.style.cssText="text-align:left;margin-left:400px;width:640px;";
         div.appendChild(line); 
     }
 
@@ -216,7 +218,7 @@ for(let x in data.Drinks){
         div.appendChild(li2);
 
         var line = document.createElement("HR");
-        line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+        line.style.cssText="text-align:left;margin-left:400px;width:640px;";
         div.appendChild(line); 
     }
     
@@ -269,7 +271,7 @@ for(let x in data.Drinks){
         div.appendChild(break1);
         let ventiPrice = document.createElement("p");	// Create a new element
         ventiPrice.innerText = prices[3];	// Change the text of the element
-        ventiPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:932px;margin-top:0;";	// Change the text color of the element
+        ventiPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:930px;margin-top:0;";	// Change the text color of the element
         div.appendChild(ventiPrice);
     }
 
@@ -288,7 +290,7 @@ for(let x in data.Drinks){
     // }
     
     var line = document.createElement("HR");
-    line.style.cssText="text-align:left;margin-left:400px;width:600px;";
+    line.style.cssText="text-align:left;margin-left:400px;width:640px;";
     div.appendChild(line); 
 }
 });
