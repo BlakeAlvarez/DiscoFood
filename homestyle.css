@@ -109,16 +109,23 @@ transition: .3s;
 }
 
 /* some hover action for navbar */
-.pages :hover{
+.pages :hover,.Bigpages :hover,.pag1 :hover{
 color: black;
 background-color: white;
 text-decoration: underline;
-
+padding: 5px;
 transition: .3s;
 box-sizing: content-box;
 /* position: absolute */
 }
-
+#loginsmall :hover{
+  color: white;
+  background-color: #72B844;
+  text-decoration: underline;
+  padding: 5px;
+  transition: .3s;
+  box-sizing: content-box;
+}
 
 /* navigation bar properties */
 .navbar,.Bignavbar{
@@ -1292,7 +1299,7 @@ display: none;
   
   }
   
-  .pages :hover{
+  .pages :hover,.Bigpages:hover{
   color: black;
   background-color: white;
   text-decoration: underline;
