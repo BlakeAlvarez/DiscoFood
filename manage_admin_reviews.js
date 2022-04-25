@@ -18,13 +18,13 @@ const app = initializeApp(firebaseConfig);
 
 const db = getDatabase();
 const Menu = ref(db);
-/* PREVENT USERS/ADMINS FROM DIRECT ACCESS TO PAGE THROUGH URL, THE USER/ADMIN MUST LOGGED IN FIRST!
+
 var checkAdmin = sessionStorage.getItem("ADMIN_LOGGED_IN");
 if(checkAdmin!="true"){
- alert("Access Denied");
+ 
  window.location.replace("index.html");
 }
-*/
+
 // this works on the admin manage reviews page
 let div = document.getElementById("reviews-container");
 div.style.overflow='auto';
