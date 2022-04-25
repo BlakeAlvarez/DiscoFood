@@ -269,7 +269,7 @@ for(let x in data.Drinks){
         div.appendChild(break1);
         let ventiPrice = document.createElement("p");	// Create a new element
         ventiPrice.innerText = prices[3];	// Change the text of the element
-        ventiPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:915px;margin-top:0;";	// Change the text color of the element
+        ventiPrice.style.cssText= "display: inline-block; padding-left:10px;margin-left:932px;margin-top:0;";	// Change the text color of the element
         div.appendChild(ventiPrice);
     }
 
