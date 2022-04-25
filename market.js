@@ -21,13 +21,12 @@ var GetUser = sessionStorage.getItem("USER");
 //alert("Hello" + GetUser +" From Food")
 if(something=="true"){
   document.getElementById("WriteAReviewButton").addEventListener("click", DisplayWriteReviewsPopup);
-  document.getElementById("UserButton").innerHTML="Manage Account";
   var manage1 = document.getElementById("UserButton1");
-manage1.innerHTML="Manage Account";
-var manage2 = document.getElementById("UserButton2");
-manage2.innerHTML="Manage Account";
-var manage3 = document.getElementById("UserButton3");
-manage3.innerHTML="Manage Account";
+  manage1.innerHTML="Manage Account";
+  var manage2 = document.getElementById("UserButton2");
+  manage2.innerHTML="Manage Account";
+  var manage3 = document.getElementById("UserButton3");
+  manage3.innerHTML="Manage Account";
 if(checkAdmin=="true"){
     manage1.setAttribute("href","manage_admin.html");
     manage2.setAttribute("href","manage_admin.html");
@@ -70,10 +69,10 @@ for(let x in data.Market){
     div.appendChild(Name);
     let Price = document.createElement("p");	// Create a new element
     Price.innerText = data.Market[x].Price;	// Change the text of the element
-    Price.style.cssText= "padding-left:100px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+    Price.style.cssText= "padding-left:150px;margin-left:670px;margin-top:0;";	// Change the text color of the element
     div.appendChild(Price);
     var line = document.createElement("HR");
-    line.style.cssText="text-align:left;margin-left:400px;width:410px;";;
+    line.style.cssText="text-align:left;margin-left:400px;width:470px;";;
     div.appendChild(line); 
 }
 });
