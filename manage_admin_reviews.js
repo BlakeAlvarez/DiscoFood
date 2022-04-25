@@ -18,13 +18,13 @@ const app = initializeApp(firebaseConfig);
 
 const db = getDatabase();
 const Menu = ref(db);
-/* PREVENT USERS/ADMINS FROM DIRECT ACCESS TO PAGE THROUGH URL, THE USER/ADMIN MUST LOGGED IN FIRST!
+
 var checkAdmin = sessionStorage.getItem("ADMIN_LOGGED_IN");
 if(checkAdmin!="true"){
- alert("Access Denied");
+ 
  window.location.replace("index.html");
 }
-*/
+
 // this works on the admin manage reviews page
 let div = document.getElementById("reviews-container");
 div.style.overflow='auto';
@@ -106,7 +106,7 @@ get(child(Menu, 'Reviews/')).then((snapshot) => {
 
     //delting review by id                              ///maybe delete reviews by that user as well
     let deleteButton = document.createElement("Button");
-    deleteButton.innerText = "Delete Review by ID";
+    deleteButton.innerText = "Delete Review";
     deleteButton.id="deleteButton";
     deleteButton.style="display: inline; padding: 10px; margin-top: 30px;margin-bottom: 20px;";
     div.appendChild(deleteButton)
@@ -116,7 +116,7 @@ get(child(Menu, 'Reviews/')).then((snapshot) => {
         for(let x in data){
             if(x==review){
                 remove(ref(db, "Reviews/" + x));
-                alert(review + "Successfully Deleted!")
+                alert(review + " Successfully Deleted!")
             }
         }
     });
