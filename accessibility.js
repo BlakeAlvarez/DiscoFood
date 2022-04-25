@@ -49,12 +49,18 @@ window.onload=function(){
             var toggle = document.getElementById("themeToggle");    
             toggle.style.backgroundColor="#72B844";  
             document.getElementById("lightIcon").src="Images/Accessibility/darkMode.png";
-
+            document.getElementById("HomePageSection1H1").style.color="#72B844";
+            document.getElementById("HomePageSection2H1").style.color="#72B844";
+            document.getElementById("HomePageSection2L1").style.color="white";
+            document.getElementById("mealPlanTitle").style.color="#72B844";
         } else if (theme[0].getAttribute('data-theme') === 'light') {
             var toggle = document.getElementById("themeToggle");    
             toggle.style.backgroundColor="";    
             document.getElementById("lightIcon").src="Images/Accessibility/lightMode.png";
-            
+            document.getElementById("HomePageSection1H1").style.color="#2B5336";
+            document.getElementById("HomePageSection2H1").style.color="#2B5336";
+            document.getElementById("HomePageSection2L1").style.color="black";
+            document.getElementById("mealPlanTitle").style.color="#2B5336";
         }
     });
 
