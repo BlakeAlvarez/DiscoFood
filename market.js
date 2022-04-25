@@ -69,10 +69,10 @@ for(let x in data.Market){
     div.appendChild(Name);
     let Price = document.createElement("p");	// Create a new element
     Price.innerText = data.Market[x].Price;	// Change the text of the element
-    Price.style.cssText= "padding-left:100px;margin-left:670px;margin-top:0;";	// Change the text color of the element
+    Price.style.cssText= "padding-left:150px;margin-left:670px;margin-top:0;";	// Change the text color of the element
     div.appendChild(Price);
     var line = document.createElement("HR");
-    line.style.cssText="text-align:left;margin-left:400px;width:410px;";;
+    line.style.cssText="text-align:left;margin-left:400px;width:470px;";;
     div.appendChild(line); 
 }
 });

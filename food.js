@@ -71,7 +71,7 @@ for(let x in data.Foods){
     Price.style.cssText= "padding-left:100px;margin-left:670px;margin-top:0;";	// Change the text color of the element
     div.appendChild(Price);
     var line = document.createElement("HR");
-    line.style.cssText="text-align:left;margin-left:400px;width:410px;";;
+    line.style.cssText="text-align:left;margin-left:400px;width:430px;";;
     div.appendChild(line); 
 }
 });
