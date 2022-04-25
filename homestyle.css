@@ -10,6 +10,7 @@ overflow-x: hidden;
 font-size: 1rem;
 font-family: sans-serif;
 }
+
 .pages{
   display:none;
   box-sizing: content-box;
@@ -28,7 +29,11 @@ font-family: sans-serif;
 .discoPerks, .hours, .createAccountTitle{
 font-size: 3rem; 
 font-family: serif; 
-color: rgb(43,83,54);
+}
+
+#untDining{
+  color: black; 
+  text-decoration: underline;
 }
 
 .createAccountText {
@@ -56,38 +61,34 @@ transform: translateY(-185px);
 }
 
 
-
-
 /*--------------------------------------------------------------------------*/
 /* make navbar sticky */
 .navbar,.Bignavbar{
-position: -webkit-sticky;
-position: sticky;
-top: 0;
-z-index: 5;
-
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 nav{
-white-space: nowrap;
-
+  white-space: nowrap;
 }
 
 /* removes bullet points from navbar */
 nav ul {
-list-style-type: none;
-margin: 0;
-padding: 3px;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px;
 }
 /* styles list items of the navbar */
 nav li {
-/* vertical-align: baseline; */
-display: inline-block ;
-font-size: medium;
-font-family:  Helvetica, Arial, sans-serif;
-width: 7%;
-text-transform: uppercase;
-font-weight: bold;
+  text-align: center;
+  display: inline-block ;
+  font-size: medium;
+  font-family:  Helvetica, Arial, sans-serif;
+  width: 7%;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 /* login attributes */
@@ -103,29 +104,12 @@ font-size: medium;
 }
 
 /* login list item hover action */
-nav a:hover{
-color: grey;
-transition: .3s;
+nav a:hover, .pages :hover,.Bigpages :hover,.pag1 :hover{
+  text-decoration: underline;
+  color: #C3cbca;
 }
 
-/* some hover action for navbar */
-.pages :hover,.Bigpages :hover,.pag1 :hover{
-color: black;
-background-color: white;
-text-decoration: underline;
-padding: 5px;
-transition: .3s;
-box-sizing: content-box;
-/* position: absolute */
-}
-#loginsmall :hover{
-  color: white;
-  background-color: #72B844;
-  text-decoration: underline;
-  padding: 5px;
-  transition: .3s;
-  box-sizing: content-box;
-}
+
 
 /* navigation bar properties */
 .navbar,.Bignavbar{
@@ -135,7 +119,7 @@ background: rgb(31, 27, 27);
 }
 
 
-.page1 :hover{
+/* .page1 :hover{
 color: black;
 background-color: white;
 text-decoration: underline;
@@ -144,8 +128,7 @@ padding-bottom: 10px;
 transition: .3s;
 width: fit-content;
 box-sizing: content-box;
-/* position: absolute */
-}
+} */
 .page1{
 display: none;
 box-sizing: content-box;
@@ -159,7 +142,9 @@ display: none;
 }
 
 
-
+#itsAboutFood{
+  display: inline-block;
+}
 
 
 /* hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
@@ -189,43 +174,39 @@ display: none;
 
 /*--------------------------------------------------------------------------*/
 /*table things*/
-table.table1{
+/* table{
 border-collapse: collapse;
 table-layout: auto;
-}
-table.table1 table,th,td{
-border: 1px solid black;
-}
-table.table1 th,td{
-padding: 10px;
-}
-table.table1 th, tr{
-text-align: center;
-}
-table.table1 tr:nth-child(even){
-background-color: rgba(238,237,238,255);
-}
-table.table1 tr:nth-child(odd){
-background-color: white;
 }
 
-table.table2{
+table th,td{
+padding: 10px;
+}
+
+table tr:nth-child(even){
+background-color: rgba(238,237,238,255);
+}
+table tr:nth-child(odd){
+background-color: white;
+} */
+
+table{
 border-collapse: collapse;
 table-layout: auto;
 }
-table.table2 table,th,td{
+.tb{
 border: 1px solid black;
 }
-table.table2 th,td{
+table th,td{
 padding: 10px;
 }
-table.table2 th, tr{
+table th, tr{
 text-align: center;
 }
-table.table2 tr:nth-child(odd){
+table tr:nth-child(odd){
 background-color: rgba(238,237,238,255);
 }
-table.table2 tr:nth-child(even){
+table tr:nth-child(even){
 background-color: white;
 }
 
@@ -1151,22 +1132,27 @@ display: none;
 }
 @media screen and (max-width:1100px){
 
-  .section1, .section2{
-    padding-left: 75px;
+
+  body {
+    font-size: 1rem;
+  }
+  .section1{
+    display: inline-block;
+    padding-left: 70px;   
+  }
+  p{
+    width: 300px;
+  }
+  .section2{
+    padding-left: 70px;
   }
   #DP_Location{
     display: inline-block;
-    /* transform: translateX(-178px); */
-    /* left: 500px; */
     margin-top: 10px;
     transform: translateX(-178px);
      white-space: nowrap;
   }  
-
   .meal_cube1{
-    /* margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px; */
     width: 100px;
   }
   .meal_cube2 {
@@ -1186,21 +1172,10 @@ display: none;
     width: 10px;
   }
 
+  .mealPlans{
+    width: 200px;
+  }
 }
-
-
-
-
-
-
-/* testing reponse features */
-
-@media (min-width: 640px) { body {font-size:1rem;} } 
-@media (min-width:960px) { body {font-size:1.2rem;} } 
-
-
-
-
 
 
 /* hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
@@ -1297,18 +1272,8 @@ display: none;
   background-color: #72B844;
   font-size: medium;
   
-  }
-  
-  .pages :hover,.Bigpages:hover{
-  color: black;
-  background-color: white;
-  text-decoration: underline;
-  
-  transition: .3s;
-  width: fit-content;
-  box-sizing: content-box;
-  /* position: absolute */
-  }
-  
+}
+
+   
   }
 

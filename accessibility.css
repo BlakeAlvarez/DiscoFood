@@ -55,6 +55,12 @@
   transition: 0.5s; 
   overflow-y: auto;
   text-align: center;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 25px;
+
 }
 
 .accessMenu-content {
@@ -65,11 +71,11 @@
   float: left;
   height: 75px;
   width: 75px; 
+
 }
 
 .accessMenu .closeBtn {
   position: absolute;
-  color: white;
   top: 7%;
   right: 0;
   font-size: 72px;
@@ -93,7 +99,6 @@
   height: 75px;
   width: 75px;
   background-color: white;
-  /* text-align:center  */
 }
 
 
@@ -109,7 +114,6 @@ div[data-theme="dark"]{
   background: rgba(29,42,53,255);
   color: white;
 }
-
 
 #themeToggle {
   display: inline-block;
@@ -146,4 +150,20 @@ div[data-theme="dark"]{
   background-color: #bbb;
   border-radius: 50%;
   transition: background-color 0.6s ease;
+}
+
+
+
+@media screen and (max-width:1100px){
+
+  #accessBtn img{
+    left: 30px;
+    bottom: 50px;
+  }
+
+  #topButton{
+    right: 40px;
+    bottom: 45px;
+  }
+
 }
