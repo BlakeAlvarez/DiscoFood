@@ -1145,6 +1145,14 @@ display: none;
   p{
     width: 300px;
   }
+  #bev{
+    display: inline;
+    padding-right: 100px;
+  }
+  #side{
+    display: inline;
+    padding-right: 10px;
+  }
   .section2{
     padding-left: 70px;
   }

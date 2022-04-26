@@ -20,7 +20,7 @@ function toTheTop() {
 accessBtn = document.getElementById("accessBtn")
 function openAccessMenu() {
     var div = document.getElementById("accessMenu")
-    div.style.width = "25%"
+    div.style.width = "15%"
     document.getElementById("accessBtn").style.display="none"
     div.style.border = "2px solid #72b844";
 };

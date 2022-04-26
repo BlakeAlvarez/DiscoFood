@@ -9,16 +9,16 @@
   right: 100px;
   bottom: 65px;
   z-index: 10000;
-  border: 2px solid white;
+  border: 2px solid #72b844;
   outline: none;
   background-color: rgb(43,83,54);
   color: white;
   cursor: pointer;
   padding: 0px;
   border-radius: 50px;
-  height: 35px;
-  width: 35px;
-  font-size: 10px;
+  height: 50px;
+  width: 50px;
+  font-size: 14px;
   line-height: 12px;
 }
 
@@ -27,8 +27,8 @@
 }
 
 #accessBtn img {
-  height: 40px;
-  width: 40px;
+  height: 55px;
+  width: 55px;
   border-radius: 30px;
   background-color: rgb(223, 210, 208);
   position: fixed;
@@ -42,7 +42,7 @@
 }
 
 .accessMenu{
-  height: 50%;
+  height: 30%;
   width: 0;
   position: fixed;
   z-index: 11;
@@ -57,7 +57,7 @@
   text-align: center;
   display: flex;
   align-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   row-gap: 25px;
 
