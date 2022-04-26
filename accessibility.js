@@ -44,21 +44,25 @@ window.onload=function(){
             }
         }
         if (theme[0].getAttribute('data-theme') === 'dark') {
-            var toggle = document.getElementById("themeToggle");    
+            var toggle = document.getElementById("themeToggle"); 
             toggle.style.backgroundColor="#72B844";  
-            document.getElementById("lightIcon").src="Images/Accessibility/darkMode.png";
-
+            //document.getElementById("lightIcon").src="Images/Accessibility/darkMode.png";
             $(".tb").css({"border":"1px solid white"});
-
             $("#untDining").css({"color":"white"});
+            document.getElementById("HomePageSection1H1").style.color="#72B844";
+            document.getElementById("HomePageSection2H1").style.color= "#72B844";
+            document.getElementById("mealPlanTitle").style.color="#72B844";
+          
 
         } else if (theme[0].getAttribute('data-theme') === 'light') {
             var toggle = document.getElementById("themeToggle");    
             toggle.style.backgroundColor="";    
-            document.getElementById("lightIcon").src="Images/Accessibility/lightMode.png";
-            
+            //document.getElementById("lightIcon").src="Images/Accessibility/lightMode.png";
             $(".tb").css({"border":"1px solid black"});     
             $("#untDining").css({"color":"black"});
+            document.getElementById("HomePageSection1H1").style.color="#2B5336";
+            document.getElementById("HomePageSection2H1").style.color="#2B5336";
+            document.getElementById("mealPlanTitle").style.color="#2B5336";
         }
     });
 

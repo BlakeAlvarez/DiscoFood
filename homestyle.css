@@ -29,8 +29,11 @@ font-family: sans-serif;
 .discoPerks, .hours, .createAccountTitle{
 font-size: 3rem; 
 font-family: serif; 
-}
 
+}
+.discoPerks, .hours,#mealPlanTitle{
+  color: #2B5336;
+}
 #untDining{
   color: black; 
   text-decoration: underline;
