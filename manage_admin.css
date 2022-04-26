@@ -201,6 +201,9 @@ font-family: sans-serif;
 .footer-3 p{
   transform:translateY(35px)
 }
+.footer-3{
+  transform:translateY(-235px);
+}
 
 
 /* makes webpage responsive */
